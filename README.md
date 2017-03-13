@@ -24,6 +24,7 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 * Vultr
 * DigitalOcean
 
+---
 
 ### 管理服务器
 
@@ -36,13 +37,19 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 * Linode/Vultr/DigitalOcean 等厂商一般可以使用 root 账号和密码直接登录
 * 如果您使用 Google CloudEngine 或者 AWS EC2 等默认禁止 root 登录的账号，请查看下面的教程怎样配置私钥登录。
 
+
 **Q: 怎样判断私钥是否有加密？**  
 A：你可以查看您的私钥第二行是否有 "ENCRYPTED" 的字样，如果有则是加密的。
+
 
 **Q：我不知道 id_rsa 的密码怎么办？**  
 A：如果您使用 Mac 那么 id_rsa 的密码保存在钥匙串中，您可以打开：应用程序 - 实用工具 - 钥匙串访问，并在右上角搜索 "id_rsa" 获取其密码
 
+
 [查看如何配置 Google CloudEngine 和 AWS](./cloud.md)
+
+---
+
 
 ### 部署应用
 
