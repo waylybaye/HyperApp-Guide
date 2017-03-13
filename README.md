@@ -25,9 +25,20 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 * DigitalOcean
 
 
-下面会以WordPress为例演示如何在您的服务器上部署应用
+### 管理服务器
 
-### 部署一个应用
+![管理服务器截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/manage-server.png "添加服务器")
+
+1. 打开服务器页面，在这里可以显示基本的服务器运行状态，您可以随时下拉刷新更新重新检查服务器状态
+2. 添加服务器时您可以使用 root 账号登录也可以使用具有 sudo 权限的非 root 账号登录。如果您使用密码登录请填写密码，如果使用私钥登录密码可以留空。
+3. 如果您使用私钥登录，那么请将您的私钥复制到剪切板中，然后点击 "Paste Privatekey from Clipboard"，如果您的私钥是加密的那么请在在 Passphrase 中输入，否则留空。
+
+* Linode/Vultr/DigitalOcean 等厂商一般可以使用 root 账号和密码直接登录
+* 如果您使用 Google CloudEngine 或者 AWS EC2 等默认禁止 root 登录的账号，请查看下面的教程怎样配置私钥登录。
+
+
+
+### 部署应用
 
 #### 添加应用
 
