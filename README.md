@@ -27,6 +27,16 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 
 下面会以WordPress为例演示如何在您的服务器上部署应用
 
-## 部署 WordPress 例子
+### 部署一个应用
+
+#### 添加应用
+
+![添加应用截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/add-app.png "在商店中添加并配置应用")
+
+1. 打开商店，并点击您要部署的应用
+2. 再出现的窗口中选择您要部署到的服务器
+3. 创建后自动进入配置页面，您可以简单的配置一下并点击 Next 或者 点击右上角的 Skip 暂时跳过
+
+#### 管理应用
 
 
