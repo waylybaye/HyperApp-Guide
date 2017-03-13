@@ -29,7 +29,12 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 * CentOS 7 ✅
 * Debian 8 ✅
 
-注：CentOS 6 也是支持的，但是有些厂商自带的内核版本较低导致不支持 Docker
+
+注：CentOS 6 也是支持的，但是有些厂商自带的内核版本较低导致不支持 Docker  
+
+**为什么不支持 OpenVZ ？**  
+因为 OpenVZ 支持的内核版本太低，不支持 Docker 所以，HyperApp 不支持 OpenVZ 的主机。
+
 
 #### 测试过的厂商
 
