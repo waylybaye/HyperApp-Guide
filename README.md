@@ -39,4 +39,9 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 
 #### 管理应用
 
+![管理应用截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/manage-app.png "管理您的应用")
+
+1. 打开 Apps 页面，当您点击 App 卡片中的服务器列时会出现 Actions 界面
+2. 在 Actions 界面你可以管理这个应用在制定服务器上的装填。点击 Install 可以安装应用。
+3. 点击后会在 App 卡片下方出现进度栏，它会实时更新安装的进度，当最左侧的图标变成对号时说明动作已经执行成功。如果出现错误则点击该进度条可以查看具体的出错信息。
 
