@@ -1,11 +1,26 @@
 
 # HyperApp 用户手册
 
+
 ## HyperApp 是什么
 
 HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在 Store 页面点击任意应用，将其部署到您的服务器上。
 
 [![HyperApp on AppStore](//linkmaker.itunes.apple.com/assets/shared/badges/zh-chs/appstore-lrg.svg "View on App Store")](https://itunes.apple.com/app/apple-store/id1179750280?pt=118260435&ct=guide&mt=8)
+
+---
+
+## 目录
+* [使用须知](#使用须知)
+    * [支持的系统](#支持的 Linux 系统)
+* [管理服务器](#管理服务器)
+* [管理应用](#管理应用)
+
+
+---
+
+
+### 使用须知
 
 #### 支持的 Linux 系统
 
@@ -39,19 +54,20 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 
 
 **Q: 怎样判断私钥是否有加密？**  
-A：你可以查看您的私钥第二行是否有 "ENCRYPTED" 的字样，如果有则是加密的。
+A：你可以查看您的私钥第二行是否有 "ENCRYPTED" 的字样，如果有则是加密的。  
 
 
 **Q：我不知道 id_rsa 的密码怎么办？**  
-A：如果您使用 Mac 那么 id_rsa 的密码保存在钥匙串中，您可以打开：应用程序 - 实用工具 - 钥匙串访问，并在右上角搜索 "id_rsa" 获取其密码
+A：如果您使用 Mac 那么 id_rsa 的密码保存在钥匙串中，您可以打开：应用程序 - 实用工具 - 钥匙串访问，并在右上角搜索 "id_rsa" 获取其密码。  
 
 
-[查看如何配置 Google CloudEngine 和 AWS](./cloud.md)
+[查看如何配置 Google CloudEngine 和 AWS](./cloud.md)  
+
 
 ---
 
 
-### 部署应用
+### 管理应用
 
 #### 添加应用
 
