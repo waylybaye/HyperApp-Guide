@@ -7,11 +7,11 @@
 
 ## 目录
 
-* [部署MySQL](#部署MySQL)
-* [配置Nginx和HTTPS](#配置Nginx和HTTPS)
-* [部署Ghost](#部署Ghost)
-* [部署WordPress](#部署WordPress)
-* [部署ownCloud](#部署ownCloud])
+* [部署MySQL](#部署mysql)
+* [配置Nginx和HTTPS](#配置nginx和https)
+* [部署Ghost](#部署ghost)
+* [部署WordPress](#部署wordpress)
+* [部署ownCloud](#部署owncloud])
 * [备份数据](#备份数据)
 
 ---
@@ -30,13 +30,18 @@
 
 为了安全考虑建议用户不要在端口那里将容器的3306端口发布到主机端口上，防止恶意程序探测并且暴力猜密码。而是使用 Link的方法，让别的容器可以访问 MySQL。
 
+**数据库连接提示** 任何连接了 mysql 的应用在应用本身的安装界面如果要您输入数据库地址那么直接输入 `mysql` 而不是 localhost 或者 127.0.0.1 或者您的粉武器IP。
+
 ---
 
 ### 配置Nginx和HTTPS
 
+![配置Nginx截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/get-start/nginx-bundle.png "配置 Nginx 和 SSL")
+
 #### 为何要使用 Nginx ？
 
 因为 HTTP/HTTPS 服务一般共用 80/443 端口，如果您想在一个服务器上跑多个网站进程，并且将不同的域名映射到不同的后台进程上（例如WordPress/Ghost/ownCloud 各一个）那么就需要用 Nginx 做反向代理。
+
 
 #### 安装 Nginx
 
@@ -45,9 +50,8 @@
 3. `Volumes` 都有默认配置，你可以随意更改 SSL Certs,Config dir,HTML dir的路径，但`Docker Sock` 的值必须为 `docker` 守护进程的socket文件
 3. 将 `nginx` 部署到服务器上
 
-*Nginx 会自动监听其它应用里面设置的 `Custom Domain` 值，并自动重启服务* 所以你在部署  Ghost/WordPress/ownCloud 后不用手动重启 `nginx`。  
+*Nginx 会自动监听其它应用里面设置的 `Custom Domain` 值，并自动重启服务* 所以你在新部署 Ghost/WordPress/ownCloud 后以及更改了配置后不用手动重启 `nginx`。  
 
-现在访问您上一步中设置的域名
 
 #### 安装 Nginx SSL Support
 
@@ -55,15 +59,15 @@
 2. 在设置页面确保几个 `Volumes` 的路径和 `nginx` 的设置一样，并且在下面 `Share Volumes` 中选择 `nginx` 镜像，允许访问 `nginx` 的文件系统
 3. 将 `Nginx SSL Support` 部署到同一台服务器上
 
-*Nginx SSL Support 会自动监听其它应用里面 `SSL Support` 相关设置，并自动生成证书*，生成证书的过程会需要几分钟或者十几分钟的时间，在这个过程中你访问 https 连接会出现 `Bad Gateway` 的错误信息，稍等片刻就好。（你可以查看Log获取更多信息）  
+*Nginx SSL Support 会自动监听其它应用里面 `SSL Support` 相关设置，并自动生成证书*，生成证书的过程会需要几分钟或者十几分钟的时间，在这个过程中你访问 https 会出现 `502 Bad Gateway` 的错误信息，稍等片刻就好。
 
+你可以查看Log获取更多信息，参考上图中最后一个截图。
 
 ---
 
 ### 部署Ghost
 
-
-<img src="https://github.com/waylybaye/HyperApp-Guide/raw/master/images/get-start/ghost-setup.png" width="350" style="float: left" alt="Ghost 配置截图"/>
+![配置 Ghost n截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/get-start/ghost-bundle.png "配置 Ghost")
 
 创建一个 Ghost，第一个 Port 不需要填，因为我们不需要让外部直接访问 ghost，我们会把 Ghost 放在 nginx 后面。
 
@@ -77,7 +81,7 @@
 **Custom Domain**  
 是配合 nginx 使用的，它告诉 nginx 遇到访问该域名的请求时，把请求转发（反向代理）给当前应用。
 
-* Host: 要反向代理的域名
+* Host: 要反向代理的域名，多个域名用半角逗号隔开
 * Port: 这个 Port 是 Ghost 进程监听的 Port，一般情况下并不需要填，因为会自动探测该端口。
 * HTTPS: 这个是设置配置了HTTPS后怎么处理 HTTP 请求的，共有四个选项
     * 将所有 HTTP 的请求跳转到 HTTPS 上（默认）
@@ -88,11 +92,17 @@
 **SSL Support**  
 配合 `Nginx SSL Support` 使用，当填入一个域名时它会使用 letsencrypt 自动请求并生成该域名的证书。此过程需要认证该域名所有权，请参考文章开头的说明。
 
+* Host: 要生成证书的域名（默认会与上面的Nginx Host保持同步）
+* Email: (必填) 用来管理域名证书的邮箱。 
+
 #### 配置 Ghost
 
 现在您可以访问您设置的域名啦，在浏览器中打开 http://[YOUR-Domain].com 是不是看到了 Welcome to Ghost 的欢迎页面，下面按照 Welcome to Ghost 中所说的，打开 http://[Your-Domain].com/ghost 页面安装 Ghost 吧
 
 ---
+
+### 部署 WordPress
+
 
 ### 备份数据
 
