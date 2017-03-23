@@ -103,6 +103,36 @@
 
 ### 部署 WordPress
 
+WordPress 的安装和 Ghost 基本一致，只不过 WordPress 本身的安装界面略微和 Ghost 不同。
+
+**Config && Link Containers**  
+您只需要在这里填写 `DB name` 就可以了，下面的所有连接参数都可以省掉，然后再 `Link containers` 选择你的 MySQL 应用，会自动连接到 MySQL。
+
+如果您要连接外部的 MySQL 服务，请详细填写 host,port,user,password 信息。
+
+Public Port: 是绕过 nginx 直接对外提供服务的端口，如果您不需要 nginx 那么这儿可以填 80 让 WordPress 直接提供服务。
+
+**Custom Domain && SSL Support**  
+此处和 Ghost 一致，您按需要填写域名就可以了。
+
+---
+
+### 部署 ownCloud
+
+![配置 ownCloud 截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/get-start/owncloud-bundle.png "配置 ownCloud")
+
+#### HyperApp 配置 
+* Port 同样是直接对外提供服务的端口
+* Volumes ownCloud 会将所有数据保存到服务器上的这个目录中，您可以配合下面的 (备份数据)(#备份数据) 使用。
+* Link containers: mysql 如果您需要使用 mysql 而不是内置的 SQLite 请在此处选择您的 MySQL 实例。
+* Custom Domain 和 SSL Support 同上。
+
+#### ownCloud 配置
+在欢迎界面，您需要像Ghost/Wordpress一样创建一个账号。但是与上面不同的是 ownCloud 提供了使用 SQLite 还是 MySQL 的选项。
+
+如果您要使用 MySQL 服务器，请手动填写您的 root 账号和密码，在数据库那里填一个新的数据库，下面的 MySQL host 直接填 `mysql`，不要填 localhost 等。
+
+---
 
 ### 备份数据
 
