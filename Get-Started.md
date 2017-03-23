@@ -62,7 +62,8 @@
 
 ### 部署Ghost
 
-![Ghost配置页面截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/get-start/ghost-setup.png "配置Ghost")
+
+<img src="https://github.com/waylybaye/HyperApp-Guide/raw/master/images/get-start/ghost-setup.png" width="350" style="float: left" alt="Ghost 配置截图">
 
 然后创建一个 Ghost，第一个 Port 不需要填，因为我们不需要让外部直接访问 ghost，我们会把 Ghost 放在 nginx 后面。
 
