@@ -20,6 +20,8 @@
 
 我们先部署一个 MySQL 到服务器上，因为下面的 Ghost/WordPress/ownCloud 都需要 MySQl 用来保存数据。在配置页面只要填入 `root password` 就好，其它的配置项都不需要填。
 
+![Mysql配置页面截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/get-start/mysql-setup.png "配置MySQL服务器")
+
 #### 什么是 Link ?
 
 默认情况下docker下各应用（容器）的网络是隔离的，比如 mysql 容器里在 3306 端口监听连接，但是在其它容器里别人是访问不到3306端口的，除非把它 Publish 到主机的一个端口上，这样访问主机的某个端口就会被映射到 mysql 容器内的 3306 端口上。 
@@ -60,10 +62,16 @@
 
 ### 部署Ghost
 
+![Ghost配置页面截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/get-start/ghost-setup.png "配置Ghost")
+
 然后创建一个 Ghost，第一个 Port 不需要填，因为我们不需要让外部直接访问 ghost，我们会把 Ghost 放在 nginx 后面。
 
 **Volumes**  
 允许 docker 把应用数据保存到你的主机上。下面的 `Data dir` 就是 ghost 的所有配置文件的保存地方。
+
+**Link Containers**  
+在这里选择你创建的 mysql 让 ghost 可以通过内部网络访问 mysql 服务器
+
 
 **Custom Domain**  
 是配合 nginx 使用的，它告诉 nginx 遇到访问该域名的请求时，把请求转发（反向代理）给当前应用。
