@@ -58,11 +58,15 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 
 1. 打开服务器页面，在这里可以显示基本的服务器运行状态，您可以随时下拉刷新更新重新检查服务器状态
 2. 添加服务器时您可以使用 root 账号登录也可以使用具有 sudo 权限的非 root 账号登录。如果您使用密码登录请填写密码，如果使用私钥登录密码可以留空。
-3. 如果您使用私钥登录，那么请将您的私钥复制到剪切板中，然后点击 "Paste Privatekey from Clipboard"，如果您的私钥是加密的那么请在在 Passphrase 中输入，否则留空。
+    * Name: 为您的服务器起个名字
+    * Host: 您服务器的公网IP或者域名
+    * Port: SSH的端口，一般是22
+    * User: 您登陆用的用户名
+    * Password: 你的密码，如果使用密钥登录此处可以留空，请参考下面
+3. 如果您使用私钥登录，那么请将您的私钥复制到剪切板中（iCloud剪贴板同步或者使用其它同步App）然后点击 "Paste Privatekey from Clipboard" 从剪贴板中复制私钥，如果您的私钥是加密的那么请在在 Passphrase 中输入，否则留空。 关于密钥的更多信息请参考 [常见问题](#常见问题)
 
 * Linode/Vultr/DigitalOcean 等厂商一般可以使用 root 账号和密码直接登录
-* 如果您使用 Google CloudEngine 或者 AWS EC2 等默认禁止 root 登录的账号，请查看下面的教程怎样配置私钥登录。
-
+* 如果您使用 Google CloudEngine 或者 AWS EC2 等默认禁止 root 登录的账号，请查看下面的教程怎样配置私钥登录，然后重复上面的第3步骤在 HyperApp 中链接。
 
 [查看如何配置 Google CloudEngine 和 AWS](./cloud.md)  
 
