@@ -3,26 +3,28 @@
 
 English version | [中文版](./README_zh.md)
 
+
+
 ## What's HyperApp
 
 HyperApp is a Docker Automation iOS app and an SSH Terminal.
 
-[![HyperApp on AppStore](https://linkmaker.itunes.apple.com/assets/shared/badges/zh-chs/appstore-lrg.svg "View on App Store")](https://itunes.apple.com/app/apple-store/id1179750280?pt=118260435&ct=guide&mt=8)
+[![HyperApp on AppStore](https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg "View on App Store")](https://itunes.apple.com/app/apple-store/id1179750280?pt=118260435&ct=guide&mt=8)
 
-### Docker Automation
 
-HyperApp helps you to deploy and setup docker on your servers.
+#### Docker Automation
 
-### Linux management
+HyperApp comes with many featured docker images that we have listed all configuration for you, you can deploy & config them in a user-friendly way.
+
+#### Linux management
 
 * Monitor: HyperApp helps you monitor your servers status easily and quickly.
 * SSH Terminal: the terminal helps you to login to your servers at anytime anywhere.
 
 ---
 
-## 目录
+## TOC
 * [新手教程：如何一键搭建支持 https 的网站](./Get-Started.md)
-* [新手教程：如何一键科学上网](./g-f-w.md)
 * [新手教程：如何添加 GCE 和 AWS 的服务器](./cloud.md)
 * [使用须知](#使用须知)
     * [支持的系统](#支持的 Linux 系统)
@@ -63,31 +65,32 @@ HyperApp helps you to deploy and setup docker on your servers.
 
 ---
 
-### 管理服务器
+### Servers
 
-![管理服务器截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/manage-server.png "添加服务器")
+You can monitor your servers/routers status in Severs tab
 
-1. 打开服务器页面，在这里可以显示基本的服务器运行状态，您可以随时下拉刷新更新重新检查服务器状态
-2. 添加服务器时您可以使用 root 账号登录也可以使用具有 sudo 权限的非 root 账号登录。如果您使用密码登录请填写密码，如果使用私钥登录密码可以留空。
-    * Name: 为您的服务器起个名字
-    * Host: 您服务器的公网IP或者域名
-    * Port: SSH的端口，一般是22
-    * User: 您登陆用的用户名
-    * Password: 你的密码，如果使用密钥登录此处可以留空，请参考下面
-3. 如果您使用私钥登录，那么请将您的私钥复制到剪切板中（iCloud剪贴板同步或者使用其它同步App）然后点击 "Paste Privatekey from Clipboard" 从剪贴板中复制私钥，如果您的私钥是加密的那么请在在 Passphrase 中输入，否则留空。 关于密钥的更多信息请参考 [常见问题](#常见问题)
+![Servers](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/manage-server.png "Servers")
 
-* Linode/Vultr/DigitalOcean 等厂商一般可以使用 root 账号和密码直接登录
-* 如果您使用 Google CloudEngine 或者 AWS EC2 等默认禁止 root 登录的账号，请查看下面的教程怎样配置私钥登录，然后重复上面的第3步骤在 HyperApp 中链接。
+Click the plus button to add your own server:
+
+1. Docker automation need a root user or a user with sudo permission.
+    * Name: Set a name for your server.
+    * Host: Your server's IP address or domain.
+    * Port: The SSH server port, normally it's 22.
+    * User: Your username
+    * Password: Your password, if you authenticate using pubkey then leave it blank.
+
+2. If you authenticate using pubkey, then please copy the private key content to your phone and click "Paste Privatekey from Clipboard", fill the `passhprase` too if your private key is crypted.
+
 
 [查看如何配置 Google CloudEngine 和 AWS](./cloud.md)  
-
 
 ---
 
 
-### 管理应用
+### Dockers
 
-#### 添加应用
+#### Add Docker
 
 ![添加应用截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/add-app.png "在商店中添加并配置应用")
 
