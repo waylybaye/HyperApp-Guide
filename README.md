@@ -24,16 +24,15 @@ HyperApp comes with many featured docker images that we have listed all configur
 ---
 
 ## TOC
-* [新手教程：如何一键搭建支持 https 的网站](./Get-Started.md)
-* [新手教程：如何添加 GCE 和 AWS 的服务器](./cloud.md)
-* [使用须知](#使用须知)
-    * [支持的系统](#支持的 Linux 系统)
-* [管理服务器](#管理服务器)
-* [管理应用](#管理应用)
-    * [添加应用](#添加应用)
-    * [部署应用](#部署应用)
-* [商店应用](#商店应用)
-* [常见问题](#常见问题)
+
+* [Prerequisites](#Prerequisites)
+    * [Supported Linux](#Supported Linux)
+* [Servers](#Servers)
+* [Docker](#Docker)
+    * [Add Docker](#add docker)
+    * [Deploy Docker](#deploy docker)
+* [Store](#Store)
+* [FAQ](#faq)
 
 ---
 
@@ -52,16 +51,7 @@ HyperApp comes with many featured docker images that we have listed all configur
 * CentOS 6 ⚠️ 
 * Not support OpenVZ servers ❌
 
-*CentOS 6 does work with docker, but some hosting providers have old kernel below version 3.10 installed*
-
-
-#### Tested Vendor
-
-* Google CloudEngine
-* AWS EC2
-* Linode
-* Vultr
-* DigitalOcean
+*CentOS 6 does work with docker, but some hosting providers have old kernel lower than 3.10 installed*
 
 ---
 
@@ -92,36 +82,35 @@ Click the plus button to add your own server:
 
 #### Add Docker
 
-![添加应用截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/add-app.png "在商店中添加并配置应用")
+![Docker](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/add-app.png "Docker")
 
-1. 打开商店，并点击您要部署的应用
-2. 再出现的窗口中选择您要部署到的服务器
-3. 创建后自动进入配置页面，您可以简单的配置一下并点击 Next 或者 点击右上角的 Skip 暂时跳过配置，稍后可以点击 App 卡面的 Config 配置。
+1. Open `Store` tab and click one of the docker images.
+2. Choose the servers you want to deploy.
+3. It will take you to the config page after creation, you can see all the configuration of selected image.
+4. click `Next` if you finished configuration or click `Skip` to configure it later.
 
-#### 部署应用
+#### Deploy Docker
 
-![管理应用截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/manage-app.png "管理您的应用")
+![manage docker](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/manage-app.png "manage docker")
 
-1. 打开 Apps 页面，当您点击 App 卡片中的服务器列时会出现 Actions 界面
-2. 在 Actions 界面你可以管理这个应用在制定服务器上的状态。点击 Install 可以安装应用。
-3. 点击后会在 App 卡片下方会出现进度栏，它会实时更新安装的进度，当最左侧的图标变成对号时说明动作已经执行成功。如果出现错误则点击该进度条可以查看具体的出错信息。
+1. Open `Apps` tab，click one of the server name, it will show the action sheet.
+2. Click `Install` to install it to selected server.
+3. It will show the progress under the card, you can track the status in realtime.
 
 
 ---
 
-### 商店应用
+### Store
 
-#### 如何运行任意 Docker 镜像？
+#### How to run a Docker image not listed？
 
-您可以点击 商店里面的 Docker Image 镜像，然后再配置页面输入任意镜像名字和参数就可以了，当您输入了内容时下面会实时显示最终 docker 的运行命令
+You can click the `Docker Image` item and input any image you want to run.
 
-*注意 `-d` 选项默认是开启的，您不需要再额外指定*
+*the `-d` option is enabled by default*
 
-#### 如何添加新镜像？
+#### How to ask HyperApp add more docker images？
 
-如何您想添加新镜像可以在此仓库的 `Issues` 页面创建 `Issue`，并提供镜像地址。
-
-注意现在优先添加有一定用户基础并且趋于稳定的镜像。
+You can create issues if this repo.
 
 ---
 
