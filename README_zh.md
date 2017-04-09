@@ -1,22 +1,12 @@
 
-# HyperApp Manual
+# HyperApp 用户手册
 
-English version | [中文版](./README_zh.md)
 
-## What's HyperApp
+## HyperApp 是什么
 
-HyperApp is a Docker Automation iOS app and an SSH Terminal.
+HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在 Store 页面点击任意应用，将其部署到您的服务器上。
 
 [![HyperApp on AppStore](https://linkmaker.itunes.apple.com/assets/shared/badges/zh-chs/appstore-lrg.svg "View on App Store")](https://itunes.apple.com/app/apple-store/id1179750280?pt=118260435&ct=guide&mt=8)
-
-### Docker Automation
-
-HyperApp helps you to deploy and setup docker on your servers.
-
-### Linux management
-
-* Monitor: HyperApp helps you monitor your servers status easily and quickly.
-* SSH Terminal: the terminal helps you to login to your servers at anytime anywhere.
 
 ---
 
@@ -36,28 +26,27 @@ HyperApp helps you to deploy and setup docker on your servers.
 ---
 
 
-### Prerequisites
+### 使用须知
 
-**SSH Terminal support all versions of Linux**, but Docker automation only support specific versions.
+#### 支持的 Linux 系统
 
-#### Supported Linux
-
-* Docker only support 64 bit system
-* Kernel version 3.10+
+* 64位，内核版本 3 以上的以下系统
 * Ubuntu 14，16 ✅
 * CentOS 7 ✅
 * Debian 8 ✅
-* CentOS 6 ⚠️ 
-* Not support OpenVZ servers ❌
-
-*CentOS 6 does work with docker, but some hosting providers have old kernel below version 3.10 installed*
 
 
-#### Tested Vendor
+注：CentOS 6 也是支持的，但是有些厂商自带的内核版本较低导致不支持 Docker  
+
+**为什么不支持 OpenVZ ？**  
+因为 OpenVZ 支持的内核版本太低，不支持 Docker 所以，HyperApp 不支持 OpenVZ 的主机。
+
+
+#### 测试过的厂商
 
 * Google CloudEngine
 * AWS EC2
-* Linode
+* Linode (支持 CentOS6)
 * Vultr
 * DigitalOcean
 

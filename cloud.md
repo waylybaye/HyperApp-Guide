@@ -32,6 +32,8 @@ GCE 和 AWS 都需要密钥登录您的系统，密钥一般包括两个部分�
 ![管理服务器密钥截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/gce-keys.png "管理服务器密钥")
 
 
+#### 使用密钥登录
+
 在这个页面您可以添加已有的密钥到 GCE 中，您可以点击修改，然后将您上面 `id_rsa.pub` 文件的内容复制到里面去， **GCE 会自动识别里面的用户名，显示在用户名一列，这个就是您登录服务器需要的用户名**。
 
 
@@ -45,6 +47,21 @@ GCE 和 AWS 都需要密钥登录您的系统，密钥一般包括两个部分�
 
 
 如果您在计算机上测试没有问题，那么可以复制私钥的内容并去 HyperApp 中添加私钥访问您的服务器了。
+
+#### 使用密码登录
+
+如果您倾向于使用密码登录，那么可以按一下顺序操作：
+
+1. 请点击您的 VM 实例 “连接” 那一栏 SSH 右侧的下拉按钮，然后选择“在浏览器窗口中打开”
+2. 在打开的窗口中您可以看到 `用户名@VM实例名` 的提示信息，这个用户名就是您登录要使用的用户名
+3. 运行 `sudo passwd` 按照提示为您的账号设置一个密码
+4. 运行 `sudo vim /etc/ssh/sshd_config` 找到下面这一栏，然后将 `no` 改成 `yes`
+5. 编辑文件后运行 `sudo /etc/init.d/ssh restart` 重启SSH服务。然后您就可以通过密码登录您的 VM 实例了。
+
+```
+# Change to no to disable tunnelled clear text passwords
+PasswordAuthentication no
+```
 
 ---
 
