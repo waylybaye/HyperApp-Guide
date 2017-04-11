@@ -1,6 +1,7 @@
 
 # HyperApp 用户手册
 
+[English version](./README.md) | 中文版
 
 ## HyperApp 是什么
 
@@ -11,9 +12,11 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 ---
 
 ## 目录
-* [新手教程：如何一键搭建支持 https 的网站](./Get-Started_zh.md)
-* [新手教程：如何一键科学上网](./g-f-w.md)
-* [新手教程：如何添加 GCE 和 AWS 的服务器](./cloud.md)
+* 新手教程
+    * [新手教程：如何添加服务器(Linode/Vultr/GCE/AWS等)](./Add-Server_zh.md)
+    * [新手教程：如何一键搭建支持 https 的网站](./Get-Started_zh.md)
+    * [新手教程：如何一键科学上网](./g-f-w.md)
+    * [新手教程：如何添加 GCE 和 AWS 的服务器](./cloud.md)
 * [使用须知](#使用须知)
     * [支持的系统](#支持的 Linux 系统)
 * [管理服务器](#管理服务器)
@@ -30,18 +33,19 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 
 #### 支持的 Linux 系统
 
-* 64位，内核版本 3 以上的以下系统
+* Docker 只支持64位系统，且内核版本 >= 3.10
 * Ubuntu 14，16 ✅
 * CentOS 7 ✅
 * Debian 8 ✅
-
+* CentOS 6 ⚠️ 
+* 不支持 OpenVZ ❌
 
 注：CentOS 6 也是支持的，但是有些厂商自带的内核版本较低导致不支持 Docker  
 
 **为什么不支持 OpenVZ ？**  
 因为 OpenVZ 支持的内核版本太低，不支持 Docker 所以，HyperApp 不支持 OpenVZ 的主机。
 
-
+<!--
 #### 测试过的厂商
 
 * Google CloudEngine
@@ -49,7 +53,7 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 * Linode (支持 CentOS6)
 * Vultr
 * DigitalOcean
-
+-->
 ---
 
 ### 管理服务器
@@ -68,8 +72,7 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 * Linode/Vultr/DigitalOcean 等厂商一般可以使用 root 账号和密码直接登录
 * 如果您使用 Google CloudEngine 或者 AWS EC2 等默认禁止 root 登录的账号，请查看下面的教程怎样配置私钥登录，然后重复上面的第3步骤在 HyperApp 中链接。
 
-[查看如何配置 Google CloudEngine 和 AWS](./cloud.md)  
-
+[查看添加服务器的新手教程](./Add-Server_zh.md)  
 
 ---
 
@@ -113,32 +116,13 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 
 ### 常见问题
 
-**为什么 PrivateKey 总是认证失败！**  
-1. 请确保你复制的是私钥，不是公钥，以 `ssh-rsa *****` 开头的是公钥（也就是你在 GCE 后台上传的那行文本）
-2. 请检查你的私钥是否复制正确，一般来说私钥的格式是下面的形式：  
-
-```
------BEGIN **** PRIVATE KEY-----
-Proc-Type: 4,ENCRYPTED
-DEK-Info: DES-EDE3-CBC,D64916783E629696
-***************************************
-***************************************
------END **** PRIVATE KEY-----
-```
-
-请确保从第一行到最后一行的所有内容都复制完全了，有些剪贴板同步的应用，可能会漏掉一部分文本。
-
-
 
 **为什么部署成功了还是安装不上？**  
-
 1. 如果使用的是 GCE 或者 AWS ，那么您可以需要在它们的控制台中添加防火墙规则外部才能连接特定的端口。
 2. 您使用的Linux发行版可能默认开启了防火墙守护进程，比如 CentOS 的 FirewallD。请查阅相关的资料如何添加允许端口访问。
 
 
-
 **为什么 GCE 连接不上？**  
-
 您可能被分配了一个已经被墙的IP，请使用下面的方法进行故障排除
 
 
@@ -152,13 +136,6 @@ DEK-Info: DES-EDE3-CBC,D64916783E629696
 你手机是否开了VPN或者 Surge，尝试断开 VPN/Surge 后试试。  
 有些服务商可能会屏蔽另外服务商的某些链接，当你使用VPN绕道连接时可能会出现此问题。
 
-
-**怎样判断私钥是否有加密？**  
-您可以查看私钥第二行是否有 **ENCRYPTED** 的字样，如果有则是加密的。  
-
-
-**我不知道 Mac 上 `id_rsa` 的密码怎么办？**  
-如果您使用 Mac 那么 `id_rsa` 的密码保存在钥匙串中，您可以打开：`应用程序 - 实用工具 - 钥匙串访问`，并在右上角搜索 "id_rsa" 获取其密码。  
 
 **HyperApp 会在我的服务器/路由器上运行哪些命令？**  
 [HyperApp 运行的命令](./commands.md)
