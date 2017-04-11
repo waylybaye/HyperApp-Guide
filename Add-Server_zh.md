@@ -17,6 +17,8 @@
 * 如果您使用 Google CloudEngine 或者 AWS EC2 等默认禁止 root 登录的账号，请查看下面的教程怎样配置私钥登录，然后重复上面的第3步骤在 HyperApp 中链接。
 
 
+---
+
 
 ## 如何配置 Linode/Vultr/Digital Ocean 服务器？
 
@@ -25,15 +27,15 @@
 注意：Digital Ocean的某些镜像在您第一次登录时需要修改密码，所以请使用其它工具登录并修改密码后再添加到 HyperApp 中
 
 
-### Google Cloud Engine
 
-*注：这篇文档只讲述如何链接到 GCE 而不会讲述如何创建 GCE 账号并且创建服务器。*
+## Google Cloud Engine
 
+<!--*注：这篇文档只讲述如何链接到 GCE 而不会讲述如何创建 GCE 账号并且创建服务器。*-->
 
 ![管理服务器密钥截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/gce-keys.png "管理服务器密钥")
 
 
-#### 使用密钥登录
+#### 打开上图中的页面
 
 在这个页面您可以添加已有的密钥到 GCE 中，您可以点击修改，然后将您上面 `id_rsa.pub` 文件的内容复制到里面去， **GCE 会自动识别里面的用户名，显示在用户名一列，这个就是您登录服务器需要的用户名**。
 
@@ -43,11 +45,13 @@
 
 `ssh -i ~/.ssh/id_rsa 上一步显示的用户名@GCE.PUBLIC.IP`
 
-
 一般来说您可以省略 `-i ~/.ssh/id_rsa` 参数因为 ssh 会自动检查这个默认路径，但如果您生成的密钥在其它地方就需要用 `-i` 参数指定了。
 
 
 如果您在计算机上测试没有问题，那么可以复制私钥的内容到手机上，并在 HyperApp 添加服务器窗口中点击复制密钥来登录了。
+
+
+---
 
 
 ## 关于密钥登录的常见问题
