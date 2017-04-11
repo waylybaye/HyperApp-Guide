@@ -25,13 +25,13 @@ HyperApp comes with many featured docker images that we have listed all configur
 
 ## TOC
 
-* [Prerequisites](#Prerequisites)
-    * [Supported Linux](#Supported Linux)
-* [Servers](#Servers)
-* [Docker](#Docker)
-    * [Add Docker](#add docker)
-    * [Deploy Docker](#deploy docker)
-* [Store](#Store)
+* [Prerequisites](#prerequisites)
+    * [Supported Linux](#supported-linux)
+* [Servers](#servers)
+* [Docker](#docker)
+    * [Add Docker](#add-docker)
+    * [Deploy Docker](#deploy-docker)
+* [Store](#store)
 * [FAQ](#faq)
 
 ---
