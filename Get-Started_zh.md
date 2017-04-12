@@ -1,36 +1,20 @@
 # Get Started
 
-这篇教程会讲述如何利用 HyperApp 部署 Ghost/WordPress等，并会自动生成证书。
+这篇教程会讲述如何利用 HyperApp 在同一台服务器上部署网站或者其它基于HTTP服务的应用，并会自动生成SSL证书。
 
 *NOTE*: 在进行操作前请先将您的域名解析到该服务器上（新的域名或二级域名一般会即时生效，如果修改现有的域名可能需要48小时），HTTPS证书生成过程中需要回访该域名确认您具有域名的拥有权，如果自动生成证书时您没有将域名解析到服务器上，会导致认证失败无法生成证书。
 
 
 ## 目录
 
-* [部署MySQL](#部署mysql)
 * [配置Nginx和HTTPS](#配置nginx和https)
+* [部署MySQL](#部署mysql)
 * [部署Ghost](#部署ghost)
 * [部署WordPress](#部署wordpress)
 * [部署ownCloud](#部署owncloud])
 * [备份数据](#备份数据)
+* [FAQ](#faq)
 
----
-
-### 部署MySQL
-
-我们先部署一个 MySQL 到服务器上，因为下面的 Ghost/WordPress/ownCloud 都需要 MySQl 用来保存数据。在配置页面只要填入 `root password` 就好，其它的配置项都不需要填。
-
-<img src="https://github.com/waylybaye/HyperApp-Guide/raw/master/images/get-start/mysql-setup.png" width="350" style="border: 1px solid #ddd;padding: 10px;" alt="MySQL 配置截图"/>
-
-#### 什么是 Link ?
-
-默认情况下docker下各应用（容器）的网络是隔离的，比如 mysql 容器里在 3306 端口监听连接，但是在其它容器里别人是访问不到3306端口的，除非把它 Publish 到主机的一个端口上，这样访问主机的某个端口就会被映射到 mysql 容器内的 3306 端口上。 
-
-但 Link 可以让容器间互相访问。  
-
-为了安全考虑建议用户不要在端口那里将容器的3306端口发布到主机端口上，防止恶意程序探测并且暴力猜密码。而是使用 Link的方法，让别的容器可以访问 MySQL。
-
-**数据库连接提示** 任何连接了 mysql 的应用在应用本身的安装界面如果要您输入数据库地址那么直接输入 `mysql` 而不是 localhost 或者 127.0.0.1 或者您的粉武器IP。
 
 ---
 
@@ -38,12 +22,9 @@
 
 ![配置Nginx截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/get-start/nginx-bundle.png "配置 Nginx 和 SSL")
 
-#### 为何要使用 Nginx ？
-
-因为 HTTP/HTTPS 服务一般共用 80/443 端口，如果您想在一个服务器上跑多个网站进程，并且将不同的域名映射到不同的后台进程上（例如WordPress/Ghost/ownCloud 各一个）那么就需要用 Nginx 做反向代理。
 
 
-#### 安装 Nginx
+### 安装 Nginx
 
 1. 前往 `Store` 安装 `nginx`
 2. 配置页面采用默认的配置分别设定HTTP/HTTPS 端口为80,443
@@ -53,7 +34,7 @@
 *Nginx 会自动监听其它应用里面设置的 `Custom Domain` 值，并自动重启服务* 所以你在新部署 Ghost/WordPress/ownCloud 后以及更改了配置后不用手动重启 `nginx`。  
 
 
-#### 安装 Nginx SSL Support
+### 安装 Nginx SSL Support
 
 1. 前往 `Store` 安装 `Nginx SSL Support`。
 2. 在设置页面确保几个 `Volumes` 的路径和 `nginx` 的设置一样，并且在下面 `Share Volumes` 中选择 `nginx` 镜像，允许访问 `nginx` 的文件系统
@@ -62,6 +43,15 @@
 *Nginx SSL Support 会自动监听其它应用里面 `SSL Support` 相关设置，并自动生成证书*，生成证书的过程会需要几分钟或者十几分钟的时间，在这个过程中你访问 https 会出现 `502 Bad Gateway` 的错误信息，稍等片刻就好。
 
 你可以查看Log获取更多信息，参考上图中最后一个截图。
+
+---
+
+
+### 部署MySQL
+
+我们先部署一个 MySQL 到服务器上，因为下面的 Ghost/WordPress/ownCloud 都需要 MySQl 用来保存数据。在配置页面只要填入 `root password` 就好，其它的配置项都不需要填。
+
+<img src="https://github.com/waylybaye/HyperApp-Guide/raw/master/images/get-start/mysql-setup.png" width="350" style="border: 1px solid #ddd;padding: 10px;" alt="MySQL 配置截图"/>
 
 ---
 
@@ -143,5 +133,20 @@ Public Port: 是绕过 nginx 直接对外提供服务的端口，如果您不需
 这样会备份所有应用的数据（如果你没有改应用 `Volume` 的主机路径的话）如果你只想备份某几个应用的数据则可以把对应应用的 `Volume` 设置到 ownCloud 的子目录下。
 
 
+## FAQ
+
+#### 为何要使用 Nginx ？
+
+因为 HTTP/HTTPS 服务一般共用 80/443 端口，如果您想在一个服务器上跑多个网站进程，并且将不同的域名映射到不同的后台进程上（例如WordPress/Ghost/ownCloud 各一个）那么就需要用 Nginx 做反向代理。
+
+#### 什么是 Link ?
+
+默认情况下docker下各应用（容器）的网络是隔离的，比如 mysql 容器里在 3306 端口监听连接，但是在其它容器里别人是访问不到3306端口的，除非把它 Publish 到主机的一个端口上，这样访问主机的某个端口就会被映射到 mysql 容器内的 3306 端口上。 
+
+但 Link 可以让容器间互相访问。  
+
+为了安全考虑建议用户不要在端口那里将容器的3306端口发布到主机端口上，防止恶意程序探测并且暴力猜密码。而是使用 Link的方法，让别的容器可以访问 MySQL。
+
+**数据库连接提示** 任何连接了 mysql 的应用在应用本身的安装界面如果要您输入数据库地址那么直接输入 `mysql` 而不是 localhost 或者 127.0.0.1 或者您的粉武器IP。
 
 

@@ -3,9 +3,11 @@
 
 [English version](./README.md) | 中文版
 
-## HyperApp 是什么
+### HyperApp 简介
 
 HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在 Store 页面点击任意应用，将其部署到您的服务器上。
+
+同时 HyperApp 可以帮助您随时查看服务器运行状态，以及通过SSH终端随时随地登录到服务器上进行操作。
 
 [![HyperApp on AppStore](https://linkmaker.itunes.apple.com/assets/shared/badges/zh-chs/appstore-lrg.svg "View on App Store")](https://itunes.apple.com/app/apple-store/id1179750280?pt=118260435&ct=guide&mt=8)
 
@@ -13,17 +15,18 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 
 ## 目录
 * 新手教程
-    * [新手教程：如何添加服务器(Linode/Vultr/GCE/AWS等)](./Add-Server_zh.md)
+    * [新手教程：如何添加服务器 (Linode/Vultr/GCE/AWS等)](./Add-Server_zh.md)
     * [新手教程：如何一键搭建支持 https 的网站](./Get-Started_zh.md)
     * [新手教程：如何一键科学上网](./g-f-w.md)
     * [新手教程：如何添加 GCE 和 AWS 的服务器](./cloud.md)
 * [使用须知](#使用须知)
     * [支持的系统](#支持的 Linux 系统)
-* [管理服务器](#管理服务器)
-* [管理应用](#管理应用)
-    * [添加应用](#添加应用)
-    * [部署应用](#部署应用)
-* [商店应用](#商店应用)
+* [HyperApp 应用功能](#hyperapp)
+    * [管理服务器](#管理服务器)
+    * [管理应用](#管理应用)
+        * [添加应用](#添加应用)
+        * [部署应用](#部署应用)
+    * [商店应用](#商店应用)
 * [常见问题](#常见问题)
 
 ---
