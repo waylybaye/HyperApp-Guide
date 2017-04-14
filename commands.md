@@ -8,7 +8,7 @@
 cat /proc/loadavg | awk '{print $1}'
 
 # CPU count
-getconf _NPROCESSORS_ONLN || grep -c ^processor /proc/cpuinfo'
+getconf _NPROCESSORS_ONLN || grep -c ^processor /proc/cpuinfo
 
 # Memory
 free | grep Mem | awk '{print $2,$3}'
