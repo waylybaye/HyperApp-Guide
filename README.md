@@ -1,7 +1,7 @@
 
 # HyperApp 用户手册
 
-[English version](./README.md) | 中文版
+[English version](./README_en.md) | 中文版
 
 ### HyperApp 简介
 
