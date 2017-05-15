@@ -2,10 +2,18 @@
 
 
 ## 目录
-
+* [Business](#business)
+    * [Huginn: 打造你自己的 IFTTT 服务](#Huginn)
 * [娱乐](#娱乐)
     * [EFB: 代收微信消息的 Telegram 机器人](#efb)
     * [Thunder xware：迅雷远程下载](#thunder-xware)
+
+
+## Business
+
+### Huginn
+
+安装后默认账号: `admin` 密码: `password`
 
 
 ## 娱乐
