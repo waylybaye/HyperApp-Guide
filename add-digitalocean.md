@@ -1,4 +1,4 @@
-由于digitalocean使用密码的话会要求改密，很麻烦而且还会给发邮件所以有下面这段话
+由于digitalocean使用密码的话会要求改密码，感觉很麻烦而且还会给发邮件
 
 
 # 注册digitalocean账号
