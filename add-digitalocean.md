@@ -32,7 +32,10 @@ name 随意输入
 在host位置 输入 ip:
 端口 ：22 （如果没改的话）
 用户名 root （默认）
-![](9https://github.com/aiastia/HyperApp-Guide/blob/master/images/%E4%B8%BE%E4%B8%AA%E6%A0%97%E5%AD%90.png)
+
+![](https://github.com/aiastia/HyperApp-Guide/blob/master/images/%E4%B8%BE%E4%B8%AA%E6%A0%97%E5%AD%90.png)
+
+
 
 然后 key 选择刚刚添加的key的私钥就可以（如果没有密码的话，有密码的话要输入密码）
 
