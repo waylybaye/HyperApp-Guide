@@ -20,7 +20,7 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
     * [新手教程：如何一键科学上网](./g-f-w.md)
     * [新手教程：如何添加 GCE 和 AWS 的服务器](./cloud.md)
 * [使用须知](#使用须知)
-    * [支持的系统](#支持的 Linux 系统)
+    * [支持的系统](#支持的-linux-系统)
 * [商店应用配置](./Apps_zh.md)
     * [Huginn: 打造自己的IFTTT服务](./Apps_zh.md#huginn)
     * [EFB: 接收微信消息并转发到 Telegram](./Apps_zh.md#efb)    
@@ -40,11 +40,13 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 
 #### 支持的 Linux 系统
 
+注意，这里所说的支持是指自动安装docker支持的系统，如果你使用其它系统（如 FreeBSD, Gentoo等），你可以自己安装 docker，HyperApp 会自动检测 docker 是否安装，如果已经安装则使用已有的 docker。
+
 * Docker 只支持64位系统，且内核版本 >= 3.10
 * Ubuntu 14，16 ✅
 * CentOS 7 ✅
 * Debian 8 ✅
-* CentOS 6 ⚠️ 
+* CentOS 6 ⚠️ （docker 容器资源监控不支持）
 * 不支持 OpenVZ ❌
 
 注：CentOS 6 也是支持的，但是有些厂商自带的内核版本较低导致不支持 Docker  
@@ -54,15 +56,6 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 **为什么不支持 OpenVZ ？**  
 因为 OpenVZ 支持的内核版本太低，不支持 Docker 所以，HyperApp 不支持 OpenVZ 的主机。
 
-<!--
-#### 测试过的厂商
-
-* Google CloudEngine
-* AWS EC2
-* Linode (支持 CentOS6)
-* Vultr
-* DigitalOcean
--->
 ---
 
 ### 管理服务器
