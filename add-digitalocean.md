@@ -1,10 +1,13 @@
-# 注册账号
+由于digitalocean使用密码的话会要求改密，很麻烦而且还会给发邮件所以有下面这段话
+
+
+# 注册digitalocean账号
 
 可以通过邀请链接注册，可以获得10刀优惠卷
 
 我的邀请链接 ：https://m.do.co/c/d94a5428b233
 
-# 登陆账号配置KEy（默认你已经有公钥和私钥了，并自己把私钥添加到HyperApp）
+# 登陆digitalocean账号配置KEy（默认你已经有公钥和私钥了，并自己把私钥添加到HyperApp）
 
 登陆成功后 点击头像 下来 选择 settings——security
 
