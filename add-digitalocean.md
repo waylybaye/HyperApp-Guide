@@ -73,3 +73,5 @@ ps：吐槽一下 有的社交软件复制密钥的话会被****。可以用邮�
 # 如果你不想新建服务器而在原有基础上添加ssh 密钥登陆 请访问 
 
 https://github.com/aiastia/key
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />本著作係採用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">創用 CC 姓名標示-非商業性-相同方式分享 4.0 國際 授權條款</a>授權.
