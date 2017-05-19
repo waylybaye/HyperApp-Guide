@@ -10,7 +10,7 @@
 另外可以去 https://codeanywhere.com 注册个账号 可以获得一个20刀的优惠码
 
 当然如果有github 学生包的话可以得到50刀的兑换码。（我猜你们是没有这个）
-# 创建key 
+## 创建key 
 
 可以在自己已有vps创建也可以 用xshell创建
 
@@ -20,7 +20,7 @@
 
 至于细节的地方请自己谷歌/百度，如果实在不会生成提供付费付费
 
-# 登陆digitalocean账号配置KEy
+## 登陆digitalocean账号配置KEy
 
 登陆成功后 点击头像 下来 选择 settings——security
 
@@ -46,7 +46,7 @@
 
 等待服务器创建完毕
 
-# 把服务器添加到HyperApp
+## 把服务器添加到HyperApp
 
 打开HyperApp添加服务器
 输入：
@@ -69,6 +69,15 @@ host 输入 ip（服务器创建完毕会看见的）
 
 ps：吐槽一下 有的社交软件复制密钥的话会被****。可以用邮件的形式发送 .
 
+
+# vultr
+
+如果是vultr的话登陆后有个sshkeys，和上面内容差不多 。
+
+# 其他
+
+原理是一样的，没有其他的vps 写不了
+![](https://github.com/aiastia/HyperApp-Guide/blob/master/images/vultr.PNG)
 
 # 如果你不想新建服务器而在原有基础上添加ssh 密钥登陆 请访问 
 
