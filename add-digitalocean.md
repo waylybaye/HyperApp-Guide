@@ -74,10 +74,13 @@ ps：吐槽一下 有的社交软件复制密钥的话会被****。可以用邮�
 
 如果是vultr的话登陆后有个sshkeys，和上面内容差不多 。
 
+![](https://github.com/aiastia/HyperApp-Guide/blob/master/images/vultr.PNG)
+
+
 # 其他
 
 原理是一样的，没有其他的vps 写不了
-![](https://github.com/aiastia/HyperApp-Guide/blob/master/images/vultr.PNG)
+
 
 # 如果你不想新建服务器而在原有基础上添加ssh 密钥登陆 请访问 
 
