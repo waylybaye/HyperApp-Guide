@@ -1,7 +1,7 @@
 
 # HyperApp Manual
 
-English version | [中文版](./README_zh.md)
+English version | [中文版](../README.md)
 
 
 
