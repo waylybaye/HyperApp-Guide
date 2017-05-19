@@ -27,10 +27,12 @@
  会发现   
  `add ssh key`
  单机输入自己的ssh 的公钥key
-![](https://github.com/aiastia/HyperApp-Guide/blob/master/images/%E5%85%AC%E9%92%A5.PNG)
+
 ![](https://github.com/aiastia/HyperApp-Guide/blob/master/images/security.PNG)
 
 ![](https://github.com/aiastia/HyperApp-Guide/blob/master/images/addsshkey.PNG)
+
+![](https://github.com/aiastia/HyperApp-Guide/blob/master/images/%E5%85%AC%E9%92%A5.PNG)
 
 然后去新建服务器了 选择适合的配置和价格后
 
