@@ -74,7 +74,7 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 * Linode/Vultr/DigitalOcean 等厂商一般可以使用 root 账号和密码直接登录
 * 如果您使用 Google CloudEngine 或者 AWS EC2 等默认禁止 root 登录的账号，请查看下面的教程怎样配置私钥登录，然后重复上面的第3步骤在 HyperApp 中链接。
 
-[查看添加服务器的新手教程](./Add-Server_zh.md)  
+[查看添加服务器的新手教程](./zh/Add-Server.md)  
 
 ---
 
