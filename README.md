@@ -1,7 +1,7 @@
 
 # HyperApp 用户手册
 
-[English version](./README_en.md) | 中文版
+[English version](./en/README.md) | 中文版
 
 ### HyperApp 简介
 
@@ -15,18 +15,21 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 
 ## 目录
 * 新手教程
+
     * [新手教程：如何添加服务器 (Linode/Vultr/GCE/AWS等)](./Add-Server_zh.md)
     * [新手教程：如何一键搭建支持 https 的网站](./Get-Started_zh.md)
     * [新手教程：如何一键科学上网](./g-f-w.md)
     * [新手教程：如何添加 GCE 和 AWS 的服务器](./cloud.md)
     * [新手教程：如何添加digitalocean的服务器](./add-digitalocean.md)
     
+
+
 * [使用须知](#使用须知)
     * [支持的系统](#支持的-linux-系统)
-* [商店应用配置](./Apps_zh.md)
-    * [Huginn: 打造自己的IFTTT服务](./Apps_zh.md#huginn)
-    * [EFB: 接收微信消息并转发到 Telegram](./Apps_zh.md#efb)    
-    * [Thunder xware: 迅雷远程下载](./Apps_zh.md#thunder-xware)
+* [商店应用配置](./zh/Apps.md)
+    * [Huginn: 打造自己的IFTTT服务](./zh/Apps.md#huginn)
+    * [EFB: 接收微信消息并转发到 Telegram](./zh/Apps.md#efb)    
+    * [Thunder xware: 迅雷远程下载](./zh/Apps.md#thunder-xware)
 * [HyperApp 应用功能](#hyperapp)
     * [管理服务器](#管理服务器)
     * [管理应用](#管理应用)
@@ -76,7 +79,7 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 * Linode/Vultr/DigitalOcean 等厂商一般可以使用 root 账号和密码直接登录
 * 如果您使用 Google CloudEngine 或者 AWS EC2 等默认禁止 root 登录的账号，请查看下面的教程怎样配置私钥登录，然后重复上面的第3步骤在 HyperApp 中链接。
 
-[查看添加服务器的新手教程](./Add-Server_zh.md)  
+[查看添加服务器的新手教程](./zh/Add-Server.md)  
 
 ---
 

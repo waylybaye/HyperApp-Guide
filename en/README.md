@@ -1,7 +1,7 @@
 
 # HyperApp Manual
 
-English version | [中文版](./README_zh.md)
+English version | [中文版](../README.md)
 
 
 
@@ -72,8 +72,6 @@ Click the plus button to add your own server:
 
 2. If you authenticate using pubkey, then please copy the private key content to your phone and click "Paste Privatekey from Clipboard", fill the `passhprase` too if your private key is crypted.
 
-
-[查看如何配置 Google CloudEngine 和 AWS](./cloud.md)  
 
 ---
 
