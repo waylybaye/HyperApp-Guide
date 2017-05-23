@@ -2,7 +2,12 @@
 
 开发者精力有限，很难有时间添加各类相关的文档，但是文档对于新手来说又是不可或缺的，为了完善 HyperApp 相关的文档，开发者决定凡是参与编写文档的贡献者均赠送至少一枚 HyperApp 兑换码作为感谢。具体所需要添加的文档以及要求请看下文。
 
+先Fork本仓库，编写文章完成后，提交PR到主仓库。文章版权归贡献者所有，但自动授予开发者在 HyperApp 相关的文档、社交账号里任意修改、发布的权利。
+
+
 ### 文档格式
+
+需要是图文教程，每一步都要有截图。
 
 1. 统一使用 `Markdown` 文件，请参阅 [Github 官方的 Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 1. 不要更改 README 首页文件，我会在首页添加链接
@@ -13,7 +18,7 @@
 ## 任务列表
 
 
-### 厂商使用
+### 厂商使用教程
 
 讲述各厂商如何创建服务器并添加到 HyperApp 中，同时文档要面向非技术用户。
 
@@ -27,13 +32,37 @@
 
 文档放在 `语言/vendors` 下面。比如 Linode 放在 `zh/vendors/Linode.md`，图片放在 `zh/vendors/images/Linode-1.png`。
 
-- [ ] Google Cloud Engine 
+- [x] Google Cloud Engine 
 - [ ] Amazon AWS
 - [ ] Vultr 
 - [ ] Digital Ocean 
 - [ ] Linode
+- [ ] 搬瓦工（需要说明如何分辨 OpenVZ 和 KVM，并且声明 Docker 不支持 OpenVZ 的主机）
+- [ ] 樱花
+
+---
+
+### 应用使用教程
+
+所有可以使用 Nginx 和 SSL 的应用，都需要介绍 Nginx 和 SSL 的配置，可以复制下面这段话：
+
+```md
+### Nginx 和自动 SSL 证书
+
+如果你需要在同一个服务器上部署多个应用，那么需要配置 Nginx 将不同域名的请求代理到不同的应用上。你可以点击“显示Nginx 和SSL设置"。填入设置并且将应用安装到主机上后，并不需要重启 Nginx 和 Nginx SSL Support，会自动检测。
+
+首先需要在目标机器上安装 `Nginx` 和 `Nginx SSL Support`。
+
+Nginx 配置：
+1. 域名：填入要访问的域名，比如是博客的话可以填入 blog.xx.com 
+2. 端口：这个是反向代理的端口，不填的话会自动检测，如果自动检测失败，那么可以填写Docker容器中expose出来的那个端口。
+
+SSL 配置：
+1. 域名：填入要支持SSL的域名，一般情况下需要与上面的域名一样。
+2. 邮箱：
+```
 
 
-### 应用
-
+- [ ] Resilio Sync 如何安装。客户端如何安装。
+- [ ] 
 
