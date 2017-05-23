@@ -2,12 +2,22 @@
 
 
 ## 目录
+* [网络](#网络)
+    * [SS: TCP Fast Open 和 OBFS](#shadowsocks-libev)
 * [Business](#business)
     * [Huginn: 打造你自己的 IFTTT 服务](#Huginn)
 * [娱乐](#娱乐)
     * [EFB: 代收微信消息的 Telegram 机器人](#efb)
     * [Thunder xware：迅雷远程下载](#thunder-xware)
 
+## 网络
+
+### Shadowsocks-libev
+
+**TCP Fast Open**
+默认配置就是开启的，在Surge 中需要配置 `,tfo=true`
+
+---
 
 ## Business
 

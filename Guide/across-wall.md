@@ -18,7 +18,7 @@
 
 ### 注册 GCP 免费使用
 
-[图Free首页][图确认页面]
+![](./images/gce/1-free-tier.png) ![](./images/gce/1-intro.png)   
 
 1. 登录Google账号后使用这个链接来注册 https://cloud.google.com/free/ ，在打开的页面中点击“Try it Free"。
 2. 接受条款，并点击”同意并继续“
@@ -29,15 +29,20 @@
     * 点击 ”开始免费使用“ 完成注册
 
 ### 新建主机
-[图1]
+
+![](./images/gce/2-vms-nav.png)
 
 按照上图所示，在左侧菜单中导航到 [计算引擎 → VM 实例](https://console.cloud.google.com/compute/instances)
 
 
-[图2]
+![](./images/gce/2-vms.png)
+
 点击加号按钮，创建一个 VM 实例。
 
-[图3]
+![](./images/gce/2-create-vm.png)
+
+![](./images/gce/2-create-vm-firewall.png)
+
 
 * 名称：随意填入一个易记得名字
 * 地区：建议选择 `asia-east1-*` 三个中的任意一个，这个机房是在台湾，国内的延迟只有 50~70ms，简直快到飞起。
