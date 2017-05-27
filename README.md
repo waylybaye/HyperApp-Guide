@@ -15,6 +15,7 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 
 ## 目录
 * 新手教程
+    * [如何免费打造打造一个安全稳定低延迟超高速的科学上网环境](./Guide/across-wall.md)
     * [新手教程：如何添加服务器 (Linode/Vultr/GCE/AWS等)](./zh/Add-Server.md)
     * [新手教程：如何一键搭建支持 https 的网站](./zh/Get-Started.md)
     * [新手教程：如何一键科学上网](./zh/GFW.md)
