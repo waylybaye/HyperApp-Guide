@@ -1,5 +1,5 @@
 # 使用HyperApp简单的搭建和管理自己的Minecraft服务器
----
+
 
 这篇教程将会告诉你，如何使用HyperApp部署自己的Minecraft服务器，以及如何使用GCP的SSH Web终端来管理服务器的配置。
 
@@ -138,3 +138,5 @@ Public Port —— 服务器端口 （链接服务器时使用的端口）
 > - 如果链接服务器之后，提示 `name = null` 这个错误，说明你没有关闭正版验证，请回顾教程
 > - 如果关闭了正版验证，还是无法链接服务器，请检查防火墙是不是没有设置25565端口的通信，设置方法[看这里](https://github.com/waylybaye/HyperApp-Guide/blob/master/Guide/across-wall.md#设置-gce-防火墙)
 > - 请注意客户端版本和服务器版本一致性的问题，版本不一致也可能会导致链接问题
+
+
