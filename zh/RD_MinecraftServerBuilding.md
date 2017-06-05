@@ -80,17 +80,17 @@ Public Port —— 服务器端口 （链接服务器时使用的端口）
 1. 首先访问自己的[实例管理页面](:https://console.cloud.google.com/)
 2. 选择自己的VM实例
     <!--VM实例选择截图-->
-        ![GCP_VM](../images/RD_MinecraftServerBuilding/GCP_VM.png)
+![GCP_VM](../images/RD_MinecraftServerBuilding/GCP_VM.png)
 3. 在浏览器窗口中打开SSH
     <!--SSH Web终端载入页面截图-->
-        ![GCP_open_ssh](../images/RD_MinecraftServerBuilding/GCP_OPEN_SSH.png)
+![GCP_open_ssh](../images/RD_MinecraftServerBuilding/GCP_OPEN_SSH.png)
 4. 经过短（实际上看网络状态）时间的等待之后，你会看见这个页面
     <!--Web 终端起始页面-->
-        ![ssh_login](../images/RD_MinecraftServerBuilding/GCP_SSH_LOGIN.png)
+![ssh_login](../images/RD_MinecraftServerBuilding/GCP_SSH_LOGIN.png)
 5. 此时，我们**可以**使用root身份来进行后续操作，**也可以**在必要的时候进行`$ sudo`操作，本教程中，将会使用root身份进行操作
 6. 首先我们使用命令 `$ sudo -i`进入root身份，此时可以注意到终端变化
     <!--sudo -i-->
-        ![ssh_sudo_i](../images/RD_MinecraftServerBuilding/GCP_SSH_SUDO_I.png)
+![ssh_sudo_i](../images/RD_MinecraftServerBuilding/GCP_SSH_SUDO_I.png)
 7. 然后我们进入Minecraft的服务器存放目录，由于使用的是默认配置，所以命令应该是一样的.
 
         $ cd /..
