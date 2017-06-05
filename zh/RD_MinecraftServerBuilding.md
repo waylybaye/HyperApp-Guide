@@ -97,31 +97,31 @@ Public Port —— 服务器端口 （链接服务器时使用的端口）
         $ cd srv/docker/Minecraft-Server/
 8. 此时我们就已经进入了Minecraft服务器的目录，通过`$ ls`命令，可以看到服务器有这些文件
     <!--ls列表截图-->
-        ![ssh_ls](../images/RD_MinecraftServerBuilding/GCP_SSH_LS.png)
+![ssh_ls](../images/RD_MinecraftServerBuilding/GCP_SSH_LS.png)
 9. 我们需要配置的文件是`server.properties`，在这里，使用`vim`命令来编辑这个文件 （使用`vim`完全是因为我觉得这个比较顺手，如果有编程基础知道其他命令的并不一定要用`vim`）
 
         $ vim server.properties
 
 10. 此时终端会进入`vim`模式，应该显示成这样
     <!--VIM界面截图-->
-        ![vim](../images/RD_MinecraftServerBuilding/GCP_SSH_VIM.png)
+![vim](../images/RD_MinecraftServerBuilding/GCP_SSH_VIM.png)
 11. 如果想使用盗版MC链接服务器，那么服务器需要关闭正版验证，在键盘上按下`i`键进入`INSERT`模式，注意低端文字的变化
     <!--INSERT截图-->
-        ![vim_insert](../images/RD_MinecraftServerBuilding/GCP_SSH_VIM_INSERT.png)
+![vim_insert](../images/RD_MinecraftServerBuilding/GCP_SSH_VIM_INSERT.png)
 12. 我们需要修改的地方是这里，将`online-mode=`的`TRUE`更改为`false`来关闭正版验证，用`方向键`移动光标，把
     <!--online-mode=TRUE-->
-        ![vim_onlinemode_ture](../images/RD_MinecraftServerBuilding/GCP_SSH_VIM_ONLINEMODE_TRUE.png)
-        改成
-        ![vim_onlinemode_false](../images/RD_MinecraftServerBuilding/GCP_SSH_VIM_ONLINEMODE_FALSE.png)
+![vim_onlinemode_ture](../images/RD_MinecraftServerBuilding/GCP_SSH_VIM_ONLINEMODE_TRUE.png)
+改成
+![vim_onlinemode_false](../images/RD_MinecraftServerBuilding/GCP_SSH_VIM_ONLINEMODE_FALSE.png)
 
     <!--online-mode=false-->
 
 13. 按下键盘上的`ESC`键，并输入`:wq`来保存，并退出编辑器
     <!--:wq-->
-        ![vim_quit](../images/RD_MinecraftServerBuilding/GCP_SSH_VIM_WQ.png)
+![vim_quit](../images/RD_MinecraftServerBuilding/GCP_SSH_VIM_WQ.png)
 14. 此时我们的终端配置就完成了，输入`$ exit`退出root身份，此时会显示`logout`，然后再次输入`$ exit`来退出编辑
     <!--Logout-->
-        ![ssh_logout](../images/RD_MinecraftServerBuilding/GCP_SSH_LOGOUT.png)
+![ssh_logout](../images/RD_MinecraftServerBuilding/GCP_SSH_LOGOUT.png)
 > 退出编辑之后窗口会自动关闭，此时web终端的管理就结束了。初级教程中不对server.properties进行过多介绍。
 
 ### 利用HpyerApp重启服务器，并应用新的配置
@@ -130,7 +130,7 @@ Public Port —— 服务器端口 （链接服务器时使用的端口）
 
 1. 首先我们选择`应用`里面的服务器，然后点开菜单
     <!--菜单界面-->
-        ![hyperapp_reboot](../images/RD_MinecraftServerBuilding/HYPERAPP_ACTIONSHEET.png)
+![hyperapp_reboot](../images/RD_MinecraftServerBuilding/HYPERAPP_ACTIONSHEET.png)
 2. 选择`重启`，然后等待重启完毕即可
 
 ### 其他事项
