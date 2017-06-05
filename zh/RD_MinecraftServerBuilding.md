@@ -33,10 +33,10 @@ Public Port —— 服务器端口 （链接服务器时使用的端口）
         - adventure —— 冒险模式 （硬核一点，一旦死亡，角色就不能再被使用这样）
         - spectator —— 观光模式 （虽然没用过，不过应该是当你完成建筑之后，又不想让玩家互动的时候使用的模式吧）
     Difficulty —— 难度
-        - peaceful —— 和平 （不会刷怪）
-        - easy —— 简单
-        - normal —— 普通
-        - hard —— 困难
+        - peaceful  —— 和平 （不会刷怪）
+        - easy      —— 简单
+        - normal    —— 普通
+        - hard      —— 困难
     Whitelist —— 白名单
     Ops —— 管理员名单
 ```
