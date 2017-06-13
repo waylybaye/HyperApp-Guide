@@ -4,11 +4,15 @@
 ## 目录
 * [网络](#网络)
     * [SS: TCP Fast Open 和 OBFS](#shadowsocks-libev)
+    * [OpenConnect: Cisco AnyConnect 服务端](#openconnect)
+* [网站](#网站)
+    * [Hugo](#hugo)
 * [Business](#business)
     * [Huginn: 打造你自己的 IFTTT 服务](#Huginn)
 * [娱乐](#娱乐)
     * [EFB: 代收微信消息的 Telegram 机器人](#efb)
     * [Thunder xware：迅雷远程下载](#thunder-xware)
+
 
 ## 网络
 
@@ -17,7 +21,38 @@
 **TCP Fast Open**
 默认配置就是开启的，在Surge 中需要配置 `,tfo=true`
 
+
+### OpenConnect
+
+#### 配置界面
+
+1. Port: 填写一个端口，推荐默认的 443
+2. Domain：填写你服务器的IP即可，如果你使用域名则填写域名
+3. Username: 填入一个用户名
+4. Password: 填入一个密码
+
+Network: 默认就好
+
+#### 下载客户端
+
+* iOS/Android: 搜索 Cisco AnyConnect
+* Mac/Windows: [Cisco 官网下载地址 (需要注册)](http://www.cisco.com/c/en/us/support/security/anyconnect-secure-mobility-client/tsd-products-support-series-home.html)
+* [V2EX 网友维护的下载](https://dl.xxshe.com/)
+
+
+#### 配置客户端
+
+在客户端里输入你的 IP 或者域名点击连接，如果有安全提示可以忽略（因为我们用的自签名证书），然后输入用户名、密码连接即可。
+
+
 ---
+
+## 网站
+
+### Hugo
+
+
+
 
 ## Business
 
