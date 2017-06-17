@@ -6,6 +6,8 @@
 
 ### 应用配置及安装
 
+![](./images/v2ray.png)
+
 * Port: 端口
 * Network: 选择一种传输方式
     * tcp 使用 TCP 连接
