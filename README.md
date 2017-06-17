@@ -14,17 +14,19 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 ---
 
 ## 目录
-* 教程
+* 新手教程
     * [如何免费打造打造一个安全稳定低延迟超高速的科学上网环境](./Guide/across-wall.md)
-    * [新手教程：Vultr/Linode/AWS/阿里云 使用教程](./zh/vendors.md)
-    * [新手教程：如何添加服务器 (Linode/Vultr/GCE/AWS等)](./zh/Add-Server.md)
-    * [新手教程：如何一键搭建 WordPress/Ghost 等支持 https 的网站](./zh/Get-Started.md)
-    * [如何一键配置 V2Ray 的 VMess & HTTP & TLS 混淆（并自动生成可信的SSL证书）](./zh/V2Ray.md)
-    * [新手教程：如何一键科学上网](./zh/GFW.md)
-    * [新手教程：如何添加 GCE 和 AWS 的服务器](./zh/Add-Sever-Cloud.md)
-    * [如何使用 URL Scheme](./zh/workflow.md)
-* 用户贡献的文档
-    * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/RD_MinecraftServerBuilding.md)
+    * 如何添加服务器：
+        * [Vultr](./zh/vendors.md#vultr)
+        * [Linode](./zh/vendors.md#linode)
+        * [~~如何添加 GCE 和 AWS 的服务器 (已废弃)~~](./zh/Add-Sever-Cloud.md)
+    * 应用教程：
+        * [新手教程：如何一键搭建 WordPress/Ghost 等支持 https 的网站](./zh/Get-Started.md)
+    * 科学上网
+        * [如何一键配置 V2Ray 的 VMess & HTTP & TLS 混淆（并自动生成可信的SSL证书）](./zh/V2Ray.md)
+        * [Shadowsocks-libev 配置](./zh/GFW.md)
+    * 用户贡献的文档
+        * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/RD_MinecraftServerBuilding.md)
 * [使用须知](#使用须知)
     * [支持的系统](#支持的-linux-系统)
 * [商店应用配置](./zh/Apps.md)
@@ -37,6 +39,7 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
         * [添加应用](#添加应用)
         * [部署应用](#部署应用)
     * [商店应用](#商店应用)
+* [如何使用 URL Scheme](./zh/workflow.md)
 * [常见问题](#常见问题)
 
 ---

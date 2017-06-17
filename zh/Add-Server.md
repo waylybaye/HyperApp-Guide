@@ -20,14 +20,6 @@
 ---
 
 
-## 如何配置 Linode/Vultr/Digital Ocean 服务器？
-
-这几家服务商一般可以直接使用root密码的登录，您只要填写 `root` 账号和密码即可。
-
-注意：Digital Ocean的某些镜像在您第一次登录时需要修改密码，所以请使用其它工具登录并修改密码后再添加到 HyperApp 中
-
-
-
 ## Google Cloud Engine
 
 <!--*注：这篇文档只讲述如何链接到 GCE 而不会讲述如何创建 GCE 账号并且创建服务器。*-->
