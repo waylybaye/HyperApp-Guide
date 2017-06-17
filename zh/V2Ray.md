@@ -38,7 +38,9 @@
 * `domain.com.key`
 
 可以使用自签名的证书，当然你也可以用 `Nginx Proxy` 和 `Nginx SSL Support` 自动生成可信的 SSL 证书。只要在 `V2Ray` 下面的 `Nginx 和 SSL 配置` 中输入 `TLS Domain` 就可以自动生成 SSL 证书了！
-    
+
+
+更多的详细教程，请参考 [如何自动生成 SSL 证书](./SSL.md) 
 
 ---
 
