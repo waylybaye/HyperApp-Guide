@@ -6,7 +6,7 @@
 
 ### 应用配置及安装
 
-![](./images/v2ray.png)
+![](./images/v2ray.jpg)
 
 * Port: 端口
 * Network: 选择一种传输方式
