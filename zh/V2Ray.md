@@ -1,8 +1,10 @@
 # V2Ray VMess 以及 HTTP & TLS 教程
 
-简介：V2Ray 是另一款代理软件（省略）
+简介：V2Ray 是另一款代理软件（省略），官网 [https://www.v2ray.com/](https://www.v2ray.com/)
 
-## 配置
+## HyperApp 服务端配置
+
+### 应用配置及安装
 
 * Port: 端口
 * Network: 选择一种传输方式
@@ -34,4 +36,37 @@
 
 可以使用自签名的证书，当然你也可以用 `Nginx Proxy` 和 `Nginx SSL Support` 自动生成可信的 SSL 证书。只要在 `V2Ray` 下面的 `Nginx 和 SSL 配置` 中输入 `TLS Domain` 就可以自动生成 SSL 证书了！
     
+
+---
+
+## 客户端配置
+
+
+你可以在这里找到所有平台的客户端 [V2Ray 各平台客户端下载](https://www.v2ray.com/chapter_01/3rd_party.html) 下文以 Mac 客户端 V2RayX 为例
+
+
+### V2RayX 配置
+
+在 `V2RayX → Servers` 中添加一个服务器，如图：
+
+![](./images/v2rayx-server.png)
+
+* Address: 填入你服务器的地址 和 HyperApp 中设置的端口
+* UUID: HyperApp 中的 UUID 
+* alterId: HyperApp 中的 alterID
+* Security: 随便选，推荐默认选项
+* Network: 选择 HyperApp 中配置的选项，默认为 TCP
+
+#### HTTP 混淆 配置
+
+点击左下角的 `tranport settings` 选择 `TCP` 如图 `header type` 选择 `http` 即可开启 http 混淆
+
+![](./images/v2rayx-tcp.png)
+#### TLS 配置
+
+点击 `TLS` 标签页，选中 `Use TLS` 如果你是自签名证书也同时选中 `Allow Insecure`
+
+![](./images/v2rayx-tls.png)
+
+大功告成！
 
