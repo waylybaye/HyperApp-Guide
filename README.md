@@ -14,11 +14,12 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 ---
 
 ## 目录
-* 新手教程
+* 教程
     * [如何免费打造打造一个安全稳定低延迟超高速的科学上网环境](./Guide/across-wall.md)
     * [新手教程：Vultr/Linode/AWS/阿里云 使用教程](./zh/vendors.md)
     * [新手教程：如何添加服务器 (Linode/Vultr/GCE/AWS等)](./zh/Add-Server.md)
-    * [新手教程：如何一键搭建支持 https 的网站](./zh/Get-Started.md)
+    * [新手教程：如何一键搭建 WordPress/Ghost 等支持 https 的网站](./zh/Get-Started.md)
+    * [如何一键配置 V2Ray 的 VMess & HTTP & TLS 混淆（并自动生成可信的SSL证书）](./zh/V2Ray.md)
     * [新手教程：如何一键科学上网](./zh/GFW.md)
     * [新手教程：如何添加 GCE 和 AWS 的服务器](./zh/Add-Sever-Cloud.md)
     * [如何使用 URL Scheme](./zh/workflow.md)
