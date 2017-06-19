@@ -23,7 +23,8 @@
 
 ### 注册 GCP 免费试用
 
-![](./images/gce/1-free-tier.png) ![](./images/gce/1-intro.png)   
+<img src='./images/gce/1-free-tier.png' width="414" /> <img src='./images/gce/1-intro.png' width="414" />
+   
 
 1. 登录Google账号后使用这个链接来注册 https://cloud.google.com/free/ ，在打开的页面中点击“Try it Free"。
 2. 接受条款，并点击”同意并继续“
