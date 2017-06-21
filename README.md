@@ -23,6 +23,7 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
     * 应用教程：
         * [如何自动生成 SSL 证书](./zh/SSL.md)
         * [如何搭建 WordPress/Ghost 等支持 https 的网站](./zh/Get-Started.md)
+        * [Jekyll 和 Hugo 的使用](./zh/static-site.md)
     * 科学上网
         * [如何一键配置 V2Ray 的 VMess & HTTP & TLS 混淆（并自动生成可信的SSL证书）](./zh/V2Ray.md)
         * [Shadowsocks-libev 配置](./zh/GFW.md)
