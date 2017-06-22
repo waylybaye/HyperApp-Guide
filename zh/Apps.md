@@ -7,6 +7,7 @@
     * [OpenConnect: Cisco AnyConnect 服务端](#openconnect)
 * [网站](#网站)
     * [Hugo](#hugo)
+    * [Flarum](#flarum)
 * [Business](#business)
     * [Huginn: 打造你自己的 IFTTT 服务](#Huginn)
 * [娱乐](#娱乐)
@@ -56,9 +57,22 @@ Network: 默认就好
 
 ## 网站
 
-### Hugo
+### Flarum
 
+#### 配置
 
+Database
+* Host: 如果你下面 Link Containers 选择了 MySQL 这里就填 `mysql` 要是你连接外部 MySQL 就填外部 MySQL 地址
+* Username：数据库用户名
+* Password：数据库密码
+* Database：数据库名（注意你需要自己建数据库，Flarum 不会自动穿件）
+
+Link Containers:
+mysql: 选择一个 MySQL 或者 MariaDB
+
+#### 安装
+
+安装后，通过域名或者 IP 打开，会出现安装的界面，在数据库中填入上面同样的配置，即可。
 
 
 ## Business
