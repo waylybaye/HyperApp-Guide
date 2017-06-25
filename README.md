@@ -29,10 +29,13 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
         * [Shadowsocks-libev 配置](./zh/GFW.md)
     * 用户贡献的文档
         * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/RD_MinecraftServerBuilding.md)
+    * 系统教程
+        * [CentOS 如何手动升级 Docker 版本](./zh/centos-upgrade-docker.md)
 * [使用须知](#使用须知)
     * [支持的系统](#支持的-linux-系统)
 * [商店应用配置](./zh/Apps.md)
     * [Huginn: 打造自己的IFTTT服务](./zh/Apps.md#huginn)
+    * [Flarum: 一个漂亮的论坛应用](./zh/Apps.md#flarum)
     * [EFB: 接收微信消息并转发到 Telegram](./zh/Apps.md#efb)    
     * [Thunder xware: 迅雷远程下载](./zh/Apps.md#thunder-xware)
 * [HyperApp 应用功能](#hyperapp)
