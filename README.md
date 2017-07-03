@@ -23,7 +23,7 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
    * [~~如何添加 GCE 和 AWS 的服务器 (已废弃)~~](./zh/Add-Sever-Cloud.md)
 * 应用教程
    * [如何自动生成 SSL 证书](./zh/SSL.md)
-   * [如何搭建 WordPress/Ghost 等支持 https 的网站](./zh/Get-Started.md)
+   * [如何搭建 MySQL/WordPress/Ghost/ownCloud 等支持 https 的网站](./zh/Get-Started.md)
    * [Jekyll 和 Hugo 的使用](./zh/static-site.md)
 * 科学上网
    * [SSR 教程](./zh/SSR.md)
