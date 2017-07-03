@@ -21,7 +21,7 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
    * [Vultr](./zh/vendors.md#vultr)
    * [Linode](./zh/vendors.md#linode)
    * [~~如何添加 GCE 和 AWS 的服务器 (已废弃)~~](./zh/Add-Sever-Cloud.md)
-* 应用教程：
+* 应用教程
    * [如何自动生成 SSL 证书](./zh/SSL.md)
    * [如何搭建 WordPress/Ghost 等支持 https 的网站](./zh/Get-Started.md)
    * [Jekyll 和 Hugo 的使用](./zh/static-site.md)
@@ -32,8 +32,6 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
    * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/RD_MinecraftServerBuilding.md)
 * 系统教程
    * [CentOS 如何手动升级 Docker 版本](./zh/centos-upgrade-docker.md)
-
-        
 * [商店应用配置](./zh/Apps.md)
     * [Huginn: 打造自己的IFTTT服务](./zh/Apps.md#huginn)
     * [Flarum: 一个漂亮的论坛应用](./zh/Apps.md#flarum)
