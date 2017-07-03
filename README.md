@@ -18,17 +18,18 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 
 * [如何免费打造打造一个安全稳定低延迟超高速的科学上网环境](./Guide/across-wall.md)
 * 如何添加服务器：
-   * [Vultr](./zh/vendors.md#vultr)
-   * [Linode](./zh/vendors.md#linode)
-   * [~~如何添加 GCE 和 AWS 的服务器 (已废弃)~~](./zh/Add-Sever-Cloud.md)
+    * [Vultr](./zh/vendors.md#vultr)
+    * [Linode](./zh/vendors.md#linode)
+    * [~~如何添加 GCE 和 AWS 的服务器 (已废弃)~~](./zh/Add-Sever-Cloud.md)
 * 应用教程
-   * [如何自动生成 SSL 证书](./zh/SSL.md)
-   * [如何搭建 MySQL/WordPress/Ghost/ownCloud 等支持 https 的网站](./zh/Get-Started.md)
-   * [Jekyll 和 Hugo 的使用](./zh/static-site.md)
+    * [如何自动生成 SSL 证书](./zh/SSL.md)
+    * [如何搭建 MySQL/WordPress/Ghost/ownCloud 等支持 https 的网站](./zh/Get-Started.md)
+    * [Jekyll 和 Hugo 的使用](./zh/static-site.md)
 * 科学上网
-   * [SSR 教程](./zh/SSR.md)
-   * [V2Ray 教程](./zh/V2Ray.md)
-   * [Shadowsocks-libev 教程](./zh/GFW.md)
+    * [综述：如何选择主机商和代理软件？](./zh/gfw.md)
+    * [SSR 教程](./zh/SSR.md)
+    * [V2Ray 教程](./zh/V2Ray.md)
+    * [Shadowsocks-libev 教程](./zh/ss-libev.md)
 * 用户贡献的文档
    * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/RD_MinecraftServerBuilding.md)
 * 系统教程
