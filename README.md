@@ -27,9 +27,11 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
     * [Jekyll 和 Hugo 的使用](./zh/static-site.md)
 * 科学上网
     * [综述：如何选择主机商和代理软件？](./zh/GFW.md)
+    * [各类 VPN: IPSec，OpenVPN, OpenConnect 教程](./zh/VPN.md)
     * [SSR 教程](./zh/SSR.md)
     * [V2Ray 教程](./zh/V2Ray.md)
     * [Shadowsocks-libev 教程](./zh/ss-libev.md)
+    * [使用 nghttpx 搭建 HTTPS Proxy (HTTP2) ](./zh/nghttpx.md)
 * 用户贡献的文档
    * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/RD_MinecraftServerBuilding.md)
 * 系统教程
