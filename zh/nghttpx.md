@@ -25,6 +25,11 @@ nghttpx 是一个 HTTP2 代理，HTTP2 是新一代的 HTTP 协议，但一些�
 
 ## 客户端
 
+### Surge
+
+```
+nghttpx = https, DOMAIN, 端口,
+```
 
 
 
