@@ -30,7 +30,14 @@ SSL 证书的获取你可以参考 [如何自动生成可信的SSL证书](./SSL.
 * Volumes - certs: SSL 证书的存放目录，应该包含上面所填写的 Domain 的两个文件: Domain.key 和  Domain.crt
 * Link Containers - backend: 这儿可以选择上面创建的 squid 
 
+安装即可，然后你就有一个非常安全的 HTTPS 代理了。开始配置客户端吧。
+
 ## 客户端
+
+### Chrome
+
+Chrome 支持HTTP2，可以使用 Proxy SwitchyOmega 来使用
+
 
 ### Surge
 
