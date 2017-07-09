@@ -4,16 +4,23 @@ nghttpx 是一个 HTTP2 代理，HTTP2 是新一代的 HTTP 协议，但一些�
 
 具体请求流程是：
 
-| 你的浏览器 |  → http2 协议 → | nghttpx | → | http(1.x) proxy | → | 你要访问的网站 |
+| 国内网络 | 墙 | VPS | 自由网络 | 目标网站
+| --- | :---: | --- | :---: | --- |
+| 你的浏览器 |  → （加密）HTTP2 → | nghttpx → squid | → HTTP(S) → | 目标网站 |
 
 ## 服务器安装和配置
 
 ### 配置 squid
+<img src="./images/squid.jpg" width="450" />
 
 在商店中选择 `squid` 并创建，无需填写任何选项（端口也不用填）安装即可。
 
 
 ### 配置 nghttpx
+
+<img src="./images/nghttpx.jpg" width="450" />
+
+SSL 证书的获取你可以参考 [如何自动生成可信的SSL证书](./SSL.md)，如果使用自签名证书你需要在客户端导入CA。
 
 * Port: 代理端口
 * Disable TLS: 是否禁用 TLS，不禁用的话就必须填写 SSL 参数以及提供 SSL 证书。
