@@ -15,6 +15,18 @@ nghttpx 是一个 HTTP2 代理，HTTP2 是新一代的 HTTP 协议，但一些�
 
 在商店中选择 `squid` 并创建，无需填写任何选项（端口也不用填）安装即可。
 
+**注意，如果 Squid 无法启动，日志中显示 `FATAL xcalloc: Uable to allocate ***` 时，这是内存不足引起的错误。你可以尝试添加交互分区来解决。
+
+```sh
+sudo su
+touch /var/swap.img
+dd if=/dev/zero of=/var/swap.img bs=1024k count=1000
+mkswap /var/swap.img
+swapon /var/swap.img
+```
+
+然后重启 Squid 即可。
+
 
 ### 配置 nghttpx
 
