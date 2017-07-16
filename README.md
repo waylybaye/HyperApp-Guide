@@ -33,6 +33,7 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
     * [Shadowsocks-libev 教程](./zh/ss-libev.md)
     * [使用 nghttpx 搭建 HTTPS Proxy (HTTP2) ](./zh/nghttpx.md)
     * [使用 kcptun 加速上面所有的服务](./zh/kcptun.md)
+    * [ss-panel 安装教程](./zh/sspanel.md)
 * 用户贡献的文档
    * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/RD_MinecraftServerBuilding.md)
 * 系统教程
