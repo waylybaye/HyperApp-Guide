@@ -1,5 +1,5 @@
 ## 1.使用ssh登陆你的阿里云服务器
-## 2.参考这篇文档来安装你的docker服务器:
+## 2.安装docker服务，具体请自行搜索
 ## 3.使用阿里云docker镜像加速服务
 1. 访问：https://dev.aliyun.com/search.html
 1. 点击右上角的管理中心选项
