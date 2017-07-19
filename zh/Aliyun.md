@@ -1,26 +1,6 @@
 ## 1.使用ssh登陆你的阿里云服务器
 ## 2.参考这篇文档来安装你的docker服务器:
-https://github.com/waylybaye/HyperApp-Guide/blob/master/zh/centos-upgrade-docker.md
-### 概况一下要点（嫌麻烦的人可以直接复制回车就好）
-##### 另外下文代码中的sudo，在使用root权限登陆时可以省略
-###### 安装Docker的依赖
-`sudo yum install -y yum-utils device-mapper-persistent-data lvm2`
-###### 安装Docker官方仓库
-```
-sudo yum-config-manager \
-    --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo
-```
-###### 更新仓库源
-`sudo yum makecache fast`
-###### 从仓库安装Docker-CE
-`sudo yum install docker-ce`
-###### 启动Docker服务并设置成开机启动
-```
-sudo systemctl start docker
-sudo systemctl enable docker
-```
-### 3.使用阿里云docker镜像加速服务
+## 3.使用阿里云docker镜像加速服务
 1. 访问：https://dev.aliyun.com/search.html
 1. 点击右上角的管理中心选项
 1. 进入后会提示设置密码，请随意
