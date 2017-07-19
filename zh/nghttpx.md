@@ -19,13 +19,21 @@ nghttpx 是一个 HTTP2 代理，HTTP2 是新一代的 HTTP 协议，但一些�
 
 ```sh
 sudo su
-touch /var/swap.img
-dd if=/dev/zero of=/var/swap.img bs=1024k count=1000
-mkswap /var/swap.img
-swapon /var/swap.img
+fallocate -l 1G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+echo "vm.swappiness = 10" >> /etc/sysctl.conf
+sysctl -p
 ```
 
-然后重启 Squid 即可。
+注意重启后swap会取消挂载.请根据相应系统查询写入fstab的命令.这里给出Ubuntu和Centos的
+
+Ubuntu:`echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab`
+
+Centos:`echo "/swapfile swap swap defaults 0 0" | sudo tee -a /etc/fstab`
+
+然后**卸载重装** Squid 即可。
 
 
 ### 配置 nghttpx
@@ -56,6 +64,5 @@ Chrome 支持HTTP2，可以使用 Proxy SwitchyOmega 来使用
 ```
 nghttpx = https, DOMAIN, 端口,
 ```
-
 
 
