@@ -29,7 +29,7 @@
 
 
 
-**来到下面这个界面.点击`Use DNS`.然后再点击`Use Freenom DNS Service`.HostName保持默认即可.看得懂的想改也没关系.IP Address填写你想解析的66.112.223.135.填写VPS的IP地址即可.记住别忘了选择12个月免费**
+**来到下面这个界面.点击`Use DNS`.然后再点击`Use Freenom DNS Service`.HostName保持默认即可.看得懂的想改也没关系.IP Address填写你想解析的IP.一般来说填写VPS的IP地址即可.记住别忘了选择12个月免费**
 
 
 
