@@ -13,29 +13,43 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 
 ---
 
-## 目录
-* 新手教程
-    * [如何免费打造打造一个安全稳定低延迟超高速的科学上网环境](./Guide/across-wall.md)
-    * 如何添加服务器：
-        * [Vultr](./zh/vendors.md#vultr)
-        * [Linode](./zh/vendors.md#linode)
-        * [~~如何添加 GCE 和 AWS 的服务器 (已废弃)~~](./zh/Add-Sever-Cloud.md)
-    * 应用教程：
-        * [如何自动生成 SSL 证书](./zh/SSL.md)
-        * [如何搭建 WordPress/Ghost 等支持 https 的网站](./zh/Get-Started.md)
-        * [Jekyll 和 Hugo 的使用](./zh/static-site.md)
-    * 科学上网
-        * [如何一键配置 V2Ray 的 VMess & HTTP & TLS 混淆（并自动生成可信的SSL证书）](./zh/V2Ray.md)
-        * [Shadowsocks-libev 配置](./zh/GFW.md)
-    * 用户贡献的文档
-        * [免费获得个人专属顶级域名](./zh/Get-Domain.md)
-        * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/RD_MinecraftServerBuilding.md)
-* [使用须知](#使用须知)
-    * [支持的系统](#支持的-linux-系统)
+
+## 文档资源
+
+* [如何免费打造打造一个安全稳定低延迟超高速的科学上网环境](./Guide/across-wall.md)
+* 如何添加服务器：
+    * [Vultr](./zh/vendors.md#vultr)
+    * [Linode](./zh/vendors.md#linode)
+    * [~~如何添加 GCE 和 AWS 的服务器 (已废弃)~~](./zh/Add-Sever-Cloud.md)
+* 应用教程
+    * [如何自动生成 SSL 证书](./zh/SSL.md)
+    * [如何搭建 MySQL/WordPress/Ghost/ownCloud 等支持 https 的网站](./zh/Get-Started.md)
+    * [Jekyll 和 Hugo 的使用](./zh/static-site.md)
+* 科学上网
+    * [综述：如何选择主机商和代理软件？](./zh/GFW.md)
+    * [各类 VPN: IPSec，OpenVPN, OpenConnect 教程](./zh/VPN.md)
+    * [SSR 教程](./zh/SSR.md)
+    * [V2Ray 教程](./zh/V2Ray.md)
+    * [Shadowsocks-libev 教程](./zh/ss-libev.md)
+    * [使用 nghttpx 搭建 HTTPS Proxy (HTTP2) ](./zh/nghttpx.md)
+    * [使用 kcptun 加速上面所有的服务](./zh/kcptun.md)
+    * [ss-panel 安装教程](./zh/sspanel.md)
+* 用户贡献的文档
+   * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/Get-Domain.md)
+   * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/RD_MinecraftServerBuilding.md)
+* 系统教程
+   * [CentOS 如何手动升级 Docker 版本](./zh/centos-upgrade-docker.md)
 * [商店应用配置](./zh/Apps.md)
     * [Huginn: 打造自己的IFTTT服务](./zh/Apps.md#huginn)
+    * [Flarum: 一个漂亮的论坛应用](./zh/Apps.md#flarum)
     * [EFB: 接收微信消息并转发到 Telegram](./zh/Apps.md#efb)    
     * [Thunder xware: 迅雷远程下载](./zh/Apps.md#thunder-xware)
+
+---
+
+### 本页目录
+* [使用须知](#使用须知)
+    * [支持的系统](#支持的-linux-系统)
 * [HyperApp 应用功能](#hyperapp)
     * [管理服务器](#管理服务器)
     * [管理应用](#管理应用)
@@ -44,8 +58,6 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
     * [商店应用](#商店应用)
 * [如何使用 URL Scheme](./zh/workflow.md)
 * [常见问题](#常见问题)
-
----
 
 
 ### 使用须知
