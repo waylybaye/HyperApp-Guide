@@ -35,8 +35,13 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
     * [使用 kcptun 加速上面所有的服务](./zh/kcptun.md)
     * [ss-panel 安装教程](./zh/sspanel.md)
 * 用户贡献的文档
+<<<<<<< HEAD
    * [免费获取个人专享顶级域名](./zh/Get-Domain.md)
    * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/RD_MinecraftServerBuilding.md)
+=======
+   * [免费获得个人专享顶级域名](./zh/Get-Domain.md)
+   * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/RD_MinecraftServerBuilding.md)
+>>>>>>> patch-4
 * 系统教程
    * [CentOS 如何手动升级 Docker 版本](./zh/centos-upgrade-docker.md)
 * [商店应用配置](./zh/Apps.md)
@@ -44,7 +49,12 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
     * [Flarum: 一个漂亮的论坛应用](./zh/Apps.md#flarum)
     * [EFB: 接收微信消息并转发到 Telegram](./zh/Apps.md#efb)    
     * [Thunder xware: 迅雷远程下载](./zh/Apps.md#thunder-xware)
+<<<<<<< HEAD
 
+=======
+    
+    
+>>>>>>> patch-4
 ---
 
 ### 本页目录
@@ -70,7 +80,7 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
 * Ubuntu 14，16 ✅
 * CentOS 7 ✅
 * Debian 8 ✅
-* CentOS 6 ⚠️ （docker 容器资源监控不支持）
+* CentOS 6 ⚠️ （不支持，但你可以手动安装最新版的Docker）
 * 不支持 OpenVZ ❌
 
 注：CentOS 6 也是支持的，但是有些厂商自带的内核版本较低导致不支持 Docker  
