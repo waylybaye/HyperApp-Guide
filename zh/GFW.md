@@ -81,4 +81,6 @@ BBR 是 Google 开发的一种新的TCP发包方式，在较低丢包率和稍�
 | V2Ray | TCP 业务 | 显示服务器IP |
 | V2Ray + TLS | HTTPS 网络连接 | 显示证书域名 |
 | nghttpx + TLS | HTTPS 网络连接 | 显示证书域名 |
-| kcptun | UDP 业务 | 显示服务器IP |
+| kcptun + 网页浏览 | UDP 业务 | 显示服务器IP |
+| kcptun + 观看视频(WebTorrent) | PPTV(什么鬼？) | 显示服务器IP |
+| kcptun + BT 下载 | 电驴(什么鬼？) | 服务器IP |
