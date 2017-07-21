@@ -74,6 +74,7 @@ BBR 是 Google 开发的一种新的TCP发包方式，在较低丢包率和稍�
 | SSR | TCP 业务 | 显示服务器IP |
 | SSR + http_simple | 上网 (Web方式get) | 显示混淆域名 | 
 | SSR + TLS(443) | * 安全类网页浏览 (HTTPS VPN) 流量 <br/>* HTTPS 链接 | 显示混淆域名 |
+| SSR + TLS(993) | 安全协议的收邮件流量 | 显示IP |
 | SSR + TLS(非443) | * 网络连接（网页）<br/>* HTTPS 链接| 显示混淆域名 |
 | OpenConnect | UDP 业务 | 显示服务器IP |
 | IPSec VPN | UDP 业务 | 显示服务器IP |
