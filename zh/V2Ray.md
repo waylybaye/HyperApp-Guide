@@ -18,7 +18,7 @@
     * level: 信任级别，默认为1
     * alterID: 默认32，注意客户端的 UUID 和 alterID 必须保持一致
 
-* HTTP OBFS （仅适用 TCP 连接，WebSocket 请忽略此选项）
+* HTTP OBFS （**仅适用 TCP 连接，WebSocket 请忽略此选项**）
     * Enable OBFS: 开启 HTTP 混淆
     * Enable TLS: 开启 TLS1.2
     * Allow Insecure: 是否允许不安全的TLS连接
@@ -40,7 +40,7 @@
 
 #### 自动生成 SSL 证书
 
-当然你也可以用 `Nginx Proxy` 和 `Nginx SSL Support` 自动生成可信的 SSL 证书。不过你要先关闭上面的 `Enable TLS` 选项，否则没有证书 V2ray 启动搞不起来，等几分钟证书生成了后，再打开此选项，然后`更新配置`即可。
+当然你也可以用 `Nginx Proxy` 和 `Nginx SSL Support` 自动生成可信的 SSL 证书。不过你要先关闭上面的 `Enable TLS` 选项，否则没有证书 V2ray 启动不起来，等几分钟证书生成了后，再打开此选项，然后`更新配置`即可。
 
 关于如何自动生成可信证书的更多介绍，请参考 [如何自动生成 SSL 证书](./SSL.md) 
 
@@ -54,7 +54,7 @@
 
 ### 自定义域名
 * 域名：填写您的域名
-* 应用端口：填写最上面的端口号
+* 应用端口：**填写最上面的端口号**
 * HTTPS: 默认会将 HTTP 重定向到 HTTPS，建议选择不重定向，这样客户端就可以随便选需不需要TLS了。
 
 ### SSL 选项
