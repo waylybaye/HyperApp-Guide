@@ -28,6 +28,8 @@
     * config.json: 生成的 V2Ray 配置文件会存在这里
     * SSL certs: SSL 证书的存放位置
 
+---
+
 ## 方案1: 使用 TCP 传输，并开启 TLS 
 
 ### TLS 证书设置
@@ -44,7 +46,6 @@
 
 关于如何自动生成可信证书的更多介绍，请参考 [如何自动生成 SSL 证书](./SSL.md) 
 
----
 
 ## 方案2: WebSocket 传输，使用 Nginx & SSL Support 反代 V2Ray
 
@@ -101,6 +102,8 @@
 点击 `TLS` 标签页，选中 `Use TLS` 如果你是自签名证书也同时选中 `Allow Insecure`
 
 ![](./images/v2rayx-tls.png)
+
+---
 
 大功告成！
 
