@@ -67,4 +67,5 @@
 
 
 ## 请尽情享受安全的网络:)
+* **疑问请加入hyperapp官方telegram群咨询@fanvinga**
 
