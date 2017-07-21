@@ -29,7 +29,7 @@ HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具， 您可以在
     * [综述：如何选择主机商和代理软件？](./zh/GFW.md)
     * [各类 VPN: IPSec，OpenVPN, OpenConnect 教程](./zh/VPN.md)
     * [SSR 教程](./zh/SSR.md)
-    * [V2Ray + TLS 教程](./zh/V2Ray.md)
+    * [`V2Ray` TCP TLS 混淆 或者 WebSocket 使用 Nginx 自动分流教程](./zh/V2Ray.md)
     * [Shadowsocks-libev 教程](./zh/ss-libev.md)
     * [使用 nghttpx + TLS 搭建 HTTPS Proxy (HTTP2) ](./zh/nghttpx.md)
     * [使用 kcptun 加速上面所有的服务](./zh/kcptun.md)

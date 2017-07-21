@@ -28,7 +28,7 @@
     * config.json: 生成的 V2Ray 配置文件会存在这里
     * SSL certs: SSL 证书的存放位置
 
-## 方案1: TCP TLS
+## 方案1: 使用 TCP 传输，并开启 TLS 
 
 ### TLS 证书设置
 如果你想使用 WebSocket 请跳过本段，直接看下一段，本段只适用于 TCP 方式。
@@ -50,7 +50,7 @@
 
 这个方案会自动配置 Nginx 来反代 V2Ray，达到完美伪装。结合 Nginx SSL Support 还能自动生成可信的 LetsEncrypt 证书。这个方案 TLS 是在 Nginx 层面实现的。
 
-在上面的配置页面中，Nginx 和 SSL 选项按下面填写：
+首先参考 [如何自动生成 SSL 证书](./SSL.md) 依次安装 `Nginx Proxy` 和 `Nginx SSL Support` 然后在上面的配置页面中，Nginx 和 SSL 选项按下面填写：
 
 ### 自定义域名
 * 域名：填写您的域名
@@ -62,6 +62,9 @@
 * 邮箱：填写您的邮箱
 
 然后安装即可，安装完毕稍等几分钟 Nginx SSL Support 将会自动生成可信的 LetsEncrypt 证书。接下来就配置客户端连接即可。
+
+关于如何自动生成可信证书的更多介绍，请参考 [如何自动生成 SSL 证书](./SSL.md) 
+
 
 ---
 
@@ -88,6 +91,11 @@
 点击左下角的 `tranport settings` 选择 `TCP` 如图 `header type` 选择 `http` 即可开启 http 混淆
 
 ![](./images/v2rayx-tcp.png)
+#### WebSocket 配置
+
+如果你使用 WebSocket 则打开 WebSocket 选项卡，填写选项即可。其实不用改，默认选项就行。
+
+
 #### TLS 配置
 
 点击 `TLS` 标签页，选中 `Use TLS` 如果你是自签名证书也同时选中 `Allow Insecure`
