@@ -42,6 +42,7 @@
 
 
 点击加号按钮，创建一个 VM 实例。
+
 <img src='./images/gce/2-create-vm.png' width="414" /> <img src='./images/gce/2-create-vm-firewall.png' width="414" />
 
 
@@ -54,6 +55,7 @@
 
 点击”创建“，稍等几分钟就会创建完毕，现在打开 HyperApp 开始配置这台服务器吧。
 
+---
 
 
 ## HyperApp
@@ -71,7 +73,7 @@ HyperApp 是一个部署自动化以及服务器监控管理的App，致力于�
 1. 在 ”服务器“ 页面点击右下角的加号，然后选择第二个”自动配置“
 2. 点击“开始”，应用会自动生成一对密钥，请耐心等到几秒~十几秒。
 
-<img src='./images/gce/3-auto-config-done.png' width="414" /> <img src='./images/gce/3-vm-ssh' width="414" />
+<img src='./images/gce/3-auto-config-done.png' width="414" /> <img src='./images/gce/3-vm-ssh.png' width="414" />
 
 
 3. 等到出现“一切就绪”时，点击“复制“将代码复制到剪贴板里，如果你用电脑操作的话可以点击”发送“将代码通过任意一种方式发送到电脑上。
@@ -118,16 +120,18 @@ HyperApp 是一个部署自动化以及服务器监控管理的App，致力于�
 
 ### 部署科学上网应用
 
-![](./images/gce/4-create-app.png)
+
+<img src='./images/gce/4-create-app.png' width="414" /> <img src='./images/gce/4-config-app.png' width="414" />
+
+
 在 `商店` 页面 `网络` 分组下选择任意一个应用，这里我们选择占用资源最少的 `****-libev`，（下文用SS代替）点击该应用。在弹出的对话框中选择刚刚添加的服务器，点击`创建应用`
 
-![](./images/gce/4-config-app.png)
 
 在此页面中输入简单的一些配置：
 * Port: 端口，可以填入 80 或者 443（因为用其它端口需要设置防火墙）
 * Password：随便填入一个密码
 * Encrypt：选择一种加密方式，推荐针对移动访问优化的 `chacha20`
-* OBFS: 使用 OBFS 可以将 SS 流量伪装成正常的网页访问从而达到欺骗效果，可以防止被墙或者运营商干扰。另外还有人利用此功能实现“免流”效果：运营商会对一些域名免收流量费，于是可以将所有SS流量伪装成对某个域名的访问从而达到免流效果，具体此处不表。
+* OBFS: 使用 OBFS 可以将 SS 流量伪装成正常的网页访问从而达到欺骗效果，可以防止被墙或者运营商干扰。
 
 如果你使用其它端口，请参考文末的 [设置GCE防火墙](#设置-gce-防火墙) 如何开启防火墙。
 
