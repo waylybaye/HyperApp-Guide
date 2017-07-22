@@ -4,9 +4,6 @@
 
 下文用 GCP 代表 Google Cloud Platform，指 Google 的整个云平台。GCE 是指 Google Cloud Engine，是 GCP 产品线里的一个主机产品。
 
-为什么要自己搭建环境，用商业服务不行吗？  
-一方面是为了安全和隐私，防止泄露自己的浏览记录，甚至是访问不安全的HTTP时暴露自己网络请求密码等。另外一些商业服务超售严重，会降低个体用户的访问质量。
-
 
 ### 本文前提条件
 
@@ -38,18 +35,15 @@
 
 ### 新建主机
 
-![](./images/gce/2-vms-nav.png)
+<img src='./images/gce/2-vms-nav.png' width="414" /> <img src='./images/gce/2-vms.png' width="414" />
+
 
 按照上图所示，在左侧菜单中导航到 [计算引擎 → VM 实例](https://console.cloud.google.com/compute/instances)
 
 
-![](./images/gce/2-vms.png)
-
 点击加号按钮，创建一个 VM 实例。
+<img src='./images/gce/2-create-vm.png' width="414" /> <img src='./images/gce/2-create-vm-firewall.png' width="414" />
 
-![](./images/gce/2-create-vm.png)
-
-![](./images/gce/2-create-vm-firewall.png)
 
 
 * 名称：随意填入一个易记得名字
@@ -64,25 +58,24 @@
 
 ## HyperApp
 
-本段介绍如何使用 HyperApp 自动开启 BBR 加速，并且安装科学上网应用。
+HyperApp 是一个部署自动化以及服务器监控管理的App，致力于让普通用户也可以使用云服务。HyperApp 可以监控服务器/路由器的运行状态，还可以可视化的一键部署各种应用。
+本段介绍如何使用 HyperApp 管理刚刚创建的服务器，开启 BBR 加速，安装科学上网应用。
 
 [![下载 HyperApp](https://linkmaker.itunes.apple.com/assets/shared/badges/zh-chs/appstore-lrg.svg "View on App Store")](https://itunes.apple.com/app/apple-store/id1179750280?pt=118260435&ct=v2ex&mt=8)
 
 
 ### 添加服务器
 
-![](./images/gce/3-servers.png)
-在 ”服务器“ 页面点击右下角的加号，然后选择第二个”自动配置“
+<img src='./images/gce/3-servers.png' width="414" /> <img src='./images/gce/3-auto-config-start.png' width="414" />
 
-![](./images/gce/3-auto-config-start.png)
+1. 在 ”服务器“ 页面点击右下角的加号，然后选择第二个”自动配置“
+2. 点击“开始”，应用会自动生成一对密钥，请耐心等到几秒~十几秒。
 
-点击“开始”，应用会自动生成一对密钥，但这个过程在某些手机上会耗时较长，请耐心等到 十几秒~几分钟 左右。
+<img src='./images/gce/3-auto-config-done.png' width="414" /> <img src='./images/gce/3-vm-ssh' width="414" />
 
-![](./images/gce/3-auto-config-done.png)
 
-等到出现“一切就绪”时，点击“复制“将代码复制到剪贴板里，如果你用电脑操作的话可以点击”发送“将代码通过任意一种方式发送到电脑上。
+3. 等到出现“一切就绪”时，点击“复制“将代码复制到剪贴板里，如果你用电脑操作的话可以点击”发送“将代码通过任意一种方式发送到电脑上。
 
-![](./images/gce/3-vm-ssh.jpg)
 
 在 GCE [计算引擎 → VM 实例](https://console.cloud.google.com/compute/instances) 页面，选择刚刚创建的实例的 `SSH ▽ 在浏览器窗口中打开` 打开一个基于 Web 的 SSH 终端。
 
