@@ -5,11 +5,24 @@
 下文用 GCP 代表 Google Cloud Platform，指 Google 的整个云平台。GCE 是指 Google Cloud Engine，是 GCP 产品线里的一个主机产品。
 
 
-### 本文前提条件
+#### 本文前提条件
 
 1. 有一个 Google 账号，没有的话可以注册一个。
 2. 注册 GCP 免费试用需要用信用卡进行身份验证（只做验证，不会收费），所以你必须有一个 Visa/MasterCard 的信用卡才行。
 
+
+#### 本文目录
+
+* GCP 注册以及创建服务器
+    * 注册 GCP
+    * 新建主机
+* HyperApp
+    * 添加服务器到 HyperApp
+    * 配置公钥
+    * 开启 BBR 加速，跑满带宽
+    * 部署科学上网应用
+* 客户端设置
+* 常见问题
 
 ---
 
