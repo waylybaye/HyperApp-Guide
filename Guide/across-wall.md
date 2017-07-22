@@ -73,7 +73,7 @@ HyperApp 是一个部署自动化以及服务器监控管理的App，致力于�
 1. 在 ”服务器“ 页面点击右下角的加号，然后选择第二个”自动配置“
 2. 点击“开始”，应用会自动生成一对密钥，请耐心等到几秒~十几秒。
 
-<img src='./images/gce/3-auto-config-done.png' width="414" /> <img src='./images/gce/3-vm-ssh.png' width="414" />
+<img src='./images/gce/3-auto-config-done.png' width="414" /> <img src='./images/gce/3-vm-ssh.jpg' width="414" />
 
 
 3. 等到出现“一切就绪”时，点击“复制“将代码复制到剪贴板里，如果你用电脑操作的话可以点击”发送“将代码通过任意一种方式发送到电脑上。
@@ -106,7 +106,7 @@ HyperApp 是一个部署自动化以及服务器监控管理的App，致力于�
 
 要开启 BBR 需要升级 Linux 内核，不过不用急，在 HyperApp 中开启非常简单：
 
-![](./images/gce/4-bbr.png)
+<img src='./images/gce/4-bbr.png' width="414" />
 
 1. 在服务器卡片中点击右上角的 Terminal 图标，进入 SSH 终端。
 2. 选择最下面的一行工具栏的第一个图标，然后点击 "teddyun/BBR" 一键脚本的链接，点击后会让你确认是否下载并执行外部脚本。
