@@ -33,7 +33,7 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
     * [SSR: 教程](./zh/SSR.md)
     * [V2Ray: TCP TLS 混淆 或者 WebSocket 使用 Nginx 自动分流教程](./zh/V2Ray.md)
     * [Shadowsocks-libev](./zh/ss-libev.md)
-    * [Cisco AnyConnect](.zh/ocserv.md)
+    * [Cisco AnyConnect](./zh/ocserv.md)
     * [使用 nghttpx (HTTP2) + TLS 搭建 HTTPS Proxy](./zh/nghttpx.md)
     * [使用 kcptun 加速上面所有的服务](./zh/kcptun.md)
     * [ss-panel 安装教程](./zh/sspanel.md)
