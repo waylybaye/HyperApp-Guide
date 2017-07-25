@@ -18,7 +18,7 @@
 * Vultr
     * $2.5/月起，有东京机房，但2.5的可能缺货买不到
 * 搬瓦工
-    * 等待补充
+    * KVM/OVZ 皆$2.99或$4.99/月起,有洛杉矶机房,凤凰城机房等等
 
 ### 如何选择主机商
 
@@ -74,10 +74,12 @@ BBR 是 Google 开发的一种新的TCP发包方式，在较低丢包率和稍�
 | SSR | TCP 业务 | 显示服务器IP |
 | SSR + http_simple | 上网 (Web方式get) | 显示混淆域名 | 
 | SSR + TLS(443) | * 安全类网页浏览 (HTTPS VPN) 流量 <br/>* HTTPS 链接 | 显示混淆域名 |
+| SSR + TLS(995) | 安全协议的收邮件流量 | 显示IP |
 | SSR + TLS(非443) | * 网络连接（网页）<br/>* HTTPS 链接| 显示混淆域名 |
-| OpenConnect | | |
+| OpenConnect | UDP 业务 | 显示服务器IP |
 | IPSec VPN | UDP 业务 | 显示服务器IP |
 | V2Ray | TCP 业务 | 显示服务器IP |
 | V2Ray + TLS | HTTPS 网络连接 | 显示证书域名 |
 | nghttpx + TLS | HTTPS 网络连接 | 显示证书域名 |
 | kcptun | UDP 业务 | 显示服务器IP |
+
