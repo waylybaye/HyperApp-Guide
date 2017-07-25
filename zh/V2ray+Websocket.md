@@ -1,7 +1,7 @@
 # V2Ray配置Websocket并使用Nginx反向代理(TLS)教程
 
 
-
+* **本文原文链接https://vinga.ml/v2ray**
 ## 工具
 
 
