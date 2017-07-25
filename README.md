@@ -1,4 +1,3 @@
-
 # HyperApp 用户手册
 
 [English version](./en/README.md) | 中文版
@@ -43,10 +42,12 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
     * [EFB: 接收微信消息并转发到 Telegram](./zh/Apps.md#efb)    
     * [Thunder xware: 迅雷远程下载](./zh/Apps.md#thunder-xware)
 * 用户贡献的文档
-    * [Smartsocks使用帮助](./zh/Smartsocks-help.md)
-    * [打造安全websocket+nginx tls V2ray](./zh/V2ray+Websocket.md)
-    * [免费获得个人专享顶级域名](./zh/Get-Domain.md)
-    * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/RD_MinecraftServerBuilding.md)
+   * [VPS上搭建高速BT下载服务](./zh/Bt.md)
+   * [使用Hugo搭建惊艳个人博客](./zh/Hugo.md)
+   * [Smartsocks使用帮助](./zh/Smartsocks-help.md)
+   * [打造安全websocket+nginx tls V2ray](./zh/V2ray+Websocket.md)
+   * [免费获得个人专享顶级域名](./zh/Get-Domain.md)
+   * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/RD_MinecraftServerBuilding.md)
 * 系统教程
    * [CentOS 如何手动升级 Docker 版本](./zh/centos-upgrade-docker.md)
    * [阿里云 Docker 加速](./zh/Aliyun-docker.md)
@@ -172,6 +173,5 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 
 **HyperApp 会在我的服务器/路由器上运行哪些命令？**  
 [HyperApp 运行的命令](./commands.md)
-
 
 
