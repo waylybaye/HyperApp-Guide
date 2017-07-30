@@ -19,10 +19,11 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 ## 文档资源
 
 * [如何免费打造打造一个安全稳定低延迟超高速的科学上网环境](./Guide/across-wall.md)
+* [排错指引](./zh/common-help.md)
 * 如何添加服务器：
     * [Vultr](./zh/vendors.md#vultr)
     * [Linode](./zh/vendors.md#linode)
-    * [~~如何添加 GCE 和 AWS 的服务器 (已过期)~~](./zh/Add-Sever-Cloud.md)
+    * [~~如何添加 GCE 和 AWS 的服务器 (已过期)~~](./zh/Add-Sever-Cloud.md)
 * 应用教程
     * [如何自动生成 SSL 证书](./zh/SSL.md)
     * [如何搭建 MySQL/WordPress/Ghost/ownCloud 等支持 https 的网站](./zh/Get-Started.md)
@@ -173,5 +174,4 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 
 **HyperApp 会在我的服务器/路由器上运行哪些命令？**  
 [HyperApp 运行的命令](./commands.md)
-
 
