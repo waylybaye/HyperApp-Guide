@@ -31,9 +31,9 @@
   * CentOS7: systemctl disable firewalld
   * Ubuntu16: systemctl disable ufw
 
-* 系统防火墙添加端口
+* 系统防火墙永久添加端口
 
-  * CentOS7: firewall-cmd --permanent --zone=public --add-port=80/tcp
+  * CentOS7: firewall-cmd --permanent --zone=public --add-port=端口/tcp
 
 * 平台防火墙
 
@@ -47,7 +47,7 @@
 
 ## 厂商常见问题：
 
-* 搬瓦工只支持 KVM 的机器。
+* 搬瓦工只支持 KVM虚拟化 的机器。
 * Vultr/DigitalOcean/AWS 全都支持
 * GCP没有领到试用金：重新打开试用页面再点击一次“Try it free”
 
@@ -118,6 +118,5 @@ sysctl -p
 * Centos请将第一个echo换成
   `echo "/swapfile swap swap defaults 0 0" | sudo tee -a /etc/fstab`
 
-## 另外:要是某个应用的使用遇到问题.请访问github的具体教程.链接如下
+## 另外:要是某个应用的使用遇到问题.请访问github的[具体教程](https://github.com/waylybaye/HyperApp-Guide/blob/master/README.md).
 
-https://github.com/waylybaye/HyperApp-Guide/blob/master/README.md
