@@ -18,6 +18,29 @@
 - 如果你用 Wingy 不要开 OBFS
 - 另外不要用SSR 连 SS，也不要用SS 连SSR
 
+## 防火墙设置教程
+
+- 临时禁用系统防火墙
+
+  CentOS7: service firewalld stop
+  CentOS6: service iptables stop
+  Ubuntu16: service ufw stop
+
+- 永久禁用系统防火墙
+
+  CentOS7: systemctl disable firewalld
+  Ubuntu16: systemctl disable ufw
+
+- 系统防火墙添加端口
+
+  CentOS7: firewall-cmd --permanent --zone=public --add-port=80/tcp
+
+- 平台防火墙
+
+  GCE: 网络 → 防火墙规则
+  AWS: EC2 控制面板 → 安全组
+  阿里云: 云服务器 ECS → 安全组
+
 ## 手机可以电脑没法翻墙的问题：
 
 * 请先查看客户端日志，并贴出来用全局模式测非Chrome、Firefox浏览器（因为Chrome浏览器的很多插件会改代理设置）如果全局可以就能断定是pac规则或者浏览器的原因。
