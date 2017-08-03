@@ -14,7 +14,6 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 
 ---
 
-<!--    * [VPN: IPSec，OpenVPN, OpenConnect 教程 （占坑）](./zh/VPN.md)-->
 
 ## 文档资源
 
