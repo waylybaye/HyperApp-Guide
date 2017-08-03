@@ -49,9 +49,9 @@
   * CentOS7: systemctl disable firewalld
   * Ubuntu16: systemctl disable ufw
 
-* 系统防火墙添加端口
+* 系统防火墙永久添加端口
 
-  * CentOS7: firewall-cmd --permanent --zone=public --add-port=80/tcp
+  * CentOS7: firewall-cmd --permanent --zone=public --add-port=端口/tcp
 
 * 平台防火墙
 
@@ -70,7 +70,7 @@
 
 ## 厂商常见问题：
 
-* 搬瓦工只支持 KVM 的机器。
+* 搬瓦工只支持 KVM虚拟化 的机器。
 * Vultr/DigitalOcean/AWS 全都支持
 * GCP没有领到试用金：重新打开试用页面再点击一次“Try it free”
 
@@ -112,6 +112,10 @@ net.ipv4.tcp_congestion_control = bbr
 
   * 执行命令`curl -fsSL get.docker.com | sh`安装最新docker
 
+* 操作Docker时提示权限不足(Permission Denied)，原因是默认用户没有docker权限，加到docker组才有
+	
+  * 执行命令`sudo usermod -aG docker $USER`
+
 * 如何加入testflight测试计划?
 
   * 不要刷机器人了.想加入tf.私聊群主@waylybaye.附上你的购买凭证和通讯邮箱.群主会处理的
@@ -149,6 +153,9 @@ sysctl -p
 * Centos请将第一个echo换成
   `echo "/swapfile swap swap defaults 0 0" | sudo tee -a /etc/fstab`
 
+<<<<<<< HEAD
+## 另外:要是某个应用的使用遇到问题.请访问github的[具体教程](https://github.com/waylybaye/HyperApp-Guide/blob/master/README.md).
+=======
 ## Hyperapp官方应用教程链接
 
 http://t.cn/R965Wzg
@@ -156,4 +163,5 @@ http://t.cn/R965Wzg
 #### ~~部署v2ray等应用可适当参考如下链接~~(打死这个不要脸的:)
 
 https://vinga.ml
+>>>>>>> b4a63e0eb8bc1fabc9c4aca23bc631c965cf46fe
 
