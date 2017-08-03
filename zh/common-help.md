@@ -112,6 +112,10 @@ net.ipv4.tcp_congestion_control = bbr
 
   * 执行命令`curl -fsSL get.docker.com | sh`安装最新docker
 
+* 操作Docker时提示权限不足(Permission Denied)，原因是默认用户没有docker权限，加到docker组才有
+	
+  * 执行命令`sudo usermod -aG docker $USER`
+
 * 如何加入testflight测试计划?
 
   * 不要刷机器人了.想加入tf.私聊群主@waylybaye.附上你的购买凭证和通讯邮箱.群主会处理的

@@ -66,6 +66,26 @@
 
 关于如何自动生成可信证书的更多介绍，请参考 [如何自动生成 SSL 证书](./SSL.md) 
 
+## 方案3: 使用mKCP 传输
+
+mKCP是V2ray对KCP的简单实现，是基于UDP的一种传输方式，它可以伪装成FaceTime视频通话，BT下载和WeChat视频聊天等流量，一般搭配动态端口来实现较为完美的伪装，动态端口HyperApp后续将会支持，此处暂以单端口为例。
+
+### 配置选项
+* Port:		填写您的端口
+* Network:	选择"kcp"
+* Header:	"kcp utp","kcp srtp","kcp wechat-video"三选一
+
+其他设置保持默认即可，安装完毕后记得打开防火墙对应的UDP端口。
+
+---
+
+## 三种传输方式的区别
+
+- TCP和WebSocket是基于TCP传输的，mKCP是基于UDP传输的
+- TCP和WebSocket都可以套TLS，mKCP不能套TLS
+- 只有WebSocket可以搭配Nginx伪装成普通网站
+- mKCP是以流量换速度，同一条件下使用mKCP会比其他方式耗费更多流量
+- TCP和WebSocket可以使用TCP加速手段进行加速，比如锐速，BBR。mKCP不行
 
 ---
 
