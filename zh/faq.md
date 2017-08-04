@@ -4,8 +4,37 @@
 ## 索引
 
 * HyperApp 问题
-    * 拍错思路
-* GCP 问题：
+    * 安装错误
+    * 其它错误
+* GCP 问题
+
+
+## HyperApp 常见错误排查
+
+### 安装错误
+
+`docker: Error response from daemon: Conflict. The container name *** is already used by container ....`
+A: 应用已经安装过了，更新要点击“更新配置”
+
+**提示连接失败/无法连接/transport read**
+A: 请不要使用代理连接hyperapp.并且进行操作的时候不要切换应用.
+
+
+`docker command not found`
+A: HyperApp 会自动安装 Docker，出现这类问题可能是 Docker 安装失败，你可以手动执行 `curl -fsSL get.docker.com | sh` 安装最新docker
+
+**操作Docker时提示权限不足(Permission Denied)**
+A: 当前用户没有docker权限，加到docker组才有，执行命令 `sudo usermod -aG docker $USER`
+
+`cannot connect to the Docker daemon`
+A: 请确保一定要先安装 BBR 再安装应用，如果你不幸搞错了顺序，参考吓一跳
+
+**如果先安装了docker再安装bbr导致无法启动docker怎么办?**
+A: 执行 `rm -rf /var/lib/docker/aufs` 清除docker网络配置.然后重新安装所有应用即可.
+
+
+### 使用bbr安装脚本的时候提示"Inappropriate ioctl for device"
+使用键盘随便输入几个字符并且回车两下.原因是bbr安装脚本需要等待输入来执行下一步
 
 
 ## 顶部教程食用方法
@@ -105,33 +134,10 @@ net.ipv4.tcp_congestion_control = bbr
 ```
 
 
-* 提示连接失败/无法连接/密钥认证失败/操作失败并且日志提示transport read  
-    * 请不要使用代理连接hyperapp.并且进行操作的时候不要切换应用.
-
-* 使用bbr安装脚本的时候提示"Inappropriate ioctl for device"
-
-  * 使用键盘随便输入几个字符并且回车两下.原因是bbr安装脚本需要等待输入来执行下一步
-
-
-* 提示docker command not found
-
-  * 执行命令`curl -fsSL get.docker.com | sh`安装最新docker
-
-* 操作Docker时提示权限不足(Permission Denied)，原因是默认用户没有docker权限，加到docker组才有
-	
-  * 执行命令`sudo usermod -aG docker $USER`
 
 * 如何加入testflight测试计划?
 
   * 不要刷机器人了.想加入tf.私聊群主@waylybaye.附上你的购买凭证和通讯邮箱.群主会处理的
-
-* 出现cannot connect to the Docker daemon
-
-  * 请确保升级内核启用BBR或者启用魔改BBR这个步骤.在使用docker之前
-
-* 如果先安装了docker再安装bbr导致无法启动docker怎么办?
-
-  * 执行`rm -rf /var/lib/docker/aufs`清除docker网络配置.然后重新安装所有应用.
 
 * 关于nginx上传限制的解决办法：
 
