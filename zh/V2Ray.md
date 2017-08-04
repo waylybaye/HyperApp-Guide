@@ -4,18 +4,17 @@
 
 V2Ray 共有三种传输方式，可以形成三种使用方案：
 
-1. TCP 模式 （支持 TLS）
+#### TCP 模式 （支持 TLS）
 
 使用TCP来传输，这种方式和其它代理应用模式上差不多。TCP 模式可以使用 HTTP/TLS 混淆来模拟 HTTP 网站流量，但也只是模拟，并不是真实的 HTTP 流量。
 
-2. WebSocket 模式 （支持 TLS）
+#### WebSocket 模式 （支持 TLS）
 
 WebSocket 是一种在 HTTP 之上的协议，本质也是TCP传输，但是是天然的 HTTP 网站流量。并且可以搭配各种 HTTP 服务器（比如nginx,caddy）一起使用。
 
 因为 WebSocket 已经是 HTTP 的一种，所以并不需要任何伪装（混淆）。
 
-3. mKCP 模式
-
+#### mKCP 模式
 
 使用 `UDP` 来传输，mKCP是以流量换速度，就是多倍发包，我同一份数据发多份，防止丢包重传，所以同一条件下使用mKCP会比其他方式耗费更多流量，不建议手机4G使用。
 

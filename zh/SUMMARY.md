@@ -9,6 +9,7 @@
     * [如何自动生成 SSL 证书](SSL.md)
     * [如何搭建 MySQL/WordPress/Ghost/ownCloud 等支持 https 的网站](Get-Started.md)
     * [Jekyll 和 Hugo 的使用](static-site.md)
+    * [Minecraft服务器](RD_MinecraftServerBuilding.md)
 * 爱国软件
     * [如何选择主机商和爱国软件？(未完)](GFW.md)
     * [SSR](SSR.md)
@@ -29,7 +30,6 @@
    * [Smartsocks使用帮助](Smartsocks-help.md)
    * [打造安全websocket+nginx tls V2ray](V2ray+Websocket.md)
    * [免费获得个人专享顶级域名](Get-Domain.md)
-   * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](RD_MinecraftServerBuilding.md)
 * 系统教程
    * [CentOS 如何手动升级 Docker 版本](centos-upgrade-docker.md)
    * [阿里云 Docker 加速](Aliyun-docker.md)

@@ -8,12 +8,14 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 
 [![HyperApp on AppStore](https://linkmaker.itunes.apple.com/assets/shared/badges/zh-chs/appstore-lrg.svg "View on App Store")](https://itunes.apple.com/app/apple-store/id1179750280?pt=118260435&ct=guide&mt=8)
 
+---
+
+## 支持链接
 
 * [Telegram Group](https://t.me/hyperapp)
 * [Twitter](https://twitter.com/HyperAppCloud)
 * [Fork on Github](github.com/waylybaye/HyperApp-Guide)
 
----
 
 推荐从萌新入门教程开始：[手把手爱国教程](proxy/get-started.md)
 
