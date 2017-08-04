@@ -65,5 +65,6 @@ Chrome 支持HTTP2，可以使用 Proxy SwitchyOmega 来使用
 ```
 http2s = http, my.server.com, 443, Squid用户名, Squid密码, tls=true
 ```
+- 使用https代理例如nghttpx+squid的时候.surge代理测试以及邮箱协议不可用都属于正常情况.因为https代理不支持
 
 
