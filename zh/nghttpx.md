@@ -63,7 +63,7 @@ Chrome 支持HTTP2，可以使用 Proxy SwitchyOmega 来使用
 ### Surge
 
 ```
-nghttpx = https, DOMAIN, 端口
+http2s = http, my.server.com, 443, Squid用户名, Squid密码, tls=true
 ```
 
 
