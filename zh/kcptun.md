@@ -4,6 +4,8 @@ Kcptun 是一个非常简单和快速的，基于 KCP 协议的 UDP 隧道，它
 
 <img src="./images/kcptun-1.png" style="zoom:100%"/>
 
+*image from https://github.com/xtaci/kcptun/*
+
 
 ## 服务端
 
