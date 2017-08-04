@@ -14,11 +14,14 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 
 ---
 
+## 在线浏览
+
+[www.hyperapp.fun](https://www.hyperapp.fun)
 
 ## 文档资源
 
-* [如何免费打造打造一个安全稳定低延迟超高速的科学上网环境](./Guide/across-wall.md)
-* [排错指引](./zh/common-help.md)
+* [如何免费打造打造一个安全稳定低延迟超高速的科学上网环境](./zh/proxy/get-started.md)
+* [排错指引](./zh/faq.md)
 * 如何添加服务器：
     * [Vultr](./zh/vendors.md#vultr)
     * [Linode](./zh/vendors.md#linode)
@@ -129,8 +132,8 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 2. 在 Actions 界面你可以管理这个应用在制定服务器上的状态。点击 Install 可以安装应用。
 3. 点击后会在 App 卡片下方会出现进度栏，它会实时更新安装的进度，当最左侧的图标变成对号时说明动作已经执行成功。如果出现错误则点击该进度条可以查看具体的出错信息。
 
-
 ---
+
 
 ### 商店应用
 
