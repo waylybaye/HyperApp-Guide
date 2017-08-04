@@ -1,27 +1,36 @@
 
 # FAQ
 
+## 索引
+* HyperApp 问题
+    * 常见安装错误
+    * BBR 问题
+    * 服务器错误
+* 应用问题
+    * 手机爱国电脑不爱国
+    * 无法爱国的问题
+* GCP 问题
+    * [结算账号被停用](proxy/get-started.md)
+    * [密钥认证失败](proxy/get-started.md)
+
+
 ## HyperApp 常见错误排查
-
-### 服务器错误
-
-**GCP 密钥认证失败怎么办**
-看[手把手教程](proxy/get-started.md) → “永久添加公钥” 那一段
-
 
 ### 安装错误
 
-> docker: Error response from daemon: Conflict. The container name *** is already used by container ....
+**Conflict**
+
+`docker: Error response from daemon: Conflict. The container name *** is already used by container ....`
 
 A: 应用已经安装过了，更新要点击“更新配置”
 
 
-> 提示连接失败/无法连接/transport read/timeout**
+**提示连接失败/无法连接/transport read/timeout**
 
 A: 请不要使用代理连接hyperapp.并且进行操作的时候不要切换应用.
 
 
-> docker command not found
+**docker command not found**
 
 A: HyperApp 会自动安装 Docker，出现这类问题可能是 Docker 安装失败，你可以手动执行 `curl -fsSL get.docker.com | sh` 安装最新docker
 
@@ -30,34 +39,32 @@ A: HyperApp 会自动安装 Docker，出现这类问题可能是 Docker 安装�
 
 A: 当前用户没有docker权限，加到docker组才有，执行命令 `sudo usermod -aG docker $USER`
 
-> cannot connect to the Docker daemon
+**cannot connect to the Docker daemon**
+
 1. 请确保你的 Linux 版本符合要求
 2. 请确保一定要先安装 BBR 再安装应用，如果你不幸搞错了顺序，参考下一条
 
 
 **如果先安装了docker再安装bbr导致无法启动docker怎么办?**
+
 A: 执行 `rm -rf /var/lib/docker/aufs` 清除docker网络配置.然后重新安装所有应用即可.
 
 
 **为什么在安装应用的时候.会卡在安装中非常久(这种情况多出现在国内VPS中)？**
 
-请先确定你的VPS可以正确联网再参考下列步骤
+请先确定你的VPS可以正确联网再参考下列步骤:
 * 方法1: 在hyperapp终端左下角第一个按钮中.选择安装阿里云国内Docker源
 * 方法2: 阿里云用户请参考[使用阿里云镜像加速服务](Aliyun-docker.md)
 * 终极解决办法: 远离国内VPS.
 
 
-### 使用bbr安装脚本的时候提示"Inappropriate ioctl for device"
+
+#### 使用bbr安装脚本的时候提示"Inappropriate ioctl for device"
 使用键盘随便输入几个字符并且回车两下.原因是bbr安装脚本需要等待输入来执行下一步
 
 
-## 顶部教程食用方法
-
-* 结算被停用怎么办？怎么添加防火墙端口？ → 教程底部
-* 其它错误怎么办？→参考本篇文章
-* 在群里报告问题，请带完整的截图。如果安装失败，点击蓝色的感叹号然后截图。
-
 ---
+
 
 ## 应用问题
 
