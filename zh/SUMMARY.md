@@ -9,13 +9,13 @@
     * [如何搭建 MySQL/WordPress/Ghost/ownCloud 等支持 https 的网站](Get-Started.md)
     * [Jekyll 和 Hugo 的使用](static-site.md)
 * 爱国软件
-    * [综述：如何选择主机商和爱国软件？（未完）](GFW.md)
-    * [SSR: 教程](SSR.md)
-    * [V2Ray: TCP TLS 混淆 或者 WebSocket 使用 Nginx 自动分流教程](V2Ray.md)
+    * [如何选择主机商和爱国软件？(未完)](GFW.md)
+    * [SSR](SSR.md)
+    * [V2Ray](V2Ray.md)
     * [Shadowsocks-libev](ss-libev.md)
     * [Cisco AnyConnect](ocserv.md)
-    * [使用 nghttpx (HTTP2) + TLS 搭建 HTTPS Proxy](nghttpx.md)
-    * [使用 kcptun 加速上面所有的服务](kcptun.md)
+    * [nghttpx (HTTP2) + TLS](nghttpx.md)
+    * [使用 kcptun 加速](kcptun.md)
     * [ss-panel 安装教程](sspanel.md)
 * [商店应用配置](Apps.md)
     * [Huginn: 打造自己的IFTTT服务](Apps.md#huginn)
@@ -32,3 +32,5 @@
 * 系统教程
    * [CentOS 如何手动升级 Docker 版本](centos-upgrade-docker.md)
    * [阿里云 Docker 加速](Aliyun-docker.md)
+
+
