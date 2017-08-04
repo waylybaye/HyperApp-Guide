@@ -31,7 +31,7 @@ kcptun 是一个双边加速工具，服务端和客户端都需要安装特定�
 将上面的文件解压后，在同级目录运行里面的 `client_*`
 
 ```bash
-./client_darwin_amd64 --remote VPS_IP:上面的端口 --key 密码 --crypt 上面的加密 --mode 上面的Mode -l :一个本地端口
+./client_darwin_amd64 --remote 你服务器IP:上面的端口 --key 密码 --crypt 上面的加密 --mode 上面的Mode -l :一个本地端口
 ```
 
 你需要注意最后的 `本地端口`，在上面的命令中是 `冒号:端口号` 的形式，下面的设置只需要其中的端口号
