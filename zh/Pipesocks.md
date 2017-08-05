@@ -16,6 +16,7 @@ Pipesocks把爱国上网的过程比喻为Pump(泵)、Pipe(水管)、Tap(水龙�
 ### Pipesocks 配置（IOS）
 
 打开Pipesocks，点击Settings,填写`服务器IP，端口，和密码`,全部填写完毕之后返回主页面点击袜子图案，黑白袜子变成黄袜子之时代表代理已经开启
+
 <img src="./images/pipesocks-2.jpg" width="450" />
 
 大功告成！
