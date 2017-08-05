@@ -41,6 +41,8 @@
 
 ![配置Nginx截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/get-start/nginx-bundle.png "配置 Nginx 和 SSL")
 
+- 最新测试版中已经移除了"Default Host"一栏，此处可不填写。
+
 
 ### 安装 Nginx
 
