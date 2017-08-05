@@ -7,6 +7,7 @@ Pipesocks把爱国上网的过程比喻为Pump(泵)、Pipe(水管)、Tap(水龙�
 ## HyperApp 服务端配置
 
 首先打开HyperApp在应用中找到Pipesocks,填写相关配置，这里只需要填写"Localport"和"password"即端口和密码即可。
+
 <img src="./images/pipesocks-1.jpg" width="450" />
 
 ## 防火墙配置
