@@ -18,6 +18,7 @@
     * [Cisco AnyConnect](ocserv.md)
     * [nghttpx (HTTP2) + TLS](nghttpx.md)
     * [使用 kcptun 加速](kcptun.md)
+    * [Pipesocks 教程](Pipesocks.md)
     * [ss-panel 安装教程](sspanel.md)
 * [商店应用配置](Apps.md)
     * [Huginn: 打造自己的IFTTT服务](Apps.md#huginn)
