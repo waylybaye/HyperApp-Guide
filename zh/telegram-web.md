@@ -63,7 +63,7 @@ sudo ufw allow 443
 
 打开浏览器，键入你的域名，回车即可看到Telegram Web的页面
 
-<img src="./images/telegram-7.jpg" align=center />
+<img src="./images/telegram-6.jpg" align=center />
 
 输入手机号码和其他客户端一样登陆即可开始聊天。
 
