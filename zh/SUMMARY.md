@@ -10,6 +10,7 @@
     * [如何搭建 MySQL/WordPress/Ghost/ownCloud 等支持 https 的网站](Get-Started.md)
     * [Jekyll 和 Hugo 的使用](static-site.md)
     * [Minecraft服务器](RD_MinecraftServerBuilding.md)
+    * [Telegram Web 搭建教程](telegram-web.md)
 * 爱国软件
     * [如何选择主机商和爱国软件？(未完)](GFW.md)
     * [SSR](SSR.md)
