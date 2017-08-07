@@ -82,22 +82,3 @@ BBR 是 Google 开发的一种新的TCP发包方式，在较低丢包率和稍�
 2. 如果你机房的线路很差（比如丢包很高或者距离很远）那么可以使用 BBR + SS/SSR + kcptun。
 3. 如果你的运营商会封锁 SS 或者进行 QoS，那么使用 BBR + SSR 混淆，或者 BBR + VMess 的 TLS 混淆。
 
-
-### 联通客户端检测
-
-| 软件和协议 | 联通检测类型 | 访问网址 |
-| --------- | -------- | ---- |
-| Shadowsocks | TCP 业务 | 显示服务器IP |
-| SS + http_simple（80端口） | 上网 (Web方式get) | 显示混淆域名 |
-| SSR | TCP 业务 | 显示服务器IP |
-| SSR + http_simple | 上网 (Web方式get) | 显示混淆域名 | 
-| SSR + TLS(443) | * 安全类网页浏览 (HTTPS VPN) 流量 <br/>* HTTPS 链接 | 显示混淆域名 |
-| SSR + TLS(995) | 安全协议的收邮件流量 | 显示IP |
-| SSR + TLS(非443) | * 网络连接（网页）<br/>* HTTPS 链接| 显示混淆域名 |
-| OpenConnect | UDP 业务 | 显示服务器IP |
-| IPSec VPN | UDP 业务 | 显示服务器IP |
-| V2Ray | TCP 业务 | 显示服务器IP |
-| V2Ray + TLS | HTTPS 网络连接 | 显示证书域名 |
-| nghttpx + TLS | HTTPS 网络连接 | 显示证书域名 |
-| kcptun | UDP 业务 | 显示服务器IP |
-
