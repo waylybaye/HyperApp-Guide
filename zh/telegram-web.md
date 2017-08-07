@@ -18,7 +18,7 @@
 
 再填写完手机号成功登陆之后选择"Getting my application",填写完相关信息即可得到API，其中我们将要用到的是api_id和api_hash
 
-<img src="./images/telegram-4.JPG" alien=center />
+<img src="./images/telegram-4.jpg" alien=center />
 
 ## HyperApp 服务端配置
 
