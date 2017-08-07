@@ -21,6 +21,7 @@
     * [使用 kcptun 加速](kcptun.md)
     * [Pipesocks 教程](Pipesocks.md)
     * [ss-panel 安装教程](sspanel.md)
+    * [联通客户端检测](proxy/unicom.md)
 * [商店应用配置](Apps.md)
     * [Huginn: 打造自己的IFTTT服务](Apps.md#huginn)
     * [Flarum: 一个漂亮的论坛应用](Apps.md#flarum)
