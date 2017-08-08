@@ -26,7 +26,7 @@ Rocket.Chat是使用Meteor框架做的开源消息应用。它支持视频会议
 
 全部填写好的示意图如下：
 
-<img src="./images/rocket-chat-2.PNG" width="450" />
+<img src="./images/rocket-chat-1.png" width="450" />
 
 ## 防火墙配置
 
@@ -46,7 +46,7 @@ sudo ufw allow 443
 
 打开浏览器，键入你的域名，回车即可看到Rocket.Chat的页面,注册好之后进如即可开始聊天。
 
-<img src="./images/rocket-chat-3.jpg" align=center />
+<img src="./images/rocket-chat-2.jpg" align=center />
 
 大功告成！
 
