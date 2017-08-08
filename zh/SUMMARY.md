@@ -7,6 +7,7 @@
     * [~~如何添加 GCE 和 AWS 的服务器 (已过期)~~](Add-Sever-Cloud.md)
 * 应用教程
     * [如何自动生成 SSL 证书](SSL.md)
+    * [使用certbot 更加简单的生成 SSL证书](developer/certbot.md)
     * [如何搭建 MySQL/WordPress/Ghost/ownCloud 等支持 https 的网站](Get-Started.md)
     * [Jekyll 和 Hugo 的使用](static-site.md)
     * [Minecraft服务器](RD_MinecraftServerBuilding.md)
