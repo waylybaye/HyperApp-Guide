@@ -26,20 +26,20 @@
 
 - 首先打开HyperApp在应用中找到Telegram Web,填写相关配置：
 
-* "Api_id"和"Api_hash"填写刚才申请到的值 
-* "Hostname"填写你的域名 
-* "Port"填写你的端口(注意此端口不要和Nginx监听的80和443端口冲突，此处我们选择8888端口为例) 
+	* "Api_id"和"Api_hash"填写刚才申请到的值 
+	* "Hostname"填写你的域名 
+	* "Port"填写你的端口(注意此端口不要和Nginx监听的80和443端口冲突，此处我们选择8888端口为例) 
 
 - 再展开"Show Nginx and SSL options"选项
 
-* "Custom Domain"填写你的域名
-* "Port"填写443
-* "HTTPS"推荐选择"Redirect http to https"
+	* "Custom Domain"填写你的域名
+	* "Port"填写443
+	* "HTTPS"推荐选择"Redirect http to https"
 
 - 再来到"Nginx SSL Support"选项下
 
-* "Domain"填写你的域名
-* "Email"填写你的邮箱
+	* "Domain"填写你的域名
+	* "Email"填写你的邮箱
 
 全部填写好的示意图如下：
 
