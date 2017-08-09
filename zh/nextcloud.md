@@ -93,4 +93,49 @@
 
 大功告成！
 
+## 客户端教程
+
+### 客户端下载
+
+客户端下载地址如下，如果链接失效请前往[此处](https://nextcloud.com/install/)到页面右下角下载
+
+- [Windows & Mac & Linux](https://nextcloud.com/install/#install-clients)
+- [Android](https://play.google.com/store/apps/details?id=com.nextcloud.client)
+- [IOS](https://itunes.apple.com/us/app/nextcloud/id1125420102?mt=8)
+
+### 客户端的使用
+
+以Window客户端为例，下载之后进行安装，然后打开。
+
+在server address中填写你的域名，然后点击下一步
+
+<img src="./images/nextcloud-5.PNG" align=center />
+
+然后输入刚才创建的用户名和密码
+
+<img src="./images/nextcloud-6.PNG" align=center />
+
+然后上面选择相关的设置参数，比如同步大小到多大时通知用户，默认500M，按照自己需求设置，下面选择本地文件夹，选好之后点击完成。
+
+<img src="./images/nextcloud-6.PNG" align=center />
+
+- 此时配置完成，客户端会最小化到任务栏同时可以看到客户端和云端已经可以看到开始了自动同步，你可以打开所设置的本地文件夹，在里面放一个文件，它便会自动同步到云端。
+
+大功告成。
+
+<img src="./images/nextcloud-7.PNG" align=center />
+
+## 后续配置
+
+如果你想要自己配置相关参数，在右下角通知栏打开Nextcloud然后进行设置即可，这里贴上一个设置代理的方法。
+
+```
+打开Nextcloud
+选项卡选择"Network"
+在代理设置(Proxy Settings)中 选择"手动指定代理"(Specify proxy manually as)为 "socks5"
+"Host"填写"127.0.0.1"，右侧的方框是填写端口的，一般填写"1080"
+```
+<img src="./images/nextcloud-8.PNG" align=center />
+
+然后代理即设置完毕，点击关闭即可。
 
