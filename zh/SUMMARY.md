@@ -14,6 +14,8 @@
     * [Telegram Web 搭建教程](telegram-web.md)
     * [Rocket.Chat 搭建教程](rocket-chat.md)
     * [Syncthing 搭建教程](syncthing.md)
+    * [Nextcloud 搭建教程](nextcloud.md)
+
 * 爱国软件
     * [如何选择主机商和爱国软件？(未完)](GFW.md)
     * [SSR](SSR.md)
