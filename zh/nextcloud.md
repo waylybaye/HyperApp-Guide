@@ -1,4 +1,4 @@
-# Syncthing 教程
+# Nextcloud 教程
 
 ## 简介 
 
