@@ -117,13 +117,13 @@
 
 然后上面选择相关的设置参数，比如同步大小到多大时通知用户，默认500M，按照自己需求设置，下面选择本地文件夹，选好之后点击完成。
 
-<img src="./images/nextcloud-6.PNG" align=center />
+<img src="./images/nextcloud-7.PNG" align=center />
 
 - 此时配置完成，客户端会最小化到任务栏同时可以看到客户端和云端已经可以看到开始了自动同步，你可以打开所设置的本地文件夹，在里面放一个文件，它便会自动同步到云端。
 
 大功告成。
 
-<img src="./images/nextcloud-7.PNG" align=center />
+<img src="./images/nextcloud-8.PNG" align=center />
 
 ## 后续配置
 
@@ -135,7 +135,7 @@
 在代理设置(Proxy Settings)中 选择"手动指定代理"(Specify proxy manually as)为 "socks5"
 "Host"填写"127.0.0.1"，右侧的方框是填写端口的，一般填写"1080"
 ```
-<img src="./images/nextcloud-8.PNG" align=center />
+<img src="./images/nextcloud-9.PNG" align=center />
 
 然后代理即设置完毕，点击关闭即可。
 
