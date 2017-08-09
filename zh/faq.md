@@ -7,6 +7,8 @@
     * BBR 问题
     * 服务器错误
 * 应用问题
+    * 文件上传大小限制
+* 爱国问题
     * 手机爱国电脑不爱国
     * 无法爱国的问题
 * [GCP 问题](#gcp)
@@ -73,6 +75,23 @@ A: 执行 `rm -rf /var/lib/docker/aufs` 清除docker网络配置.然后重新安
 
 ## 应用问题
 
+
+### 关于 Nginx 的上传限制
+
+如果你使用了 `Nginx Proxy`，则默认有个2M的上传限制，你可以新建一个文件 `/srv/docker/vhost.d/default` 添加一行  `client_max_body_size 100m;` 来解决这个问题（一般情况下 Nginx 会自动重启，如果没有则需要手动重启下 Nginx Proxy）
+
+你也可以直接运行下面的命令，会自动创建上面的所说的文件:
+
+```sh
+​​echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
+​​```
+​
+​**除了 Nginx 外，PHP 还可以有自己的上传限制，请参考 https://github.com/waylybaye/HyperApp-Guide/issues/152**
+​
+​---
+​
+​
+## 爱国问题
 
 ### 手机可以电脑不行：
 请先查看客户端日志，并贴出来用全局模式测非Chrome、Firefox浏览器（因为Chrome浏览器的很多插件会改代理设置）如果全局可以就能断定是pac规则或者浏览器的原因。
@@ -157,11 +176,6 @@ net.core.default_qdisc = fq
 net.ipv4.tcp_congestion_control = bbr
 ```
 
-* 关于nginx上传限制的解决办法：
-
-​        执行下列这条命令然后重启.把你的受到限制的域名替换命令中 example.com 
-
-​      `touch /srv/docker/nginx/vhost.d/example.com && echo "client_max_body_size 100m;" » /srv/docker/nginx/vhost.d/example.com`
 
 * 关于squid内存不足无法正确启动的解决办法:
 
