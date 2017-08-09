@@ -83,7 +83,19 @@
 
 ## 使用Nextcloud
 
-打开浏览器，键入你的域名，回车即可看到nextcloud的页面,首先我们需要初始化，设置一个账户。
+打开浏览器，键入你的域名，回车即可看到nextcloud的页面,首先我们需要初始化
+
+- 首先要点击屏幕上的"存储&数据库"待其菜单展开后依次配置以下内容
+
+```
+数据目录                          保持默认
+配置数据库                        选择Mysql/MariaDB
+数据库用户                        填写在Mysql中设置的数据库用户，本教程中为"nextcloud"
+数据库密码                        填写在Mysql中设置的数据库密码，本教程中为"nextcloud"
+数据库名称                        填写在Mysql中设置的数据库名称，本教程中为"nextcloud"
+数据库地址                        本教程中因为之前设置了nextcloud连接到容器mysql，所以这里填mysql(宿主机中的Mysql一般是127.0.0.1)   
+
+```
 
 <img src="./images/nextcloud-3.PNG" align=center />
 
