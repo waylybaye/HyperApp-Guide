@@ -64,7 +64,7 @@ chmod -R o+w /srv/docker/syncthing
 
 打开浏览器，键入你的域名，回车即可看到syncthing的页面,进行相关设置后即可使用。
 
-<img src="./images/syncthing-3.jpg" align=center />
+<img src="./images/syncthing-3.png" align=center />
 
 大功告成！
 
