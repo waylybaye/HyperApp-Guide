@@ -91,15 +91,11 @@ A: 当前用户没有docker权限，加到docker组才有，执行命令 `sudo u
 你也可以直接运行下面的命令，会自动创建上面的所说的文件:
 
 ```sh
-​​echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
-​​```
-​
-​**除了 Nginx 外，PHP 还可以有自己的上传限制，请参考 https://github.com/waylybaye/HyperApp-Guide/issues/152**
-​
-​
-​---
-​
-​
+echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
+```
+* **除了 Nginx 外，PHP 还可以有自己的上传限制，请参考 https://github.com/waylybaye/HyperApp-Guide/issues/152**
+
+
 ## 爱国问题
 
 ### 手机可以电脑不行：
@@ -116,7 +112,7 @@ A: 当前用户没有docker权限，加到docker组才有，执行命令 `sudo u
 3. 如果上两步都没有问题，请检查
     * 是否是机器防火墙问题（参考下面的第二项）
     * 是否是客户端配置错误（参考下面的客户端排错）
-  
+
 #### 排查客户端的问题
 
 * 是否使用了跟服务端一致的配置。建议通过扫描二维码的方式添加。
@@ -178,7 +174,7 @@ sudo su && cp /etc/sysctl.conf /etc/sysctl.conf.bak && rm -rf /etc/sysctl.conf &
 
 ​**如果这时候`lsmod | grep bbr`还没有出现tcp_bbr的话请自行根据网上linux文本编辑器教程编辑/etc/sysctl.conf.加上这两行**
 
-```bash
+​```bash
 net.core.default_qdisc = fq
 net.ipv4.tcp_congestion_control = bbr
 ```
