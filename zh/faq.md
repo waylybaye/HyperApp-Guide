@@ -78,7 +78,6 @@ A: 当前用户没有docker权限，加到docker组才有，执行命令 `sudo u
 #### 使用bbr安装脚本的时候提示"Inappropriate ioctl for device"
 使用键盘随便输入几个字符并且回车两下.原因是bbr安装脚本需要等待输入来执行下一步
 
-
 ---
 
 
@@ -92,15 +91,11 @@ A: 当前用户没有docker权限，加到docker组才有，执行命令 `sudo u
 你也可以直接运行下面的命令，会自动创建上面的所说的文件:
 
 ```sh
-​​echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
-​​```
-​
-​**除了 Nginx 外，PHP 还可以有自己的上传限制，请参考 https://github.com/waylybaye/HyperApp-Guide/issues/152**
-​
-​
-​---
-​
-​
+echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
+```
+* **除了 Nginx 外，PHP 还可以有自己的上传限制，请参考 https://github.com/waylybaye/HyperApp-Guide/issues/152**
+
+
 ## 爱国问题
 
 ### 手机可以电脑不行：
@@ -117,7 +112,7 @@ A: 当前用户没有docker权限，加到docker组才有，执行命令 `sudo u
 3. 如果上两步都没有问题，请检查
     * 是否是机器防火墙问题（参考下面的第二项）
     * 是否是客户端配置错误（参考下面的客户端排错）
-  
+
 #### 排查客户端的问题
 
 * 是否使用了跟服务端一致的配置。建议通过扫描二维码的方式添加。
@@ -173,13 +168,13 @@ A: 当前用户没有docker权限，加到docker组才有，执行命令 `sudo u
 * bbr脚本执行后重启后发现执行`lsmod | grep bbr`发现输出空白.bbr没有正确启动.同时执行sysctl -p输出空白
 * 根据使用者反馈的问题 ,初步解决方案是执行一下命令
 
-```bash
+​```bash
 sudo su && cp /etc/sysctl.conf /etc/sysctl.conf.bak && rm -rf /etc/sysctl.conf && touch /etc/sysctl.conf && chmod 644 /etc/sysctl.conf && sudo echo -e "\n\n\n\nnet.core.default_qdisc = fq\n\n\nnet.ipv4.tcp_congestion_control = bbr" >> /etc/sysctl.conf && sysctl -p
 ```
 
 ​**如果这时候`lsmod | grep bbr`还没有出现tcp_bbr的话请自行根据网上linux文本编辑器教程编辑/etc/sysctl.conf.加上这两行**
 
-```bash
+​```bash
 net.core.default_qdisc = fq
 net.ipv4.tcp_congestion_control = bbr
 ```
@@ -204,3 +199,12 @@ sysctl -p
   `echo "/swapfile swap swap defaults 0 0" | sudo tee -a /etc/fstab`
 
 
+
+
+## Hyperapp官方应用教程链接
+
+https://www.hyperapp.fun
+
+#### ~~部署v2ray等hyperapp应用可适当参考如下链接~~(打死这个不要脸的:)
+
+https://vinga.ml
