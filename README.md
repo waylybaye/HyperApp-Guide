@@ -14,12 +14,14 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 
 ---
 
-<!--    * [VPN: IPSec，OpenVPN, OpenConnect 教程 （占坑）](./zh/VPN.md)-->
+## 在线浏览
+
+[www.hyperapp.fun](https://www.hyperapp.fun)
 
 ## 文档资源
 
-* [如何免费打造打造一个安全稳定低延迟超高速的科学上网环境](./Guide/across-wall.md)
-* [排错指引](./zh/common-help.md)
+* [如何免费打造打造一个安全稳定低延迟超高速的科学上网环境](./zh/proxy/get-started.md)
+* [排错指引](./zh/faq.md)
 * 如何添加服务器：
     * [Vultr](./zh/vendors.md#vultr)
     * [Linode](./zh/vendors.md#linode)
@@ -28,8 +30,8 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
     * [如何自动生成 SSL 证书](./zh/SSL.md)
     * [如何搭建 MySQL/WordPress/Ghost/ownCloud 等支持 https 的网站](./zh/Get-Started.md)
     * [Jekyll 和 Hugo 的使用](./zh/static-site.md)
-* 科学上网
-    * [综述：如何选择主机商和代理软件？（未完）](./zh/GFW.md)
+* 爱国软件
+    * [综述：如何选择主机商和爱国软件？（未完）](./zh/GFW.md)
     * [SSR: 教程](./zh/SSR.md)
     * [V2Ray: TCP TLS 混淆 或者 WebSocket 使用 Nginx 自动分流教程](./zh/V2Ray.md)
     * [Shadowsocks-libev](./zh/ss-libev.md)
@@ -37,6 +39,7 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
     * [使用 nghttpx (HTTP2) + TLS 搭建 HTTPS Proxy](./zh/nghttpx.md)
     * [使用 kcptun 加速上面所有的服务](./zh/kcptun.md)
     * [ss-panel 安装教程](./zh/sspanel.md)
+    * [Pipesocks 教程](./zh/Pipesocks.md)
 * [商店应用配置](./zh/Apps.md)
     * [Huginn: 打造自己的IFTTT服务](./zh/Apps.md#huginn)
     * [Flarum: 一个漂亮的论坛应用](./zh/Apps.md#flarum)
@@ -130,8 +133,8 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 2. 在 Actions 界面你可以管理这个应用在制定服务器上的状态。点击 Install 可以安装应用。
 3. 点击后会在 App 卡片下方会出现进度栏，它会实时更新安装的进度，当最左侧的图标变成对号时说明动作已经执行成功。如果出现错误则点击该进度条可以查看具体的出错信息。
 
-
 ---
+
 
 ### 商店应用
 

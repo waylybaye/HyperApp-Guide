@@ -33,5 +33,12 @@
 
 注意：如果您使用 GCE/AWS 等，需要手动在防火墙中打开端口
 
+### SS 客户端下载地址
 
+- Windows客户端	[下载地址](https://github.com/shadowsocks/shadowsocks-windows/releases)
+- Android客户端	[下载地址](https://play.google.com/store/apps/details?id=com.github.shadowsocks&hl=en)
+- IOS客户端
+	- [Shadowrocket](https://itunes.apple.com/us/app/shadowrocket/id932747118?mt=8)
+	- [Quantumult](https://itunes.apple.com/us/app/quantumult/id1252015438?mt=8)
+	- [Suege](https://itunes.apple.com/us/app/surge-web-developer-tool-and-proxy-utility/id1040100637?mt=8)
 

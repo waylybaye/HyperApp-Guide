@@ -1,6 +1,28 @@
-# V2Ray VMess 以及 HTTP & TLS 教程
+# V2Ray 教程
 
 简介：V2Ray 是另一款代理软件（省略），官网 [https://www.v2ray.com/](https://www.v2ray.com/)
+
+V2Ray 共有三种传输方式，可以形成三种使用方案：
+
+#### TCP 模式 （支持 TLS）
+
+使用TCP来传输，这种方式和其它代理应用模式上差不多。TCP 模式可以使用 HTTP/TLS 混淆来模拟 HTTP 网站流量，但也只是模拟，并不是真实的 HTTP 流量。
+
+#### WebSocket 模式 （支持 TLS）
+
+WebSocket 是一种在 HTTP 之上的协议，本质也是TCP传输，但是是天然的 HTTP 网站流量。并且可以搭配各种 HTTP 服务器（比如nginx,caddy）一起使用。
+
+因为 WebSocket 已经是 HTTP 的一种，所以并不需要任何伪装（混淆）。
+
+#### mKCP 模式
+
+使用 `UDP` 来传输，mKCP是以流量换速度，就是多倍发包，我同一份数据发多份，防止丢包重传，所以同一条件下使用mKCP会比其他方式耗费更多流量，不建议手机4G使用。
+
+由于BT下载、游戏、以及视频聊天等也都是使用 UDP 传输，所以这种模式下可以伪装成 `BT下载流量、FaceTime 流量、微信视频流量`。
+
+由于 BBR 是 TCP 加速技术，所以使用 mKCP 并不能享受 BBR 的加速buff，不过 mKCP 本身就是一种加速技术了，也并不需要 BBR。
+
+---
 
 ## HyperApp 服务端配置
 
@@ -66,8 +88,19 @@
 
 关于如何自动生成可信证书的更多介绍，请参考 [如何自动生成 SSL 证书](./SSL.md) 
 
+## 方案3: 使用mKCP 传输
+
+mKCP是V2ray对KCP的简单实现，是基于UDP的一种传输方式，它可以伪装成FaceTime视频通话，BT下载和WeChat视频聊天等流量，一般搭配动态端口来实现较为完美的伪装，动态端口HyperApp后续将会支持，此处暂以单端口为例。
+
+### 配置选项
+* Port:		填写您的端口
+* Network:	选择"kcp"
+* Header:	"kcp utp","kcp srtp","kcp wechat-video"三选一
+
+其他设置保持默认即可，安装完毕后记得打开防火墙对应的UDP端口。
 
 ---
+
 
 ## 客户端配置
 
@@ -75,7 +108,7 @@
 你可以在这里找到所有平台的客户端 [V2Ray 各平台客户端下载](https://www.v2ray.com/chapter_01/3rd_party.html) 下文以 Mac 客户端 V2RayX 为例
 
 
-### V2RayX 配置
+### V2RayX 配置（Mac）
 
 在 `V2RayX → Servers` 中添加一个服务器，如图：
 
