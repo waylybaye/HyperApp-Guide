@@ -35,16 +35,22 @@
 * 如果你使用的国外 VPS 依然非常慢，那估计是你VPS的网络比较慢，有些应用的镜像很大，下载需要时间。
 
 
-#### 提示连接失败/无法连接/transport read/timeout
+#### 提示连接失败/无法连接
 
-A: 请不要使用代理连接hyperapp.并且进行操作的时候不要切换应用.
+1. 请不要打开VPN连接hyperapp.（或者在对应的App中加一条规则，设置你的服务器IP直连）
+2. 检查服务器IP是否变了（GCP 如果没有用静态IP，服务器关机后再重启IP可能会变）
+
+#### 提示 transport read 或者 timeout
+
+1. 不要开 VPN 使用 HyperApp，并且进行操作的时候不要切换应用.
+2. timeout 可能是掉线了，刷新下服务器状态，看看应用状态是否改变。
 
 
 #### Conflict
 
 `docker: Error response from daemon: Conflict. The container name *** is already used by container ....`
 
-A: 应用已经安装过了，更新了配置要点击“更新配置”
+应用已经安装过了，更新了配置要点击“更新配置”
 
 
 #### docker command not found
@@ -61,7 +67,7 @@ A: 应用已经安装过了，更新了配置要点击“更新配置”
 
 #### 如果先安装了docker再安装bbr导致无法启动docker怎么办?
 
-A: 执行 `rm -rf /var/lib/docker/aufs` 清除docker网络配置.然后重新安装所有应用即可.
+执行 `rm -rf /var/lib/docker/aufs` 清除docker网络配置.然后重新安装所有应用即可.
 
 
 #### 操作Docker时提示权限不足(Permission Denied)
