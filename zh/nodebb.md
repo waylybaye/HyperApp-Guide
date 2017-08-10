@@ -68,7 +68,7 @@ BodeBB主页面如下
 
 我们右上角登陆后随便点击一个帖子
 
-<img src="./images/nodebb-3.png" align=center />
+<img src="./images/nodebb-4.png" align=center />
 
 ## 注意
 
