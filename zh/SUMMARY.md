@@ -15,7 +15,7 @@
     * [Rocket.Chat 搭建教程](rocket-chat.md)
     * [Syncthing 搭建教程](syncthing.md)
     * [Nextcloud 搭建教程](nextcloud.md)
-
+    * [Telegram Web](telegram.md)
 * 爱国软件
     * [如何选择主机商和爱国软件？(未完)](GFW.md)
     * [SSR](SSR.md)
@@ -26,6 +26,7 @@
     * [使用 kcptun 加速](kcptun.md)
     * [Pipesocks 教程](Pipesocks.md)
     * [ss-panel 安装教程](sspanel.md)
+    * [ss-panel 服务端与客户端安装](sspanel.md)
     * [联通客户端检测](proxy/unicom.md)
 * [商店应用配置](Apps.md)
     * [Huginn: 打造自己的IFTTT服务](Apps.md#huginn)
