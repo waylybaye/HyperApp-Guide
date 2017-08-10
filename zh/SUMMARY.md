@@ -15,7 +15,6 @@
     * [Rocket.Chat 搭建教程](rocket-chat.md)
     * [Syncthing 搭建教程](syncthing.md)
     * [Nextcloud 搭建教程](nextcloud.md)
-
 * 爱国软件
     * [如何选择主机商和爱国软件？(未完)](GFW.md)
     * [SSR](SSR.md)
@@ -25,20 +24,25 @@
     * [nghttpx (HTTP2) + TLS](nghttpx.md)
     * [使用 kcptun 加速](kcptun.md)
     * [Pipesocks 教程](Pipesocks.md)
-    * [ss-panel 安装教程](sspanel.md)
     * [联通客户端检测](proxy/unicom.md)
-* [商店应用配置](Apps.md)
-    * [Huginn: 打造自己的IFTTT服务](Apps.md#huginn)
-    * [Flarum: 一个漂亮的论坛应用](Apps.md#flarum)
-    * [EFB: 接收微信消息并转发到 Telegram](Apps.md#efb)
-    * [Thunder xware: 迅雷远程下载](Apps.md#thunder-xware)
+    * [SSPANEL轻松搭建教程](./zh/panel.md)
+    * [V2Ray完美混淆教程（内含全平台客户端配置教程）](./zh/V2ray+Websocket.md)
+* [商店应用配置](./zh/Apps.md)
+    - [Huginn: 打造自己的IFTTT服务](./zh/Apps.md#huginn)
+    - [CloudTorrent部署教程](./zh/Bt.md)
+    - [使用Hugo搭建惊艳个人博客](./zh/Hugo.md)
+    - [免爱国Telegram-Web部署教程](./zh/telegram.md)
+    - [Flarum: 一个漂亮的论坛应用](./zh/Apps.md#flarum)
+    - [EFB: 接收微信消息并转发到 Telegram](./zh/Apps.md#efb)    
+    - [Thunder xware: 迅雷远程下载](./zh/Apps.md#thunder-xware)
 * 用户贡献的文档
-   * [VPS上搭建高速BT下载服务](Bt.md)
-   * [使用Hugo搭建惊艳个人博客](Hugo.md)
-   * [Smartsocks使用帮助](Smartsocks-help.md)
-   * [打造安全websocket+nginx tls V2ray](V2ray+Websocket.md)
-   * [免费获得个人专享顶级域名](Get-Domain.md)
+   - [Smartsocks使用帮助](./zh/Smartsocks-help.md)
+
+   - [免费获得个人专享顶级域名](./zh/Get-Domain.md)
+
+   - [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/RD_MinecraftServerBuilding.md)
 * 系统教程
+
    * [CentOS 如何手动升级 Docker 版本](centos-upgrade-docker.md)
    * [阿里云 Docker 加速](Aliyun-docker.md)
 
