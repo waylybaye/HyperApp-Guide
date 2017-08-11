@@ -28,7 +28,8 @@ Nginx相关的配置不再赘述，下面贴出MongoDB的配置图
          "Email"               填一个邮箱
          "Uploads"             保持默认
          "config.json"         保持默认
-"Link Containers" 选择`MongoDB`
+         "Link Containers"     选择`MongoDB`
+```
 
 - 再展开"Show Nginx and SSL options"选项
 
