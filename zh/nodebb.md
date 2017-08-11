@@ -21,24 +21,30 @@ Nginx相关的配置不再赘述，下面贴出MongoDB的配置图
 
 ### 配置NodeBB 
 
-	* "Port" 留空即可
-	* "Username" 填一个用户名
-	* "Password" 填一个密码
-	* "Email" 填一个邮箱
-	* "Uploads" 保持默认
-	* "config.json" 保持默认
-	* "Link Containers" 选择`MongoDB`
+```
+         "Port"                留空即可
+         "Username"            填一个用户名
+         "Password"            填一个密码
+         "Email"               填一个邮箱
+         "Uploads"             保持默认
+         "config.json"         保持默认
+         "Link Containers"     选择`MongoDB`
+```
 
 - 再展开"Show Nginx and SSL options"选项
 
-	* "Custom Domain"填写你的域名
-	* "Port" 留空即可
-	* "HTTPS"推荐选择"Redirect http to https"
+```
+         "Custom Domain"        填写你的域名
+         "Port"                 留空即可
+         "HTTPS"                推荐选择"Redirect http to https"
+```
 
 - 再来到"Nginx SSL Support"选项下
 
-	* "Domain"填写你的域名
-	* "Email"填写你的邮箱
+```
+         "Domain"               填写你的域名
+         "Email"                填写你的邮箱
+```
 
 全部填写好的示意图如下：
 

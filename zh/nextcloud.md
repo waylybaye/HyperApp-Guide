@@ -15,12 +15,12 @@
 - 首先打开HyperApp找到Mysql安装，填写相关配置：
 
 ```
-	 "Version"             选择"latest"
-	 "Root Password"       设置一个Mysql的"Root密码"
-	 "Database"            设置一个数据库名,此处示例为"nextcloud"
-	 "User"                设置一个数据库用户,此处示例为"nextcloud"
-	 "Password"            设置一个数据库密码,此处示例为"nextcloud"
-	 "Port"                此处`留空`
+         "Version"             选择"latest"
+         "Root Password"       设置一个Mysql的"Root密码"
+         "Database"            设置一个数据库名,此处示例为"nextcloud"
+         "User"                设置一个数据库用户,此处示例为"nextcloud"
+         "Password"            设置一个数据库密码,此处示例为"nextcloud"
+         "Port"                此处`留空`
 ```
 
 - 其他设置如未说明则保持默认
@@ -36,25 +36,25 @@
 - 首先打开HyperApp在应用中找到Nextcloud,填写相关配置：
 
 ```
-	 "Version"             "latest"
-	 "Port"                此处"留空"
-	 "Data dir"            保持默认
-	 "Link Containers"     选择"Mysql"
+         "Version"             "latest"
+         "Port"                此处"留空"
+         "Data dir"            保持默认
+         "Link Containers"     选择"Mysql"
 ```
 
 - 再展开"Show Nginx and SSL options"选项
 
 ```
-	 "Custom Domain"       填写"你的域名"
-	 "Port"                此处"留空"
-	 "HTTPS"               推荐选择"Redirect http to https"
+         "Custom Domain"       填写"你的域名"
+         "Port"                此处"留空"
+         "HTTPS"               推荐选择"Redirect http to https"
 ```
 
 - 再来到"Nginx SSL Support"选项(如果你之前已经通过HyperApp申请好证书则此步骤不需要填写)
 
 ```
-	 "Domain"      填写你的"域名"
-	 "Email"       填写你的"邮箱"
+         "Domain"              填写你的"域名"
+         "Email"               填写你的"邮箱"
 ```
 
 - 填写完成之后点击最下方的"保存"
@@ -68,16 +68,16 @@
 - CentOS
 
 ```
-	firewall-cmd --add-port=80/tcp --permanent
-	firewall-cmd --add-port=443/tcp --permanent
-	firewall-cmd --reload
+firewall-cmd --add-port=80/tcp --permanent
+firewall-cmd --add-port=443/tcp --permanent
+firewall-cmd --reload
 ```
 
 - Ubuntu
 
 ```
-	sudo ufw allow 80
-	sudo ufw allow 443
+sudo ufw allow 80
+sudo ufw allow 443
 ```
 
 
