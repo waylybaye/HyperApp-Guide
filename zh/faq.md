@@ -72,8 +72,27 @@
 
 #### 操作Docker时提示权限不足(Permission Denied)
 
-A: 当前用户没有docker权限，加到docker组才有，执行命令 `sudo usermod -aG docker $USER`
+原因：当前用户没有docker权限，加到docker组才有，执行命令 
 
+```
+sudo usermod -aG docker $USER
+```
+
+#### 安装应用时安装失败提示"overlay"已满
+
+原因：已安装或者曾经安装过的应用太多，因为Docker自身的机制，删除容器并不会删除镜像，久而久之硬盘可能会被塞满
+
+首先进入命令行，输入以下命令来查询已存在的镜像
+
+```
+docker image ls
+```
+然后找到不需要的或者占用体积特别大的镜像，复制它的"REPOSITORY"或者"IMAGE ID",然后键入以下命令来删除镜像
+
+```
+docker image rm 镜像ID或者REPOSITORY
+```
+删除完成之后可看到硬盘空间已经释放，可以继续安装想要的应用
 
 #### 使用bbr安装脚本的时候提示"Inappropriate ioctl for device"
 使用键盘随便输入几个字符并且回车两下.原因是bbr安装脚本需要等待输入来执行下一步
