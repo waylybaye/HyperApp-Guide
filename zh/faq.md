@@ -162,6 +162,8 @@ echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
 * 搬瓦工只支持 KVM虚拟化 的机器。
 * Vultr/DigitalOcean/AWS 全都支持
 * GCP没有领到试用金：重新打开试用页面再点击一次“Try it free”
+* 50Kvm 的机器第一次登录需要记下下次登录的 SSH 端口
+* DigitalOcean 的机器第一次登录需要改密码
 
 ## HyperApp 常见问题:
 
