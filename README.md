@@ -40,7 +40,6 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
     * [使用 kcptun 加速上面所有的服务](./zh/kcptun.md)
     * [Pipesocks 教程](./zh/Pipesocks.md)
     * [SSPANEL轻松搭建教程](./zh/panel.md)
-    * [V2Ray完美混淆教程（内含全平台客户端配置教程）](./zh/V2ray+Websocket.md)
 * [商店应用配置](./zh/Apps.md)
     * [Huginn: 打造自己的IFTTT服务](./zh/Apps.md#huginn)
     * [CloudTorrent部署教程](./zh/Bt.md)
