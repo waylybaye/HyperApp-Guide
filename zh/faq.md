@@ -25,10 +25,10 @@
 
 ### 安装错误
 
-#### 安装应用时报错"something's not recognized platform"
+#### 安装应用时报错 "i686 not recognized platform"
 
-* 更改系统为64位(X86-64)Linux系统
-* 虚拟化须为KVM
+* 系统必须是64位(X86-64)Linux系统
+* 虚拟化方式不支持 OpenVZ
 
 #### 为什么在安装应用的时候.会卡在安装中非常久(这种情况多出现在国内VPS中)？
 
@@ -101,11 +101,13 @@ docker image rm 镜像ID或者REPOSITORY
 #### 使用bbr安装脚本的时候提示"Inappropriate ioctl for device"
 使用键盘随便输入几个字符并且回车两下.原因是bbr安装脚本需要等待输入来执行下一步
 
+
 ##### 部署 Nginx SSL Support 报错提示找不到/不存在Nginx Proxy 但 Nginx 已经正确安装
 
 * 如果将同一个应用部署到多个服务器，最好在安装时一次选择多个服务器而不要开启多个应用。
 
 检查 SSL Support 是否在同一机器有对应的Nginx
+
 
 ---
 
