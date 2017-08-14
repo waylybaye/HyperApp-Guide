@@ -28,7 +28,6 @@
     * [Pipesocks 教程](Pipesocks.md)
     * [联通客户端检测](proxy/unicom.md)
     * [SSPANEL轻松搭建教程](panel.md)
-    * [V2Ray完美混淆教程（内含全平台客户端配置教程）](V2ray+Websocket.md)
 * [商店应用配置](Apps.md)
     - [Huginn: 打造自己的IFTTT服务](Apps.md#huginn)
     - [CloudTorrent部署教程](Bt.md)
