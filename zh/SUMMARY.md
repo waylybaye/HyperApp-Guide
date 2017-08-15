@@ -18,6 +18,7 @@
     * [NodeBB论坛 搭建教程](nodebb.md)
     * [Telegram Web](telegram.md)
 * 爱国软件
+    * [LoveBundle 爱国套件](proxy/love-bundle.md)
     * [如何选择主机商和爱国软件？(未完)](GFW.md)
     * [SSR](SSR.md)
     * [V2Ray](V2Ray.md)
