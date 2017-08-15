@@ -64,6 +64,12 @@ SS/SSR 的 TLS 混淆并非是真正的 TLS 流量，而是通过伪装成 TLS �
 > 那你可以使用 `XX.XX.XX.XX.xip.io` 来连接你的服务器，这个域名会自动解析到前面的IP上
 
 
+### 配置界面
+
+<img src="../images/love-bundle.jpeg" width="450" />
+
+### 配置详解
+
 在商店中点击 `LoveBundle`，在出现的配置页面中按如下填写：
 
 ```
