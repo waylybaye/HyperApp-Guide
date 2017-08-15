@@ -16,7 +16,7 @@
     * [Syncthing 搭建教程](syncthing.md)
     * [Nextcloud 搭建教程](nextcloud.md)
     * [NodeBB论坛 搭建教程](nodebb.md)
-    * [Telegram Web](telegram.md)
+    * [WordPress搭建教程](wordpress.md)
 * 爱国软件
     * [LoveBundle 爱国套件](proxy/love-bundle.md)
     * [如何选择主机商和爱国软件？(未完)](GFW.md)

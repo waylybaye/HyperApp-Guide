@@ -9,20 +9,24 @@ Rocket.Chat是使用Meteor框架做的开源消息应用。它支持视频会议
 - 在安装`Rocket.Chat`前，需要先安装`MongoDB`,`Nginx Proxy`和`Nginx SSL Support`,它们三个的参数不需要变动。（如果之前已经安装了则可不用安装）
 
 - 首先打开HyperApp在应用中找到Rocket.Chat,填写相关配置：
-
-	* "Port" 留空即可
-	* "Link Containers" 选择`MongoDB`
-
+```
+        "Port"                 留空即可
+        "Link Containers"      选择`MongoDB`
+```
 - 再展开"Show Nginx and SSL options"选项
 
-	* "Custom Domain"填写你的域名
-	* "Port"填写443
-	* "HTTPS"推荐选择"Redirect http to https"
+```
+        "Custom Domain"        填写你的域名
+        "Port"                 留空即可
+        "HTTPS"                推荐选择"Redirect http to https"
+```
 
 - 再来到"Nginx SSL Support"选项下
 
-	* "Domain"填写你的域名
-	* "Email"填写你的邮箱
+```
+         "Domain"              填写你的域名
+         "Email"               填写你的邮箱
+```
 
 全部填写好的示意图如下：
 

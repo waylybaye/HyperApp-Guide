@@ -19,21 +19,25 @@ Nginx设置如下：
 
 - 首先打开HyperApp在应用中找到Syncthing,填写相关配置：
 
-	* "WebUI"	填写`8384`
-	* "Sync Port"	保持默认
-	* "Data dir"	保持默认
-
+```
+         "WebUI"                填写`8384`
+         "Sync Port"            保持默认
+         "Data dir"             保持默认
+```
 - 再展开"Show Nginx and SSL options"选项
 
-	* "Custom Domain"	填写`你的域名`
-	* "Port"		填写`8384`
-	* "HTTPS"		推荐选择`Redirect http to https`
+```
+         "Custom Domain"        填写`你的域名`
+         "Port"                 填写`8384`
+         "HTTPS"                推荐选择`Redirect http to https`
+```
 
 - 再来到"Nginx SSL Support"选项
 
-	* "Domain"	填写你的`域名`
-	* "Email"	填写你的`邮箱`
-
+```
+         "Domain"               填写你的`域名`
+         "Email"                填写你的`邮箱`
+```
 全部填写好的示意图如下：
 
 <img src="./images/syncthing-2.png" width="450" />
@@ -60,7 +64,7 @@ sudo ufw allow 443
 chmod -R o+w /srv/docker/syncthing
 ```
 
-## 使用R
+## 使用
 
 打开浏览器，键入你的域名，回车即可看到syncthing的页面,进行相关设置后即可使用。
 
