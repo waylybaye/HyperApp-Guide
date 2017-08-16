@@ -73,6 +73,9 @@
 
 执行 `rm -rf /var/lib/docker/aufs` 清除docker网络配置.然后重新安装所有应用即可.
 
+#### sudo: no tty present and no askpass program specified
+
+你需要修改 `sudo` 配置文件允许当前用户无密码运行 `sudo`
 
 #### 操作Docker时提示权限不足(Permission Denied)
 
@@ -241,3 +244,5 @@ https://www.hyperapp.fun
 #### ~~部署v2ray等hyperapp应用可适当参考如下链接~~(打死这个不要脸的:)
 
 https://vinga.ml
+
+
