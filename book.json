@@ -3,10 +3,22 @@
     "styles": {
         "website": "styles/website.css"
     },
-    "plugins": ["ga"],
+    "plugins": [
+        "ga",
+        "editlink",
+        "github"
+    ],
     "pluginsConfig": {
         "ga": {
             "token": "UA-104662039-1"
+        },
+        "editlink": {
+            "base": "https://github.com/waylybaye/HyperApp-Guide/edit/master/",
+            "label": "Edit",
+            "multilingual": true
+        },
+        "github": {
+            "url": "https://github.com/waylybaye/HyperApp-Guide"
         }
     }
 }
