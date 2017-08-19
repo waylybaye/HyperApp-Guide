@@ -10,7 +10,7 @@ LoveBundle 是一个多合一的应用，使用 haproxy 通过**域名**来自�
 
 #### LoveBundle 包含哪些应用？
 
-* `SS TLS` 混淆
+* `SS TLS`
 * `SSR tls1.2_ticket_auth`
 * `V2Ray VMess TCP TLS` (支持 LetsEncrypt 证书）
 * `V2Ray VMess WebSocket TLS`（支持 LetsEncrypt 证书）
@@ -77,22 +77,22 @@ SS/SSR 的 TLS 混淆并非是真正的 TLS 流量，而是通过伪装成 TLS �
 * Username          用户名（此用户名可以用来登录 AnyConnect/HTTP2）
 * Password          密码（此密码用来登录 SS/SSR/AnyConnect/HTTP2)
 
-* SS Domain         SS TLS 混淆的域名，多个域名用英文逗号分隔开
+* SS Domain         SS TLS 混淆的域名
 * SS Method         SS 的加密协议
 
-* SSR Domain        SSR TLS 混淆的域名，多个域名用英文逗号分隔开
+* SSR Domain        SSR TLS 混淆的域名
 * SRR Protocol      SSR 协议
 * SSR Method        SSR 加密方法
  
 * V2Ray UUID        V2Ray 的 uuid （默认 alterID 是32）
-* V2Ray TLS         V2Ray TLS 的域名，不支持多域名，推荐使用自己的域名+certbot证书。
+* V2Ray TLS         V2Ray TLS 的域名，推荐使用自己的域名+certbot证书。
 * V2Ray WS          V2Ray WebSocket TLS 的域名，不支持多域名，推荐使用自己的域名+certbot证书。
 
-* HTTPS Domain      HTTP2 TLS Proxy 的域名，不支持多域名，推荐使用自己的域名+certbot 证书。
-* OCServ Domain     AnyConnect 的域名，不支持多域名，可以填写 IP。推荐使用自己的域名+certbot 证书。
+* HTTPS Domain      HTTP2 TLS Proxy 的域名，推荐使用自己的域名+certbot 证书。
+* OCServ Domain     AnyConnect 的域名，可以填写 IP。推荐使用自己的域名+certbot 证书。
 ```
 
-其中 V2Ray TLS/WS 和 HTTP2/AnyConnect 不支持多域名，并且都会在下面的 `certs` 目录里自动寻找证书，找不到就会生成自签证书。
+其中 V2Ray TLS/WS 和 HTTP2/AnyConnect 会在下面的 `certs` 目录里自动寻找证书，找不到就会生成自签证书。
 
 ### Volumes
 
