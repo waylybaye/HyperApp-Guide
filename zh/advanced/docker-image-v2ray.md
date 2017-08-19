@@ -2,7 +2,7 @@
 
 本次教程介绍如何使用HyperApp中的DockerImage应用搭建V2ray，以实现自由度更大的配置方式。
 
-我们先从 [DockerHub](https://hub.docker.com/) 通过搜索找到 V2ray 官方提供的镜像, 链接[在此](https://hub.docker.com/r/v2ray/official/)。我们可以发现，镜像名为v2ray,点击网页中的"tag"可以看出标签为`official` ,我们将这两个值其复制下来回到`DockerImage`中的`Image`出粘贴，即`v2ray:official`
+我们先从 [DockerHub](https://hub.docker.com/) 通过搜索找到 V2ray 官方提供的镜像, 链接[在此](https://hub.docker.com/r/v2ray/official/)。我们可以发现，镜像名为v2ray,点击网页中的"tag"可以看出标签为`latest` ,我们将这两个值其复制下来回到`DockerImage`中的`Image`出粘贴，即`v2ray:latest`
 
 在此之前,你需要在 /etc 目录下新建一个文件夹 v2ray, 并把你的配置写好后命令为 config.json 放入 v2ray 文件夹内。此处根据需求假设
 ```
