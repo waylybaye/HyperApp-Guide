@@ -9,7 +9,7 @@ HyperApp 的所有应用都是基于Docker技术的，Docker技术是一种新�
 HyperApp 中内置了许多经过作者精心调整的镜像，对于新手而言部署起来非常方便。但凡事都有两面性，便利性得到满足时，可定制行就容易被压制。如果你需要运行自定义的镜像或者非HyperApp提供的镜像，那么HyperApp 中的`DockerImage`这个应用可以满足你
 
 以下就是Dockerimage的界面
-<img src="/images/dockerimage-1.png" width="450" />
+<img src="./images/dockerimage-1.png" width="450" />
 
 其中主要的配置如下:
 
