@@ -26,6 +26,6 @@
 
 全部填好之后如下：
 
-<img src="/images/dockerimage-v2ray-1.png" width="450" />
+<img src="./images/dockerimage-v2ray-1.png" width="450" />
 
 之后的使用和其他HyperApp中的App类似。
