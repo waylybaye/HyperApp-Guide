@@ -10,12 +10,12 @@ LoveBundle 是一个多合一的应用，使用 haproxy 通过**域名**来自�
 
 #### LoveBundle 包含哪些应用？
 
-* SS TLS 混淆
-* SSR tls1.2_ticket_auth
-* V2Ray VMess TLS (支持 LetsEncrypt 证书）
-* V2Ray WebSocket TLS（支持 LetsEncrypt 证书）
-* nghttpx HTTP2 TLS 代理 （支持 LetsEncrypt 证书）
-* ocserv: AnyConnect VPN（支持 LetsEncrpt 证书）
+* `SS TLS` 混淆
+* `SSR tls1.2_ticket_auth`
+* `V2Ray VMess TCP TLS` (支持 LetsEncrypt 证书）
+* `V2Ray VMess WebSocket TLS`（支持 LetsEncrypt 证书）
+* `nghttpx HTTP2 TLS` 代理 （支持 LetsEncrypt 证书）
+* `ocserv: AnyConnect VPN`（支持 LetsEncrpt 证书）
 
 其中 LetsEncrypt 证书通过 [certbot](../developer/certbot.md) 来自动生成，具体使用请参阅 [certbot 自动生成LetsEncrypt 证书教程](../developer/certbot.md)
 
@@ -128,24 +128,24 @@ SSR
 * 混淆参数     上面的 SSR Domain   
 
 V2Ray TLS
-* Address      上面的 V2Ray TLS Domain（需要解析到你VPS上）
-* 端口          上面设置的端口
-* UUID         上面的UUID
+* Address       上面的 V2Ray TLS Domain（需要解析到你VPS上）
+* Port          上面设置的端口
+* UUID          上面的UUID
 * alterId       32
 * Network       tcp
 * TCP           ✅ Conection Reuse
 * TCP header typ none
 * TLS           ✅
-* Allow insecure✅
+                ✅ Allow insecure （如果使用自签证书）
 
 V2Ray WebSocket
-* Address      上面的 V2Ray WS Domain（需要解析到你VPS上）
+* Address       上面的 V2Ray WS Domain（需要解析到你VPS上）
 * 端口/UUID/alterID 保持一致
-* Network      WebSocket
-* WebSocket    ✅ Conection Reuse
-* path         /
-* TLS          ✅
-* Allow insecure✅
+* Network       WebSocket
+* WebSocket     ✅ Conection Reuse
+* path          /
+* TLS           ✅
+                ✅ Allow insecure （如果使用自签证书）
 ```
 
 
