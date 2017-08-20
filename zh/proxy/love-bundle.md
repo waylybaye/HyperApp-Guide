@@ -89,7 +89,9 @@ SS/SSR 的 TLS 混淆并非是真正的 TLS 流量，而是通过伪装成 TLS �
 * V2Ray WS          V2Ray WebSocket TLS 的域名，不支持多域名，推荐使用自己的域名+certbot证书。
 
 * HTTPS Domain      HTTP2 TLS Proxy 的域名，推荐使用自己的域名+certbot 证书。
+
 * OCServ Domain     AnyConnect 的域名，可以填写 IP。推荐使用自己的域名+certbot 证书。
+* CN no route       开启后将会忽略国内IP段，只对国外IP进行代理。
 ```
 
 其中 V2Ray TLS/WS 和 HTTP2/AnyConnect 会在下面的 `certs` 目录里自动寻找证书，找不到就会生成自签证书。
