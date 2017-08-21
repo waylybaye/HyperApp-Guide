@@ -10,7 +10,7 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 
 ---
 
-## 支持链接
+## 获得帮助
 
 * [Telegram 用户群](https://t.me/hyperapp)
 * [在 Telegram 上关注 HyperApp 更新频道](https://t.me/hyperappnews)
@@ -26,4 +26,24 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 #### 参与改进该文档
 
 遇到文档错误您可以在本页面左上角点击 `Edit` 直接在 Github 上编辑该文档，然后提交 `Pull Request` 即可。
+
+
+#### 支持的 Linux 系统
+
+注意，这里所说的支持是指自动安装docker支持的系统，如果你使用其它系统（如 FreeBSD, Gentoo等），你可以自己安装 docker，HyperApp 会自动检测 docker 是否安装，如果已经安装则使用已有的 docker。
+
+* Docker 只支持64位系统，且内核版本 >= 3.10
+* Ubuntu 14，16 ✅
+* CentOS 7 ✅
+* Debian 8 ✅
+* CentOS 6 ⚠️ （不支持，但你可以手动安装最新版的Docker）
+* 不支持 OpenVZ ❌
+
+注：CentOS 6 也是支持的，但是有些厂商自带的内核版本较低导致不支持 Docker  
+
+推荐 Ubuntu 最新版本
+
+**为什么不支持 OpenVZ ？**  
+因为 OpenVZ 支持的内核版本太低，不支持 Docker 所以，HyperApp 不支持 OpenVZ 的主机。
+
 
