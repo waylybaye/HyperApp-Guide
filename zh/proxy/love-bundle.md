@@ -90,7 +90,7 @@ SS/SSR 的 TLS 混淆并非是真正的 TLS 流量，而是通过伪装成 TLS �
 
 * HTTPS Domain      HTTP2 TLS Proxy 的域名，推荐使用自己的域名+certbot 证书。
 
-* OCServ Domain     AnyConnect 的域名，可以填写 IP。推荐使用自己的域名+certbot 证书。
+* OCServ Domain     AnyConnect 的域名，可以填写 IP（但是可能导致提示证书不可信的问题）。推荐使用自己的域名+certbot 证书。
 * CN no route       开启后将会忽略国内IP段，只对国外IP进行代理。
 ```
 
