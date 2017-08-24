@@ -2,6 +2,21 @@
 
 简介：V2Ray 是另一款代理软件（省略），官网 [https://www.v2ray.com/](https://www.v2ray.com/)
 
+目录
+* 背景知识
+    * TCP 模式
+    * WebSocket 模式
+    * mKCP 模式
+* V2Ray 服务端配置
+    * 方案1: 使用 TCP 传输，并开启 TLS 
+    * 方案2: WebSocket 传输，使用 Nginx & SSL Support 反代 V2Ray
+* 客户端配置
+    * macOS V2RayX
+
+----
+
+### 背景知识
+
 V2Ray 共有三种传输方式，可以形成三种使用方案：
 
 #### TCP 模式 （支持 TLS）
@@ -30,30 +45,32 @@ WebSocket 是一种在 HTTP 之上的协议，本质也是TCP传输，但是是�
 
 <img src="./images/v2ray.jpg" width="450" />
 
-* Port: 填一个端口
-* Network: 选择一种传输方式
-    * tcp 使用 TCP 连接
-    * kcp 使用 UDP （可能会被运营商 QoS）
-    * ws 使用 WebSocket
-* Header: 选择一种混淆模式
-    * none 不使用混淆
-    * tcp http: 使用 http 混淆（需要上面选择 tcp）
-    * kcp ****: 这几个都是kcp的混淆方式，需要上面选择 kcp
+```
+* Port:             填一个端口
+* Network:          选择一种传输方式
+    * tcp           使用 TCP 连接
+    * kcp           使用 UDP （可能会被运营商 QoS）
+    * ws            使用 WebSocket
+* Header:           选择一种混淆模式
+    * none          不使用混淆
+    * tcp http:     使用 http 混淆（需要上面选择 tcp）
+    * kcp ****:     这几个都是kcp的混淆方式，需要上面选择 kcp
     * 注意 ws (WebSocket) 本身就是 HTTP 所以不用也不能选择混淆方式
 * Clients
-    * ID: 会自动生成一个 UUID
-    * level: 信任级别，默认为1
-    * alterID: 默认32，注意客户端的 UUID 和 alterID 必须保持一致
-
+    * ID:           会自动生成一个 UUID
+    * level:        信任级别，默认为1
+    * alterID:      默认32，注意客户端的 UUID 和 alterID 必须保持一致
 * TLS
-    * Enable TLS: 开启 TLS 1.2 加密（混淆）
-    * TLS Domain: SSL 证书的域名，将会自动在下面 `SSL certs` 目录下面寻找证书文件。
-
+    * Enable TLS    开启 TLS 1.2 加密（混淆）
+    * TLS Domain    SSL 证书的域名，将会自动在下面 `SSL certs` 
+                    目录下面寻找证书文件。
 * Volumes
-    * config.json: 生成的 V2Ray 配置文件会存在这里
-    * SSL certs: SSL 证书的存放位置
+    * config.json   生成的 V2Ray 配置文件会存在这里
+    * SSL certs     SSL 证书的存放位置
+```
 
----
+----
+
 
 ## 方案1: 使用 TCP 传输，并开启 TLS 
 
@@ -102,7 +119,7 @@ mKCP是V2ray对KCP的简单实现，是基于UDP的一种传输方式，它可�
 
 其他设置保持默认即可，安装完毕后记得打开防火墙对应的UDP端口。
 
----
+----
 
 
 ## 客户端配置
