@@ -28,23 +28,26 @@ WebSocket 是一种在 HTTP 之上的协议，本质也是TCP传输，但是是�
 
 ### 应用配置及安装
 
-<img src="./images/v2ray.png" width="450" />
+<img src="./images/v2ray.jpg" width="450" />
 
 * Port: 填一个端口
 * Network: 选择一种传输方式
     * tcp 使用 TCP 连接
     * kcp 使用 UDP （可能会被运营商 QoS）
     * ws 使用 WebSocket
+* Header: 选择一种混淆模式
+    * none 不使用混淆
+    * tcp http: 使用 http 混淆（需要上面选择 tcp）
+    * kcp ****: 这几个都是kcp的混淆方式，需要上面选择 kcp
+    * 注意 ws (WebSocket) 本身就是 HTTP 所以不用也不能选择混淆方式
 * Clients
     * ID: 会自动生成一个 UUID
     * level: 信任级别，默认为1
     * alterID: 默认32，注意客户端的 UUID 和 alterID 必须保持一致
 
-* HTTP OBFS （**仅适用 TCP 连接，WebSocket 请忽略此选项**）
-    * Enable OBFS: 开启 HTTP 混淆
-    * Enable TLS: 开启 TLS1.2
-    * Allow Insecure: 是否允许不安全的TLS连接
-    * TLS Domain: SSL 证书的域名
+* TLS
+    * Enable TLS: 开启 TLS 1.2 加密（混淆）
+    * TLS Domain: SSL 证书的域名，将会自动在下面 `SSL certs` 目录下面寻找证书文件。
 
 * Volumes
     * config.json: 生成的 V2Ray 配置文件会存在这里
