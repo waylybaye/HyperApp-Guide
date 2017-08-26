@@ -125,8 +125,16 @@ mKCP是V2ray对KCP的简单实现，是基于UDP的一种传输方式，它可�
 ## 客户端配置
 
 
-你可以在这里找到所有平台的客户端 [V2Ray 各平台客户端下载](https://www.v2ray.com/chapter_01/3rd_party.html) 下文以 Mac 客户端 V2RayX 为例
+你可以在这里找到所有平台的客户端 [V2Ray 各平台的图形客户端介绍](https://www.v2ray.com/chapter_01/3rd_party.html) 
 
+但是主流平台依然有以下推荐的方案：
+
+* **MAC** [V2RayX](https://github.com/Cenmrev/V2RayX/releases)
+* **PC** [V2rayN](https://github.com/v2ray/v2rayN/releases)
+* **IOS** [Shadowrocket](https://itunes.apple.com/us/app/shadowrocket/id932747118?mt=8) 
+* **Android** [V2rayNg](https://play.google.com/store/apps/details?id=com.v2ray.ang&hl=en)
+
+## MAC 客户端
 
 ### V2RayX 配置（Mac）
 
@@ -156,7 +164,66 @@ mKCP是V2ray对KCP的简单实现，是基于UDP的一种传输方式，它可�
 
 ![](./images/v2rayx-tls.png)
 
+## PC 客户端
+
+>使用 PC 客户端之前你还需要[在此下载](https://github.com/v2ray/v2ray-core/releases)一个核心程序的压缩包,然后解压缩。再把下载好的V2rayN程序和核心程序放在同一个文件夹
+
+### V2RayN 配置
+
+在`V2rayN→服务器`中添加一个服务器，如图
+
+![](./images/v2ray-client-1.png)
+
+* 地址(Address): 填入你服务器的地址
+* 端口(Port)：HyperApp 中的 端口，本例程为443
+* 用户ID(id): HyperApp 中的 UUID
+* 额外(alterId): HyperApp 中的 alterID
+* 加密方式(Security): 随便选，推荐默认选项
+* 传输协议(Network): 选择 HyperApp 中配置的选项，默认为 TCP
+
+#### HTTP 混淆 配置
+
+点击下方的`伪装类型` 选择 `http` 如图 `伪装域名/其他项` 填写所要伪装的域名，用逗号隔开即可开启 http 混淆
+
+![](./images/v2ray-client-2.png)
+#### WebSocket 配置
+
+如果你使用 WebSocket 则上方的`传输类型` 选择 `ws`，`伪装类型`选择`none`,`伪装域名/其他项`填写WS的路径，除非特别指定，一般留空。
+
+![](./images/v2ray-client-3.png)
+
+#### TLS 配置
+
+如果你需要启用TLS，那么点击 `底层传输安全` 选项卡，选中 `TLS` ，上述介绍的任意方式都可以开启TLS。
+
+## IOS 客户端
+
+### Shadowrocket 配置
+
+在右上角中添加一个服务器，类型选择`Vmess`，并依次填写以下内容
+
+* HOST: 填入你服务器的地址
+* PORT: 填入在HyperApp 中的 端口
+* UUID: HyperApp 中的 UUID
+* Method: 默认选项
+
+#### HTTP 混淆 配置
+
+点击下方的`Obfuscation` ,进入二级页面，`Name`选择 `http` .`Path` 保持默认，`下面的大方框` 填写所要伪装的域名，用逗号隔开即可开启 http 混淆
+
+![](./images/v2ray-client-4.png)
+#### WebSocket 配置
+
+点击下方的`Obfuscation` ,进入二级页面，`Name`选择 `Websocket` .`Path` 保持默认，`下面的大方框` 填写`你的域名`，用逗号隔开即可开启 http 混淆
+
+![](./images/v2ray-client-5.png)
+
+#### TLS 配置
+
+如果你需要启用TLS，那么右滑打开在主设置页面的`TLS`开关，上述介绍的任意方式都可以开启TLS，在本例程中已经打开TLS。
+
 ---
 
 大功告成！
+
 
