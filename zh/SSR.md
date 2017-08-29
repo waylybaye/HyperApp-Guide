@@ -23,7 +23,7 @@
 
   - CentOS7
     ```
-    firewall-cmd --add-port=SSR监听的端口号 --permanent && firewall-cmd --reload
+    firewall-cmd --add-port=SSR监听的端口号/tcp --permanent && firewall-cmd --reload
     ```
   - Ubuntu16
     ```
