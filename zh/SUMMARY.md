@@ -17,7 +17,6 @@
     * [Nextcloud 搭建教程](nextcloud.md)
     * [NodeBB论坛 搭建教程](nodebb.md)
     * [WordPress搭建教程](wordpress.md)
-    * [超简单搭建免翻墙Google搜索](google.md)
 * 爱国软件
     * [❤️ LoveBundle 爱国套件](proxy/love-bundle.md)
     * [如何选择主机商和爱国软件？(未完)](GFW.md)
@@ -47,6 +46,7 @@
    * [Docker Image介绍](advanced/docker-image-introduction.md)
    * [Pydio搭建教程](pydio.md)
    * [Docker Image 手动配置 v2ray](advanced/docker-image-v2ray.md)
+   * [超简单搭建免翻墙Google搜索](google.md)
 * 系统教程
    * [CentOS 如何手动升级 Docker 版本](centos-upgrade-docker.md)
    * [阿里云 Docker 加速](Aliyun-docker.md)
