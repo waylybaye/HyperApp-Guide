@@ -17,7 +17,6 @@
     * [Nextcloud 搭建教程](nextcloud.md)
     * [NodeBB论坛 搭建教程](nodebb.md)
     * [WordPress搭建教程](wordpress.md)
-    * [Pydio搭建教程](pydio.md)
 * 爱国软件
     * [❤️ LoveBundle 爱国套件](proxy/love-bundle.md)
     * [如何选择主机商和爱国软件？(未完)](GFW.md)
@@ -43,10 +42,11 @@
    - [Smartsocks使用帮助](Smartsocks-help.md)
    - [免费获得个人专享顶级域名](Get-Domain.md)
    - [使用HyperApp简单的搭建和管理自己的Minecraft服务器](RD_MinecraftServerBuilding.md)
+* Docker Image
+   * [Docker Image介绍](advanced/docker-image-introduction.md)
+   * [Pydio搭建教程](pydio.md)
+   * [Docker Image 手动配置 v2ray](advanced/docker-image-v2ray.md)
 * 系统教程
    * [CentOS 如何手动升级 Docker 版本](centos-upgrade-docker.md)
    * [阿里云 Docker 加速](Aliyun-docker.md)
-* 提高篇
-   * [DockerImage介绍](advanced/docker-image-introduction.md)
-   * [DockerImage搭建v2ray](advanced/docker-image-v2ray.md)
 

@@ -40,7 +40,12 @@ SS/SSR 的 TLS 混淆并非是真正的 TLS 流量，而是通过伪装成 TLS �
 
 ## 获取可信的 SSL 证书
 
-注意如果你不需要可信的证书，你可以跳过本步骤，如果 LoveBundle 启动时没有找到对应域名的证书，会自动生成一个自签的证书。
+注意如果你不需要可信的证书，你可以跳过本步骤，如果 LoveBundle 启动时没有找到对应域名的证书，会自动生成一个自签的证书。为了开启 LoveBundle 全部功能，我们共需要四个子域名：
+
+* V2Ray TCP TLS
+* V2Ray Websocket TLS
+* HTTP2 (https)
+* AnyConnect
 
 ### 使用 certbot 获取证书
 
@@ -51,8 +56,8 @@ SS/SSR 的 TLS 混淆并非是真正的 TLS 流量，而是通过伪装成 TLS �
 
 具体配置：
 
-1. 假设在 `1.` 中注册了 `love.ml` 域名，然后将 `v2ray.love.ml` `http2.love.ml` `oc.love.ml` 分别指向到你的VPS IP上。
-2. 然后在 `certbot` 的域名中填入三个域名，用英文逗号分隔， `v2ray.love.ml,http2.love.ml,oc.love.ml`。
+1. 假设在 `1.` 中注册了 `love.ml` 域名，然后将 `v2ray-ws.love.ml` `v2ray-tls.love.ml` `http2.love.ml` `oc.love.ml` 分别指向到你的VPS IP上。
+2. 然后在 `certbot` 的域名中填入四个域名，用英文逗号分隔， `v2ray-ws.love.ml,v2ray-tls.love.ml,http2.love.ml,oc.love.ml`。
 3. 安装 `certbot` 后你会得到三个可信的 SSL 证书，然后在下面 LoveBundle 里面分别填入对应的域名即可。LoveBundle 会自动去对应的目录寻找证书。
 
 ----
@@ -77,10 +82,10 @@ SS/SSR 的 TLS 混淆并非是真正的 TLS 流量，而是通过伪装成 TLS �
 * Username          用户名（此用户名可以用来登录 AnyConnect/HTTP2）
 * Password          密码（此密码用来登录 SS/SSR/AnyConnect/HTTP2)
 
-* SS Domain         SS TLS 混淆的域名
+* SS Domain         SS TLS 混淆的域名（可以任意域名，不需要解析）
 * SS Method         SS 的加密协议
 
-* SSR Domain        SSR TLS 混淆的域名
+* SSR Domain        SSR TLS 混淆的域名（可以任意域名，不需要解析）
 * SRR Protocol      SSR 协议
 * SSR Method        SSR 加密方法
  
