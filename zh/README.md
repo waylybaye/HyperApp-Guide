@@ -1,6 +1,6 @@
 # HyperApp 用户文档
 
-HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具，开发者整理了超过几十个常见应用，将其整理到商店中，您只需要点击一下就会出现可视化的配置界面，然后可以一键安装到您的服务器上。部署应用就是这么简单！ 
+HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具，开发者整理了超过几十个常见应用，将其整理到商店中，您只需要点击一下就会出现可视化的配置界面，然后可以一键安装到您的服务器上。部署应用就是这么简单！
 
 HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用自动生成 SSL 证书。
 
@@ -14,7 +14,7 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 
 * [Telegram 用户群](https://t.me/hyperapp)
 * [在 Telegram 上关注 HyperApp 更新频道](https://t.me/hyperappnews)
-* [在 Twitter 上关注 HyperApp](https://twitter.com/HyperAppCloud)
+* [在 Twitter 上关注 HyperApp](https://twitter.com/LoveHyperApp)
 * [在 GitHub 上的此教程仓库](github.com/waylybaye/HyperApp-Guide)
 
 ## 文档使用办法
@@ -39,11 +39,9 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 * CentOS 6 ⚠️ （不支持，但你可以手动安装最新版的Docker）
 * 不支持 OpenVZ ❌
 
-注：CentOS 6 也是支持的，但是有些厂商自带的内核版本较低导致不支持 Docker  
+注：CentOS 6 也是支持的，但是有些厂商自带的内核版本较低导致不支持 Docker
 
 推荐 Ubuntu 最新版本
 
-**为什么不支持 OpenVZ ？**  
+**为什么不支持 OpenVZ ？**
 因为 OpenVZ 支持的内核版本太低，不支持 Docker 所以，HyperApp 不支持 OpenVZ 的主机。
-
-
