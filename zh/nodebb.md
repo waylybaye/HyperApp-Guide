@@ -13,7 +13,8 @@
 
 ## HyperApp 服务端配置
 
-- 在安装`NodeBB`前，需要先安装`Nginx Proxy`和`Nginx SSL Support`和`MongoBB`,它们三个的参数不需要变动。（如果之前已经安装了则可不用安装）
+- 在安装`NodeBB`前，需要先安装`Nginx Proxy`和`Nginx SSL Support`和`MongoD
+B`,它们三个的参数不需要变动。（如果之前已经安装了则可不用安装）
 
 Nginx相关的配置不再赘述，下面贴出MongoDB的配置图
 
