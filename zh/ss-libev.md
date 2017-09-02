@@ -40,5 +40,5 @@
 - IOS客户端
 	- [Shadowrocket](https://itunes.apple.com/us/app/shadowrocket/id932747118?mt=8)
 	- [Quantumult](https://itunes.apple.com/us/app/quantumult/id1252015438?mt=8)
-	- [Suege](https://itunes.apple.com/us/app/surge-web-developer-tool-and-proxy-utility/id1040100637?mt=8)
+	- [Surge](https://itunes.apple.com/us/app/surge-web-developer-tool-and-proxy-utility/id1040100637?mt=8)
 
