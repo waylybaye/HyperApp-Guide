@@ -6,9 +6,9 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 
 同时 HyperApp 可以帮助您随时查看服务器运行状态，以及通过SSH终端随时随地登录到服务器上进行操作。
 
-[![HyperApp on AppStore](https://linkmaker.itunes.apple.com/assets/shared/badges/zh-chs/appstore-lrg.svg "View on App Store")](https://itunes.apple.com/app/apple-store/id1179750280?pt=118260435&ct=guide&mt=8)
+[![HyperApp on AppStore](https://linkmaker.itunes.apple.com/assets/shared/badges/zh-chs/appstore-lrg.svg ”View on App Store“)](https://itunes.apple.com/app/apple-store/id1179750280?pt=118260435&ct=guide&mt=8)
 
----
+—
 
 ## 获得帮助
 
@@ -45,3 +45,7 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 
 **为什么不支持 OpenVZ ？**
 因为 OpenVZ 支持的内核版本太低，不支持 Docker 所以，HyperApp 不支持 OpenVZ 的主机。
+
+
+**HyperApp 会在我的服务器/路由器上运行哪些命令？**  
+[HyperApp 运行的命令](../commands.md)
