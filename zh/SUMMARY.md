@@ -18,6 +18,7 @@
     * [NodeBB论坛 搭建教程](nodebb.md)
     * [WordPress搭建教程](wordpress.md)
     * [搭建Huginn构建自动化信息流](huginn.md)
+    * [搭建精美H5AI文件服务器](h5ai.md)
 * 爱国软件
     * [❤️ LoveBundle 爱国套件](proxy/love-bundle.md)
     * [如何选择主机商和爱国软件？(未完)](GFW.md)
