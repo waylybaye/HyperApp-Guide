@@ -15,7 +15,7 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 * [Telegram 用户群](https://t.me/hyperapp)
 * [在 Telegram 上关注 HyperApp 更新频道](https://t.me/hyperappnews)
 * [在 Twitter 上关注 HyperApp](https://twitter.com/LoveHyperApp)
-* [在 GitHub 上的此教程仓库](github.com/waylybaye/HyperApp-Guide)
+* [在 GitHub 上的此教程仓库](https://github.com/waylybaye/HyperApp-Guide)
 
 ## 文档使用办法
 
