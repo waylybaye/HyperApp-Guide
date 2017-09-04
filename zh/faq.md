@@ -154,7 +154,7 @@ echo -e "proxy_intercept_errors on;\nerror_page 400 = https://要跳转到的域
 ```
 ### 关于 Nginx 的上传限制
 
-如果你使用了 `Nginx Proxy`，则默认有个2M的上传限制，你可以新建一个文件 `/srv/docker/vhost.d/default` 添加一行  `client_max_body_size 100m;` 来解决这个问题（一般情况下 Nginx 会自动重启，如果没有则需要手动重启下 Nginx Proxy）
+如果你使用了 `Nginx Proxy`，则默认有个2M的上传限制，你可以新建一个文件 `/srv/docker/nginx/vhost.d/default` 添加一行  `client_max_body_size 100m;` 来解决这个问题（一般情况下 Nginx 会自动重启，如果没有则需要手动重启下 Nginx Proxy）
 
 你也可以直接运行下面的命令，会自动创建上面的所说的文件:
 
