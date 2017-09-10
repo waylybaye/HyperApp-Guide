@@ -50,6 +50,8 @@
    * [Docker Image 手动配置 v2ray](advanced/docker-image-v2ray.md)
    * [超简单搭建免翻墙Google搜索](google.md)
    * [搭建HACK·CHAT即时通信平台](chat.md)
+   * [内网穿透服务otunnel架设](otunnel.md)
+   * [搭建个人专享2048在线小游戏](2048.md)
 * 系统教程
    * [CentOS 如何手动升级 Docker 版本](centos-upgrade-docker.md)
    * [阿里云 Docker 加速](Aliyun-docker.md)
