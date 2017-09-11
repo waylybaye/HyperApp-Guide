@@ -1,5 +1,6 @@
 * [HyperApp 介绍](README.md)
     * [常见错误指引](faq.md)
+    * [如何使用 URL Scheme](workflow.md)
     * [⭐️ 手把手爱国教程](proxy/get-started.md)
 * 如何添加服务器：
     * [Vultr](vendors.md#vultr)
