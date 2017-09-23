@@ -3,7 +3,7 @@
 
 > 之前写过一篇Hugo个人博客部署的教程.那是一个轻量化的选择.今天就给大家带来以丰富插件著称的WordPress的搭建教程
 
-### 本文原文链接为 [wordpress](https://vinga.ml/wordpress)
+### 本文原文链接为 [wordpress](https://vinga.fun/wordpress)
 
 
 ## 准备工作
@@ -36,7 +36,7 @@
 ## 写在最后
 
 * **写了这么久.如果能有所收获那就是我最大的荣幸了:)**
-* **如果可以的话.可以关注一下 https://vinga.ml 这是我的私人博客地址:)**
+* **如果可以的话.可以关注一下 https://vinga.fun 这是我的私人博客地址:)**
 * **如有问题可发邮件至我邮箱fanalcest@gmail.com联系或telegram@fanvinga**
 
-<a href="https://vinga.ml"><img src="https://d.vinga.ml/design/banner.png" alt="banner" target="_blank"></a>
+<a href="https://vinga.fun"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
