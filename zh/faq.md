@@ -331,6 +331,6 @@ https://www.hyperapp.fun
 
 #### ~~部署v2ray等hyperapp应用可适当参考如下链接~~(打死这个不要脸的:)
 
-https://vinga.ml
+https://vinga.fun
 
 
