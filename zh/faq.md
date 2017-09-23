@@ -2,14 +2,15 @@
 # FAQ
 
 ## 索引
-* HyperApp 问题
+* [HyperApp 问题](#安装错误)
     * 常见安装错误
     * BBR 问题
     * 服务器错误
-* 应用问题
+* [应用问题](#应用问题)
     * 文件上传大小限制
     * 网页无法访问 (502,503)
-* 爱国问题
+    * 开启nginx的gzip压缩
+* [爱国问题](#爱国问题)
     * 手机爱国电脑不爱国
     * 无法爱国的问题
 * [GCP 问题](#gcp)
@@ -37,12 +38,13 @@
 1. 在服务器下面的 Docker 监控里选择你的应用，轻点后选择 `Pull Image` 即可更新镜像，然后在应用那里 `更新配置`
 2. 手动的话可以 `docker ps` 找到应用的镜像名字，然后 `docker pull 镜像`，然后在应用那里 `更新配置`
 
-### 安装错误
+## 安装错误
 
 #### 安装应用时报错 "i686 not recognized platform"
 
 * 系统必须是64位(X86-64)Linux系统
 * 虚拟化方式不支持 OpenVZ
+
 
 #### 为什么在安装应用的时候.会卡在安装中非常久(这种情况多出现在国内VPS中)？
 
@@ -64,20 +66,20 @@
 2. timeout 可能是掉线了，刷新下服务器状态，看看应用状态是否改变。
 
 
-#### Conflict
+#### 点击install之后报错冲突
 
 `docker: Error response from daemon: Conflict. The container name *** is already used by container ....`
 
 应用已经安装过了，更新了配置要点击“更新配置”
 
 
-#### docker command not found
+#### 安装应用报错docker command not found
 
 1. 确保你 VPS 的操作系统支持 Docker。
 2. HyperApp 会自动安装 Docker，出现这类问题可能是 Docker 安装失败，你可以手动执行 `curl -fsSL get.docker.com | sh` 安装最新docker
 
 
-#### cannot connect to the Docker daemon
+#### 安装应用报错cannot connect to the Docker daemon
 
 1. 请确保你的 Linux 版本符合要求
 2. 请确保一定要先安装 BBR 再安装应用，如果你不幸搞错了顺序，参考下一条
@@ -87,9 +89,11 @@
 
 执行 `rm -rf /var/lib/docker/aufs` 清除docker网络配置.然后重新安装所有应用即可.
 
+
 #### sudo: no tty present and no askpass program specified
 
 你需要修改 `sudo` 配置文件允许当前用户无密码运行 `sudo`
+
 
 #### 操作Docker时提示权限不足(Permission Denied)
 
@@ -99,35 +103,77 @@
 sudo usermod -aG docker $USER
 ```
 
+
 #### 安装应用时安装失败提示"overlay"已满
 
 原因：已安装或者曾经安装过的应用太多，因为Docker自身的机制，删除容器并不会删除镜像，久而久之硬盘可能会被塞满
 
-首先进入命令行，输入以下命令来查询已存在的镜像
+首先进入命令行，输入以下命令来查询已存在的镜像`docker images`然后找到不需要的或者占用体积特别大的镜像，复制它的"REPOSITORY"或者"IMAGE ID",然后键入以下命令来删除镜像`docker rmi 镜像ID或者REPOSITORY`
 
-```
-docker image ls
-```
-然后找到不需要的或者占用体积特别大的镜像，复制它的"REPOSITORY"或者"IMAGE ID",然后键入以下命令来删除镜像
-
-```
-docker image rm 镜像ID或者REPOSITORY
-```
 删除完成之后可看到硬盘空间已经释放，可以继续安装想要的应用
 
+注:提供两个快速清理镜像/容器的命令
+
+快速删除当前没有在运行的所有容器:
+`docker rm $(docker ps -a -q)`
+
+快速删除当前没有被使用的所有镜像:
+`docker rmi $(docker images -q)`
+
+
 #### 使用bbr安装脚本的时候提示"Inappropriate ioctl for device"
+
 使用键盘随便输入几个字符并且回车两下.原因是bbr安装脚本需要等待输入来执行下一步
 
+#### bbr脚本执行完成重启后BBR没有启动
 
-##### 部署 Nginx SSL Support 报错提示找不到/不存在Nginx Proxy 但 Nginx 已经正确安装
+> bbr脚本执行重启后发现执行`lsmod | grep bbr`发现输出空白.bbr没有正确启动.同时执行sysctl -p输出空白
 
-* 如果将同一个应用部署到多个服务器，最好在安装时一次选择多个服务器而不要开启多个应用。
+初步解决方案是执行一下命令
 
-检查 SSL Support 是否在同一机器有对应的Nginx
+​```
+sudo su && cp /etc/sysctl.conf /etc/sysctl.conf.bak && rm -rf /etc/sysctl.conf && touch /etc/sysctl.conf && chmod 644 /etc/sysctl.conf && sudo echo -e "\n net.core.default_qdisc = fq \n net.ipv4.tcp_congestion_control = bbr" >> /etc/sysctl.conf && sysctl -p
+```
+
+​如果这时候`lsmod | grep bbr`还没有出现tcp_bbr的话请自行根据网上linux文本编辑器教程编辑/etc/sysctl.conf 加上这两行
+
+​```
+net.core.default_qdisc = fq
+net.ipv4.tcp_congestion_control = bbr
+```
 
 
----
+#### 关于squid内存不足无法正确启动的解决办法:
 
+squid无法启动是因为内存不够又检查到没有swap导致的.使用下面的命令创建1G大小的swap.
+
+Ubuntu或者debian使用如下命令创建swap
+
+```
+sudo su && \
+fallocate -l 1G /swapfile && \
+chmod 600 /swapfile && \
+mkswap /swapfile && \
+swapon /swapfile && \
+cp /etc/fstab /etc/fstab.bak && \
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && \
+echo "vm.swappiness = 10" » /etc/sysctl.conf && \
+sysctl -p
+```
+
+centos使用如下命令创建swap
+
+```
+sudo su && \
+fallocate -l 1G /swapfile && \
+chmod 600 /swapfile && \
+mkswap /swapfile && \
+swapon /swapfile && \
+cp /etc/fstab /etc/fstab.bak && \
+echo "/swapfile swap swap defaults 0 0" | sudo tee -a /etc/fstab && \
+echo "vm.swappiness = 10" » /etc/sysctl.conf && \
+sysctl -p
+```
 
 ## 应用问题
 
@@ -145,11 +191,17 @@ docker image rm 镜像ID或者REPOSITORY
 2. 如果不在运行中的状态，说明安装后的初始化没有成功，查看应用日志可以看到出错原因。
 3. 如果你要寻求帮助，请发出此处的日志截图，且要贴全。
 
+### 部署 Nginx SSL Support 报错提示找不到/不存在Nginx Proxy 但 Nginx 已经正确安装
+
+如果将同一个应用部署到多个服务器，最好在安装时一次选择多个服务器而不要开启多个应用。
+
+检查 SSL Support 是否在同一机器有对应的Nginx
+
 
 ### 关于V2Ray访问域名出现Bad Request的解决办法
   如果你按照教程搭建了`Nginx(tls)+V2Ray(websocket)`.那么访问证书域名的时候往往会出现bad request的情况.这是成功的标志.但是总不那么好看.这里给出一个跳转到其他域名的办法.执行以下命令即可.注意修改命令中的域名
 
-```sh
+```
 echo -e "proxy_intercept_errors on;\nerror_page 400 = https://要跳转到的域名;" > /srv/docker/nginx/vhost.d/default
 ```
 ### 关于 Nginx 的上传限制
@@ -158,10 +210,49 @@ echo -e "proxy_intercept_errors on;\nerror_page 400 = https://要跳转到的域
 
 你也可以直接运行下面的命令，会自动创建上面的所说的文件:
 
-```sh
-echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
 ```
-* **除了 Nginx 外，PHP 还可以有自己的上传限制，请参考 https://github.com/waylybaye/HyperApp-Guide/issues/152**
+echo "client_max_body_size 1000m;" > /srv/docker/nginx/vhost.d/default
+```
+### 除了 Nginx 外，PHP 还可以有自己的上传限制，
+
+1. 进入wordpress的容器内部.如果是其他容器.请相应更改名称
+`docker exec -it $(docker ps |grep wordpress|awk '{print $1}') bash`
+
+2. 执行以下命令修改上传限制.
+`echo "upload_max_filesize = 1000M" >  /usr/local/etc/php/conf.d/uploads.ini`
+
+3. 回到hyperapp.对应用执行重启.注意不要更新配置.更新了配置的话要重来.
+
+### 对nginx开起默认关闭的gzip压缩提升访问速度
+执行以下命令
+
+```
+echo -e "gzip on; \n \
+    gzip_comp_level 5; \n \
+    gzip_min_length 512; \n \
+    gzip_buffers 4 8k; \n \
+    gzip_proxied any; \n \
+    gzip_vary on; \n \
+    gzip_disable "msie6"; \n \
+    gzip_types \n \
+      text/css \n \
+      text/javascript \n \
+      text/xml \n \
+      text/plain \n \
+      text/x-component \n \
+      application/javascript \n \
+      application/x-javascript \n \
+      application/json \n \
+      application/xml \n \
+      application/rss+xml \n \
+      application/vnd.ms-fontobject \n \
+      font/truetype \n \
+      font/opentype \n \
+      image/svg+xml;" >> /srv/docker/nginx/vhost.d/default
+```
+### Ghost出现localhost的地址
+
+登录Ghost管理后台（域名后面加上/admin）-Design-自行修改
 
 
 ## 爱国问题
@@ -233,43 +324,6 @@ echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
 * 50Kvm 的机器第一次登录需要记下下次登录的 SSH 端口
 * DigitalOcean 的机器第一次登录需要改密码
 
-## HyperApp 常见问题:
-
-* bbr脚本执行后重启后发现执行`lsmod | grep bbr`发现输出空白.bbr没有正确启动.同时执行sysctl -p输出空白
-* 根据使用者反馈的问题 ,初步解决方案是执行一下命令
-
-​```bash
-sudo su && cp /etc/sysctl.conf /etc/sysctl.conf.bak && rm -rf /etc/sysctl.conf && touch /etc/sysctl.conf && chmod 644 /etc/sysctl.conf && sudo echo -e "\n\n\n\nnet.core.default_qdisc = fq\n\n\nnet.ipv4.tcp_congestion_control = bbr" >> /etc/sysctl.conf && sysctl -p
-```
-
-​**如果这时候`lsmod | grep bbr`还没有出现tcp_bbr的话请自行根据网上linux文本编辑器教程编辑/etc/sysctl.conf.加上这两行**
-
-​```bash
-net.core.default_qdisc = fq
-net.ipv4.tcp_congestion_control = bbr
-```
-
-* 关于squid内存不足无法正确启动的解决办法:
-
-   * Ubuntu使用如下命令创建swap
-
-```bash
-sudo su
-fallocate -l 1G /swapfile
-chmod 600 /swapfile
-mkswap /swapfile
-swapon /swapfile
-cp /etc/fstab /etc/fstab.bak
-echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
-echo "vm.swappiness = 10" » /etc/sysctl.conf
-sysctl -p
-```
-
-* Centos请将第一个echo换成
-  `echo "/swapfile swap swap defaults 0 0" | sudo tee -a /etc/fstab`
-
-
-
 
 ## Hyperapp官方应用教程链接
 
@@ -277,6 +331,6 @@ https://www.hyperapp.fun
 
 #### ~~部署v2ray等hyperapp应用可适当参考如下链接~~(打死这个不要脸的:)
 
-https://vinga.ml
+https://vinga.fun
 
 
