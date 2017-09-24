@@ -131,7 +131,8 @@ mKCP是V2ray对KCP的简单实现，是基于UDP的一种传输方式，它可�
 
 * **MAC** [V2RayX](https://github.com/Cenmrev/V2RayX/releases)
 * **PC** [V2rayN](https://github.com/v2ray/v2rayN/releases)
-* **IOS** [Shadowrocket](https://itunes.apple.com/us/app/shadowrocket/id932747118?mt=8) 
+* **IOS** [Shadowrocket](https://itunes.apple.com/us/app/shadowrocket/id932747118?mt=8)
+* **IOS** [Kitsunebi](https://itunes.apple.com/us/app/kitsunebi/id1275446921?mt=8) 
 * **Android** [V2rayNg](https://play.google.com/store/apps/details?id=com.v2ray.ang&hl=en)
 
 ## MAC 客户端
@@ -221,6 +222,22 @@ mKCP是V2ray对KCP的简单实现，是基于UDP的一种传输方式，它可�
 #### TLS 配置
 
 如果你需要启用TLS，那么右滑打开在主设置页面的`TLS`开关，上述介绍的任意方式都可以开启TLS，在本例程中已经打开TLS。
+
+### Kitsunebi 配置
+
+在右上角中点击“+”，类型选择`Vmess`,并依次填写以下内容
+
+* Address: 填入你服务器的地址
+* Port: 填入在HyperApp 中的 端口
+* Password/UUID: HyperApp 中的 UUID
+* Security: 保持默认即可
+* Network: 选择你所配置的方式，本文以WS为例
+* WS Path: 填写你的WS的路径，一般此处为空。
+* TLS: 右滑勾选
+* Allow Insecure: 建议勾选
+
+![](./images/v2ray-client-6.png)
+
 
 ---
 
