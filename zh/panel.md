@@ -2,7 +2,7 @@
 
 > 有时候出于要分享爱国线路.或者想对线路进行全自动化管理的时候.用hyperapp一个个进行部署可能稍显麻烦.~~逼格也不够高~~今天给大家介绍sspanel的搭建方法
 
-## 本文原文链接为 https://vinga.ml/panel 本篇不一定为最新版本
+## 本文原文链接为 https://vinga.fun/panel 本篇不一定为最新版本
 
 ## 请完整仔细认真阅读完本教程再动手！
 
@@ -67,7 +67,7 @@
 ## 写在最后
 
 * 写了这么久.如果能有所收获那就是我最大的荣幸了:)
-* 如果可以的话.可以关注一下 https://vinga.ml 这是我的私人博客地址:)
+* 如果可以的话.可以关注一下 https://vinga.fun 这是我的私人博客地址:)
 * 如有问题可发邮件至我邮箱fanalcest@gmail.com联系或telegram@fanvinga
 
-<a href="https://vinga.ml"><img src="https://d.vinga.ml/design/banner.png" alt="banner" target="_blank"></a>
+<a href="https://vinga.fun"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
