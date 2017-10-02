@@ -9,15 +9,17 @@
 ### 本文原文链接为 https://vinga.fun/v2ray 原文更新更为及时
 
 ## 更新记录
-
+- 2017.10.1:增加了网络拓扑部分.
 - 2017.08.10:Replace the introduce of server setting.
 - 2017.07.28:增加了一直相加但是懒癌发作没加的mac版config.json
 - 2017.07.28:增加了安卓和win端客户端的链接并且调整了小火箭的图片排版
 - 2017.07.27:增加了安卓端和win端的设置.并且与ios端并列
 
+## 网络拓扑
+
+![v2ray-0](./images/v2ray-0.jpg)
+
 ## 工具
-
-
 
 - **hyperapp**
 - **Mac/Win**
