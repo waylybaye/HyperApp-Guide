@@ -1,9 +1,12 @@
-# 搭建精美强大Grafana监控系统
 
-
+## 搭建精美强大Grafana监控系统
 
 
 > **随着剁手越来越畅快.手里积攒的小鸡也越来越多了.那今天就讲解一下怎么样搭建一个美轮美奂的基于Grafana+influxDb+Colletcd的监控系统.感谢开源世界!**
+
+
+
+## 本文原文链接https://vinga.fun/monitor
 
 
 
@@ -18,15 +21,21 @@
 ![monitor-1](./images/monitor-1.jpg)
 ![monitor-2](./images/monitor-2.jpg)
 
+
+
 ## 网络拓扑
 
 ![monitor-0](./images/monitor-0.jpg)
+
+
 
 ## 准备
 
 * **Hyperapp**
 * **一个已经解析正确的域名（ping验证）**
 * **耐心.仔细.认真**
+
+
 
 ## 监控端部署
 
@@ -35,7 +44,11 @@
 
 ```
 sudo su
-cd /root/ && wget --no-check-certificate https://github.com/fanvinga/monitor/raw/master/monitor.zip && unzip monitor.zip && chmod -R 777 monitor && rm monitor.zip
+cd /root/ 
+wget --no-check-certificate https://github.com/fanvinga/monitor/raw/master/monitor.zip
+unzip monitor.zip 
+chmod -R 777 monitor 
+rm monitor.zip
 ```
 * **执行完这个命令.在`/root`下会出现一个叫做`monitor`的文件夹.并且里面有三个子文件夹.分别是`grafana` `influxDB` 和`collectd`.里面有一些我们后面会用到的文件.并且我们也会把数据放在这个文件夹里面**
 
@@ -126,6 +139,8 @@ cd /root/ && wget --no-check-certificate https://github.com/fanvinga/monitor/raw
    </Include>
 ```
 
+
+
 ### 接着找到influxdb的container id并且部署grafana
 
 1. **先在vps的ssh执行`docker ps | grep alpine`.这时候会返回一行`influxdb`的有关信息.这时候我们把最后一小段(形如docker-04f39d)复制出来备用**
@@ -149,6 +164,8 @@ cd /root/ && wget --no-check-certificate https://github.com/fanvinga/monitor/raw
 *  **如果在grafana运行过程中遇到localhost的问题.那么请在初始登录完grafana之后在options里面加上`-e "GF_SERVER_ROOT_URL=你要给grafana的域名"`并且更新配置.**
 
 
+
+
 ### 设置Grafana
 
 1. **如图登录`grafana`**
@@ -161,6 +178,8 @@ cd /root/ && wget --no-check-certificate https://github.com/fanvinga/monitor/raw
 3. **点击`Dashboards`然后选择`New`.选择一个图表样式.这里用`Graph`举例.再点击一下`Panel Title`.会出来一个小菜单.选择`Edit`.按照下图进行配置并且在`Legend`选项卡开启`Avg`即可得到一个节点到联通的链路信息图例.**
    ![monitor-5](./images/monitor-5.jpg)
 4. **这只是其中一个小例子.还有监控CPU/内存/硬盘/流量/IO等等的图例.请到Grafana官网查找图例配置教程(官网真的文档非常非常非常齐全).或者Google搜索**
+
+
 
 
 ## 写在最后
