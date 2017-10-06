@@ -19,7 +19,6 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 
 ## 文档使用办法
 
-* 新手入门推荐从此教程开始：[手把手爱国教程](proxy/get-started.md)
 * 如果你在使用中遇到问题，请参考 [HyperApp 排错索引](faq.md)
 
 
@@ -47,5 +46,5 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 因为 OpenVZ 支持的内核版本太低，不支持 Docker 所以，HyperApp 不支持 OpenVZ 的主机。
 
 
-**HyperApp 会在我的服务器/路由器上运行哪些命令？**  
+**HyperApp 会在我的服务器/路由器上运行哪些命令？**
 [HyperApp 运行的命令](../commands.md)
