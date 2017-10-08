@@ -150,7 +150,7 @@ docker image rm 镜像ID或者REPOSITORY
   如果你按照教程搭建了`Nginx(tls)+V2Ray(websocket)`.那么访问证书域名的时候往往会出现bad request的情况.这是成功的标志.但是总不那么好看.这里给出一个跳转到其他域名的办法.执行以下命令即可.注意修改命令中的域名
 
 ```sh
-echo -e "proxy_intercept_errors on;\nerror_page 400 = 要跳转到的域名;" > /srv/docker/nginx/vhost.d/default
+echo -e "proxy_intercept_errors on;\nerror_page 400 = https://要跳转到的域名;" > /srv/docker/nginx/vhost.d/default
 ```
 ### 关于 Nginx 的上传限制
 
