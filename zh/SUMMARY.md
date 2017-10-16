@@ -4,6 +4,7 @@
 * 如何添加服务器：
     * [Vultr](vendors.md#vultr)
     * [Linode](vendors.md#linode)
+    * [Bandwagon](vendors.md#Bandwagon(搬瓦工))
     * [~~如何添加 GCE 和 AWS 的服务器 (已过期)~~](Add-Sever-Cloud.md)
 * 应用教程
     * [如何自动生成 SSL 证书](SSL.md)
