@@ -88,6 +88,17 @@
     * 出现 `Password` 后输入上面第3步中自己设置的 root 密码
     * 复制自动配置给的命令并运行即可。
 
+---
+
+## Bandwagon(搬瓦工)
+
+### 添加服务器
+
+1. 手动配置
+	* 登陆搬瓦工，进入[后台](https://bandwagonhost.com/clientarea.php),并登录。
+	* 依次点击`service`-`my service`,这里会列出你所购买的服务器
+	* 点击服务器信息框右侧的`KiWiVM Control Panel`按钮，默认会来到是`Main controls`,依次记下`IP address`和`SSH Port`,root密码在创建时一般会发到你的邮箱中，记下它。
+	* 依次填入记录下的 IP 地址， 用户名 root，端口填写上面`SSH Port`中的内容。密码为之前创建时发送到你邮箱中的密码。如果遗忘，可以在搬瓦工控制面板找到`Root password modification`中更改。
 
 ---
 
@@ -107,5 +118,3 @@
 * [Linode $20](https://www.linode.com/?r=ad279824479def3ef162e3e99498242d4046ec1b)
 
 <!--<a href="https://www.vultr.com/?ref=6833039"><img src="https://www.vultr.com/media/banner_2.png" width="468" height="60"></a>-->
-
-
