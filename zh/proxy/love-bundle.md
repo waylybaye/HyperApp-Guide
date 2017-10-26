@@ -5,21 +5,22 @@
 
 对于服务器来说，端口似乎用不完，但常用端口是很紧缺的资源（特别是目前端口白名单的传闻），很多协议使用标准端口（如443）能达到最好的效果，但是一个端口只能跑一个进程，要是想在一个端口上跑所有协议该怎么办呢？
 
-LoveBundle 就是这样的一个应用，使用 haproxy 来自动分流各种协议的流量，从而实现用一个端口（443）来提供所有类型的服务，你只需要为不同的代理使用不同的混淆域名。
+LoveBundle 就是这样的一个应用，专为 HyperApp 用户提供，使用 haproxy 来自动分流各种协议的流量，从而实现用一个端口（443）来提供所有类型的服务，你只需要为不同的代理使用不同的混淆域名。
 
 比如当你使用 `bing.com` （可以自己定义域名）连接时 `LoveBundle` 会将其识别为 `SS` 流量，当你用 `cloudflare.com` 连接时会将其识别为 `SSR` 流量，使用 `mydomain.com` 链接时会自动识别为 `Cisco AnyConnect` 流量。
 
 
 ### LoveBundle 包含哪些应用？
 
-* `SS TLS 混淆`
-* `SSR tls1.2_ticket_auth`
-* `V2Ray VMess TCP TLS` (支持 LetsEncrypt 证书）
-* `V2Ray VMess WebSocket TLS`（支持 LetsEncrypt 证书）
-* `nghttpx HTTP2 TLS` 代理 （支持 LetsEncrypt 证书）
-* `ocserv: AnyConnect VPN`（支持 LetsEncrpt 证书）
+* `SS TLS 混淆`  —— 你懂得
+* `SSR tls1.2_ticket_auth`  —— 你也懂
+* `V2Ray VMess TCP TLS` —— 新秀 V2Ray
+* `V2Ray VMess WebSocket TLS` —— 新秀第二种食用方法
+* `nghttpx HTTP2 TLS` —— 高效的 HTTP2 + TLS 代理，即使在 SS/SSR 被严重干扰的时候由于其小众性质也一直超稳定。
+* `ocserv: Cisco AnyConnect VPN` —— 广泛使用的企业级 VPN，出自 Cisco，全端客户端免费。
 
-其中 LetsEncrypt 证书通过 [certbot](../developer/certbot.md) 来自动生成，非常简单，具体使用请参阅 [certbot 自动生成LetsEncrypt 证书教程](../developer/certbot.md) 下文也会有提到怎么使用。
+
+其中 `V2Ray/nghttpx/AnyConnect` 需要SSL证书的可以自动生成自签证书，也支持自动获取可信的 LetsEncrypt 证书，通过 [certbot](../developer/certbot.md) 来自动生成，非常简单，具体使用请参阅 [certbot 自动生成LetsEncrypt 证书教程](../developer/certbot.md) 下文也会有提到怎么使用。
 
 
 ### 什么是 HyperApp
@@ -276,5 +277,9 @@ SS/SSR 的 TLS 混淆并非是真正的 TLS 流量，而是通过伪装成 TLS �
 #### 我不想开启某个服务怎么办？
 
 只要不填相关服务的域名即可，只要没有域名就不会开启服务。
+
+#### 有问题解决不了怎么办？
+
+不要找我私聊，进 [HyperApp Telegram 群](https://t.me/hyperapp) 详细描述你的配置方法以及为什么不能用即可。
 
 
