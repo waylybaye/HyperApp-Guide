@@ -143,7 +143,7 @@ CA      LoveBundle 用来生成自签证书以及VPN登录证书的目录
 * 混淆参数         上面的 SSR Domain   
 ```
 
-#### V2Ray TLS 方式连接方式
+#### V2Ray TCP TLS 方式配置
 
 ```
 * Address           上面的 V2Ray TLS Domain（需要解析到你VPS上）
@@ -157,7 +157,7 @@ CA      LoveBundle 用来生成自签证书以及VPN登录证书的目录
                     ✅ Allow insecure （如果使用自签证书）
 ```
 
-#### V2Ray WebSocket 方式连接方式
+#### V2Ray WebSocket TLS 方式配置
 
 ```
 * Address       上面的 V2Ray WS Domain（需要解析到你VPS上）
@@ -169,6 +169,9 @@ CA      LoveBundle 用来生成自签证书以及VPN登录证书的目录
                 ✅ Allow insecure （如果使用自签证书）
 ```
  
+#### HTTP2(nghtpx) 连接方法
+
+可以参考 [nghttpx 的教程](./nghttpx.md)
  
 #### Cisco AnyConnect 链接方法
 
