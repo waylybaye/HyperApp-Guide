@@ -1,7 +1,7 @@
 # LoveBundle 单端口全协议解决方案
 
 
-#### LoveBundle 是什么？
+### LoveBundle 是什么？
 
 对于服务器来说，端口似乎用不完，但常用端口是很紧缺的资源（特别是目前端口白名单的传闻），很多协议使用标准端口（如443）能达到最好的效果，但是一个端口只能跑一个进程，要是想在一个端口上跑所有协议该怎么办呢？
 
@@ -10,7 +10,7 @@ LoveBundle 就是这样的一个应用，使用 haproxy 来自动分流各种协
 比如当你使用 `bing.com` （可以自己定义域名）连接时 `LoveBundle` 会将其识别为 `SS` 流量，当你用 `cloudflare.com` 连接时会将其识别为 `SSR` 流量，使用 `mydomain.com` 链接时会自动识别为 `Cisco AnyConnect` 流量。
 
 
-#### LoveBundle 包含哪些应用？
+### LoveBundle 包含哪些应用？
 
 * `SS TLS 混淆`
 * `SSR tls1.2_ticket_auth`
@@ -22,9 +22,12 @@ LoveBundle 就是这样的一个应用，使用 haproxy 来自动分流各种协
 其中 LetsEncrypt 证书通过 [certbot](../developer/certbot.md) 来自动生成，非常简单，具体使用请参阅 [certbot 自动生成LetsEncrypt 证书教程](../developer/certbot.md) 下文也会有提到怎么使用。
 
 
-#### 什么是 HyperApp
+### 什么是 HyperApp
 
 HyperApp 是一个自动化部署工具，提供可视化的配置界面，就算你不懂任何 Linux 命令也可以在 Linux 上一键部署多达几十个应用。
+
+
+[![HyperApp on AppStore](https://linkmaker.itunes.apple.com/assets/shared/badges/zh-chs/appstore-lrg.svg "View on App Store")](https://itunes.apple.com/app/apple-store/id1179750280?pt=118260435&ct=guide&mt=8)
 
 
 ----
@@ -32,7 +35,7 @@ HyperApp 是一个自动化部署工具，提供可视化的配置界面，就�
 
 ## LoveBundle 配置
 
-下文需要为不同的协议准备不同的子域名，如果你没有域名也不要着急，你可以使用 `xip.io` 提供的服务。下文直接以 `xip.io` 来举例，如果你了解怎么配置域名解析，可以自行添加DNS解析并替换相关的域名。
+下文需要为除了SS/SSR之外的其它服务准备不同的子域名，如果你没有域名也不要着急，你可以使用 `xip.io` 提供的服务。下文直接以 `xip.io` 来举例，如果你了解怎么配置域名解析，可以自行添加DNS解析并替换相关的域名。
 
 
 ### 配置界面
@@ -172,10 +175,12 @@ CA      LoveBundle 用来生成自签证书以及VPN登录证书的目录
 * Address   上面的 OCServ Domain
 ```
 
-#### 一切就绪！
+### 一切就绪！
 
 开始尽情冲浪吧！请问你是GG还是MM？
-
+.
+.
+.
 
 稍等……
 
@@ -212,7 +217,7 @@ SS/SSR 的 TLS 混淆并非是真正的 TLS 流量，而是通过伪装成 TLS �
 * HTTP2 (https)
 * AnyConnect
 
-#### 使用 certbot 获取证书
+### 使用 certbot 获取证书
 
 
 先稍作准备……
@@ -237,6 +242,14 @@ SS/SSR 的 TLS 混淆并非是真正的 TLS 流量，而是通过伪装成 TLS �
 
 ## 结尾
 
-。。。。。。。。。
+。
+。
+。
+。
+。
+。
+。
+。
+。
 
 
