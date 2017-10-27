@@ -25,7 +25,7 @@ LoveBundle 就是这样的一个应用，专为 HyperApp 用户提供，使用 h
 
 ### 什么是 HyperApp
 
-HyperApp 是一个自动化部署工具，提供可视化的配置界面，就算你不懂任何 Linux 命令也可以在 Linux 上一键部署多达几十个应用。
+HyperApp 是一个iOS 上的自动化部署工具，提供可视化的配置界面，就算你不懂任何 Linux 命令也可以在 Linux 上一键部署多达几十个应用，LoveBundle 是其中之一。
 
 
 [![HyperApp on AppStore](https://linkmaker.itunes.apple.com/assets/shared/badges/zh-chs/appstore-lrg.svg "View on App Store")](https://itunes.apple.com/app/apple-store/id1179750280?pt=118260435&ct=guide&mt=8)
@@ -36,7 +36,7 @@ HyperApp 是一个自动化部署工具，提供可视化的配置界面，就�
 
 ## LoveBundle 配置
 
-下文需要为除了SS/SSR之外的其它服务准备不同的子域名，如果你没有域名也不要着急，你可以使用 `xip.io` 提供的服务。下文直接以 `xip.io` 来举例，如果你了解怎么配置域名解析，可以自行添加DNS解析并替换相关的域名。
+我们需要为除了SS/SSR之外的其它服务准备不同的子域名，如果你没有域名也不要着急，你可以使用 `xip.io` 提供的免费服务。你只需要简单的在 `xip.io` 前面加上的IP，就能获得一个域名，IP前面还可以加无限子域名，下文将直接以 `xip.io` 来举例。如果你了解怎么配置域名解析，可以自行添加DNS解析并替换成相关的域名。
 
 
 ### 配置界面
@@ -72,7 +72,9 @@ HyperApp 是一个自动化部署工具，提供可视化的配置界面，就�
 * SSR Method        SSR 加密方法
 ```
 
-你可以，在 SS Domain 中填入 `bing.com` 在 `SSR Domain` 中填入 `cloudflare.com` 选择加密方法后
+你可以，在 SS Domain 中填入 `bing.com` 在 `SSR Domain` 中填入 `cloudflare.com` 并且选择加密方法。
+
+注意下面的服务就需要一个指向你服务器的真实域名了。
 
 #### V2Ray 配置
  
@@ -82,8 +84,7 @@ HyperApp 是一个自动化部署工具，提供可视化的配置界面，就�
 * V2Ray WS          V2Ray WebSocket TLS 的域名，推荐使用自己的域名+certbot证书。
 ```
 
-你可以在 `TLS Domain` 中填入 `tls.10.10.10.10.xip.io` 在 `WS Domain` 中填入 `ws.10.10.10.10.xip.io`。
-注意将 `10.10.10.10` 换成你 VPS 的 IP 地址。`X.X.X.X.xip.io` 是 `xip.io` 提供的公共 DNS 服务，会将域名自动解析到前面的 IP 地址上，而且还可以使用子域名。在这儿我们不用做任何设置，就永远了两个不同的域名，并且会自动解析到 VPS 地址上。
+你可以在 `TLS Domain` 中填入 `tls.10.10.10.10.xip.io` 在 `WS Domain` 中填入 `ws.10.10.10.10.xip.io`。别忘了将 `10.10.10.10` 换成你 VPS 的 IP 地址。
 
 如果你有自己的域名，做好解析后，可以在这儿填写你自己的域名。
 
