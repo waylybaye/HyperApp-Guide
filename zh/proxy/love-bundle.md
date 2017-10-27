@@ -84,7 +84,7 @@ HyperApp 是一个iOS 上的自动化部署工具，提供可视化的配置界�
 * V2Ray WS          V2Ray WebSocket TLS 的域名，推荐使用自己的域名+certbot证书。
 ```
 
-你可以在 `TLS Domain` 中填入 `tls.10.10.10.10.xip.io` 在 `WS Domain` 中填入 `ws.10.10.10.10.xip.io`。别忘了将 `10.10.10.10` 换成你 VPS 的 IP 地址。
+假设你的VPS IP是 `10.10.10.10`，你可以在 `TLS Domain` 中填入 `tls.10.10.10.10.xip.io` 在 `WS Domain` 中填入 `ws.10.10.10.10.xip.io`。
 
 如果你有自己的域名，做好解析后，可以在这儿填写你自己的域名。
 
