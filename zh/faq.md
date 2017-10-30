@@ -3,6 +3,8 @@
 
 ## 索引
 * HyperApp 问题
+    * 关于国区被下架的解决方法
+    * 如何申请 TF
     * 常见安装错误
     * BBR 问题
     * 服务器错误
@@ -39,10 +41,17 @@
 
 ### 安装错误
 
+
 #### 安装应用时报错 "i686 not recognized platform"
 
 * 系统必须是64位(X86-64)Linux系统
 * 虚拟化方式不支持 OpenVZ
+
+
+#### Bind for *** failed:port is already allocated.
+
+端口重复了，不同的应用、进程不能使用同一个端口
+
 
 #### 为什么在安装应用的时候.会卡在安装中非常久(这种情况多出现在国内VPS中)？
 
@@ -87,13 +96,16 @@
 
 执行 `rm -rf /var/lib/docker/aufs` 清除docker网络配置.然后重新安装所有应用即可.
 
+
 #### sudo: no tty present and no askpass program specified
 
 你需要修改 `sudo` 配置文件允许当前用户无密码运行 `sudo`
 
+
 #### 操作Docker时提示权限不足(Permission Denied)
 
-原因：当前用户没有docker权限，加到docker组才有，执行命令 
+原因：当前用户没有docker权限，加到docker组才有，执行命令
+
 
 ```
 sudo usermod -aG docker $USER
@@ -278,5 +290,3 @@ https://www.hyperapp.fun
 #### ~~部署v2ray等hyperapp应用可适当参考如下链接~~(打死这个不要脸的:)
 
 https://vinga.fun
-
-
