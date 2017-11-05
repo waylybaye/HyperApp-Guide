@@ -77,7 +77,7 @@ HyperApp 是一个iOS 上的自动化部署工具，提供可视化的配置界�
 SS/SSR 的混淆域名可以随便填，但下面的其它服务就需要一个指向你服务器的真实域名了。
 
 #### V2Ray 配置
- 
+
 ```
 * V2Ray UUID        V2Ray 的 uuid，这儿会自动生成一个 （默认 alterID 是32）
 * V2Ray TLS         V2Ray TLS 的域名，推荐使用自己的域名+certbot证书。
@@ -141,7 +141,7 @@ CA      LoveBundle 用来生成自签证书以及VPN登录证书的目录
 * 密码            上面的密码
 * 加密、协议       和上面一一对应
 * 混淆方式         tls1.2_ticket_auth
-* 混淆参数         上面的 SSR Domain   
+* 混淆参数         上面的 SSR Domain
 ```
 
 #### V2Ray TCP TLS 方式配置
@@ -169,11 +169,11 @@ CA      LoveBundle 用来生成自签证书以及VPN登录证书的目录
 * TLS           ✅
                 ✅ Allow insecure （如果使用自签证书）
 ```
- 
+
 #### HTTP2(nghtpx) 连接方法
 
 可以参考 [nghttpx 的教程](./nghttpx.md)
- 
+
 #### Cisco AnyConnect 链接方法
 
 ```
