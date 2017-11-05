@@ -4,7 +4,7 @@
 
 ### HyperApp 简介
 
-HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具，开发者整理了超过几十个常见应用，将其整理到商店中，您只需要点击一下就会出现可视化的配置界面，然后可以一键安装到您的服务器上。部署应用就是这么简单！ 
+HyperApp 是一个基于 SSH 和 Docker 的自动化部署工具，开发者整理了超过几十个常见应用，将其整理到商店中，您只需要点击一下就会出现可视化的配置界面，然后可以一键安装到您的服务器上。部署应用就是这么简单！
 
 HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用自动生成 SSL 证书。
 
@@ -18,44 +18,6 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 
 [www.hyperapp.fun](https://www.hyperapp.fun)
 
-## 文档资源
-
-* [如何免费打造打造一个安全稳定低延迟超高速的科学上网环境](./zh/proxy/get-started.md)
-* [排错指引](./zh/faq.md)
-* 如何添加服务器：
-    * [Vultr](./zh/vendors.md#vultr)
-    * [Linode](./zh/vendors.md#linode)
-    * [~~如何添加 GCE 和 AWS 的服务器 (已过期)~~](./zh/Add-Sever-Cloud.md)
-* 应用教程
-    * [如何自动生成 SSL 证书](./zh/SSL.md)
-    * [如何搭建 MySQL/WordPress/Ghost/ownCloud 等支持 https 的网站](./zh/Get-Started.md)
-    * [Jekyll 和 Hugo 的使用](./zh/static-site.md)
-* 爱国软件
-    * [综述：如何选择主机商和爱国软件？（未完）](./zh/GFW.md)
-    * [SSR: 教程](./zh/SSR.md)
-    * [V2Ray: TCP TLS 混淆 或者 WebSocket 使用 Nginx 自动分流教程](./zh/V2Ray.md)
-    * [Shadowsocks-libev](./zh/ss-libev.md)
-    * [Cisco AnyConnect](./zh/ocserv.md)
-    * [使用 nghttpx (HTTP2) + TLS 搭建 HTTPS Proxy](./zh/nghttpx.md)
-    * [使用 kcptun 加速上面所有的服务](./zh/kcptun.md)
-    * [Pipesocks 教程](./zh/Pipesocks.md)
-    * [SSPANEL轻松搭建教程](./zh/panel.md)
-    * [V2Ray完美混淆教程（内含全平台客户端配置教程）](./zh/V2ray+Websocket.md)
-* [商店应用配置](./zh/Apps.md)
-    * [Huginn: 打造自己的IFTTT服务](./zh/Apps.md#huginn)
-    * [CloudTorrent部署教程](./zh/Bt.md)
-    * [使用Hugo搭建惊艳个人博客](./zh/Hugo.md)
-    * [免爱国Telegram-Web部署教程](./zh/telegram.md)
-    * [Flarum: 一个漂亮的论坛应用](./zh/Apps.md#flarum)
-    * [EFB: 接收微信消息并转发到 Telegram](./zh/Apps.md#efb)    
-    * [Thunder xware: 迅雷远程下载](./zh/Apps.md#thunder-xware)
-* 用户贡献的文档
-   * [Smartsocks使用帮助](./zh/Smartsocks-help.md)
-   * [免费获得个人专享顶级域名](./zh/Get-Domain.md)
-   * [使用HyperApp简单的搭建和管理自己的Minecraft服务器](./zh/RD_MinecraftServerBuilding.md)
-* 系统教程
-   * [CentOS 如何手动升级 Docker 版本](./zh/centos-upgrade-docker.md)
-   * [阿里云 Docker 加速](./zh/Aliyun-docker.md)
 
 
 ---
@@ -86,11 +48,11 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 * CentOS 6 ⚠️ （不支持，但你可以手动安装最新版的Docker）
 * 不支持 OpenVZ ❌
 
-注：CentOS 6 也是支持的，但是有些厂商自带的内核版本较低导致不支持 Docker  
+注：CentOS 6 也是支持的，但是有些厂商自带的内核版本较低导致不支持 Docker
 
 推荐 Ubuntu 16.04 LTS
 
-**为什么不支持 OpenVZ ？**  
+**为什么不支持 OpenVZ ？**
 因为 OpenVZ 支持的内核版本太低，不支持 Docker 所以，HyperApp 不支持 OpenVZ 的主机。
 
 ---
@@ -111,7 +73,7 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 * Linode/Vultr/DigitalOcean 等厂商一般可以使用 root 账号和密码直接登录
 * 如果您使用 Google CloudEngine 或者 AWS EC2 等默认禁止 root 登录的账号，请查看下面的教程怎样配置私钥登录，然后重复上面的第3步骤在 HyperApp 中链接。
 
-[查看添加服务器的新手教程](./zh/Add-Server.md)  
+[查看添加服务器的新手教程](./zh/Add-Server.md)
 
 ---
 
@@ -156,26 +118,25 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 ### 常见问题
 
 
-**为什么部署成功了还是安装不上？**  
+**为什么部署成功了还是安装不上？**
 1. 如果使用的是 GCE 或者 AWS ，那么您可以需要在它们的控制台中添加防火墙规则外部才能连接特定的端口。
 2. 您使用的Linux发行版可能默认开启了防火墙守护进程，比如 CentOS 的 FirewallD。请查阅相关的资料如何添加允许端口访问。
 
 
-**为什么 GCE 连接不上？**  
+**为什么 GCE 连接不上？**
 您可能被分配了一个已经被墙的IP，请使用下面的方法进行故障排除
 
 
-**怎样检测 IP 能否访问，或者我部署的应用能否访问？**  
+**怎样检测 IP 能否访问，或者我部署的应用能否访问？**
 1. 检测 IP 最简单的是运行 `ping IP` 看看是否可以连通，但是 GCE 和 AWS 的默认防火墙规则屏蔽了 ICMP，所以这个方法可能不适用。
 2. 基本所有的厂商都会允许外部连接 22端口（SSH远程登录）所以您可以简单的 `ssh IP` 一下看看是否可以连通，如果报错认证失败说明是可以连通的
 3. 如果您要检测其它端口（比如SS的）那么您可以运行 `telnet IP PORT` 来查看远程端口是否开启，如果可以访问则远程服务没问题。如果不可以则可以登录服务器，运行 `lsof -i :端口` 来查看是否有进程正在监听该端口，如果有说明是防火墙屏蔽了端口访问，如果没有说明部署失败。
 
 
-**为什么我在机器上能连接但在App上用同样的参数连接不了？**  
-你手机是否开了VPN或者 Surge，尝试断开 VPN/Surge 后试试。  
+**为什么我在机器上能连接但在App上用同样的参数连接不了？**
+你手机是否开了VPN或者 Surge，尝试断开 VPN/Surge 后试试。
 有些服务商可能会屏蔽另外服务商的某些链接，当你使用VPN绕道连接时可能会出现此问题。
 
 
-**HyperApp 会在我的服务器/路由器上运行哪些命令？**  
+**HyperApp 会在我的服务器/路由器上运行哪些命令？**
 [HyperApp 运行的命令](./commands.md)
-
