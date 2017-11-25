@@ -2,7 +2,7 @@
 
 > 很多人会遇到这样一个问题.有时候想用一下Google搜索.却苦于需要翻墙.打开各大代理工具稍显笨重.今天介绍一个不需要翻墙搭建Google反向代理的教程
 
-## 原文地址: https://vinga.fun/google
+## 原文地址: https://vinga.tech/google
 
 ## 更新记录
 
@@ -79,7 +79,7 @@
 ## 写在最后
 
 * 写了这么久.如果能有所收获那就是我最大的荣幸了:)
-* 如果可以的话.可以关注一下 https://vinga.fun 这是我的私人博客地址:)
+* 如果可以的话.可以关注一下 https://vinga.tech 这是我的私人博客地址:)
 * 如有问题可发邮件至我邮箱fanalcest@gmail.com联系或telegram@fanvinga
 
-<a href="https://vinga.fun"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
+<a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>

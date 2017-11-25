@@ -6,7 +6,7 @@
 
 
 
-### 本文原文链接为 https://vinga.fun/v2ray 原文更新更为及时
+### 本文原文链接为 https://vinga.tech/v2ray 原文更新更为及时
 
 ## 更新记录
 - 2017.10.1:增加了网络拓扑部分.
@@ -137,7 +137,7 @@
 ## 写在最后
 
 - **写了这么久.如果能有所收获那就是我最大的荣幸了:)**
-- **如果可以的话.可以关注一下 https://vinga.fun 这是我的私人博客地址:)**
+- **如果可以的话.可以关注一下 https://vinga.tech 这是我的私人博客地址:)**
 - **如有问题可发邮件至我邮箱fanalcest@gmail.com联系或telegram@fanvinga**
 
-  <a href="https://vinga.fun"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
+  <a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
