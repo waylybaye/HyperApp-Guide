@@ -34,6 +34,7 @@
     * [Pipesocks 教程](proxy/Pipesocks.md)
     * [联通客户端检测](proxy/unicom.md)
     * [SSPANEL轻松搭建教程](proxy/panel.md)
+    * [魔改V3后端一键搭建教程](proxy/ssrmu.md)
     * [V2Ray完美混淆教程（内含全平台客户端配置教程）](proxy/V2ray+Websocket.md)
 * [商店应用配置](Apps.md)
     - [Huginn: 打造自己的IFTTT服务](Apps.md#huginn)
