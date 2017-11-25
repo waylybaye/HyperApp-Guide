@@ -3,7 +3,7 @@
 
 ## HyperApp 配置
 
-<img src="./images/ocserv.jpg" width="450" />
+<img src="../images/ocserv.jpg" width="450" />
 
 * Port: 端口，一般为443，也可以改成别的端口
 * Domain: 填写你服务器的IP地址或者域名
@@ -38,7 +38,7 @@ certs: 这儿默认使用 `Nginx SSL Support` 的证书保存目录。如果你�
 
 在客户端中通过域名或者IP连接即可，如果你更改了默认的443端口则填入 `IP:PORT` 或者 `Domain:PORT` 的形式。随后一次输入用户名 密码即可。
 
-### 使用证书登录 
+### 使用证书登录
 
 使用密码登录时每次重连都需要输入密码有点不方便，使用证书登录就方便很多。
 

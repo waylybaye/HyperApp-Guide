@@ -17,7 +17,7 @@
 
 ## 网络拓扑
 
-![v2ray-0](./images/v2ray-0.jpg)
+![v2ray-0](../images/v2ray-0.jpg)
 
 ## 工具
 
@@ -38,7 +38,7 @@
 
 ## 配置V2Ray服务端
 
-![v2ray-1](./images/v2ray-1.jpg)
+![v2ray-1](../images/v2ray-1.jpg)
 
 - **配置完后安装即可**
 
@@ -55,7 +55,7 @@
 ### ios&Mac
 
 - **小火箭设置为以下选项即可正常连接**(**如果已经升级到2.1.13及其以上版本.混淆参数中不需要填写混淆域名**)
-  ![v2ray-2](./images/v2ray-2.jpg)
+  ![v2ray-2](../images/v2ray-2.jpg)
 - **如果你的代理工具是surge的话.配置文件请参考给出的config进行修改.默认开放127.0.0.1:10000作为本地socks代理端口并且将收到流量全部转发给vps.然后使用`/path/to/v2ray —config=/path/to/json`来启动本地v2ray.具体运行请到 https://www.v2ray.com/chapter_01/install.html 自行了解**
 - **surge设置连接本地socks代理地址为127.0.0.1:10000即可**
 
@@ -93,7 +93,7 @@
         ]
       },
       "streamSettings": {
-        "network": "ws", 
+        "network": "ws",
         "security": "tls",
         "tlsSettings": {
       "serverName": "",//这里还要填写你分配给v2ray的域名
@@ -101,7 +101,7 @@
        },
         "wsSettings": {
           "connectionReuse": true,
-          "path": "" 
+          "path": ""
         }
       },
      "mux":{
@@ -109,7 +109,7 @@
          "concurrency": 8
   }
   }
-  } 
+  }
 ```
 
 ### 安卓&Win

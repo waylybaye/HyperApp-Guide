@@ -9,7 +9,7 @@
 
 ### 应用配置及安装
 
-<img src="./images/ssr.jpg" width="450" />
+<img src="../images/ssr.jpg" width="450" />
 
 * Port: 端口 (端口的选择范围在65536以内都可以)
 * Password: 填一个密码
@@ -29,7 +29,7 @@
     ```
     sudo ufw allow SSR监听的端口号
     ```
-    
+
 - 为了图方便也可以选择关闭防火墙，关闭防火墙的命令如下。但是**十分不建议那样做**
 
   - 临时禁用防火墙
@@ -38,7 +38,7 @@
     CentOS6:  service iptables stop
     Ubuntu16  service ufw stop
     ```
-  - 永久禁用系统防火墙 
+  - 永久禁用系统防火墙
     ```
     CentOS7:  systemctl disable firewalld
     Ubuntu16: systemctl disable ufw
@@ -52,7 +52,7 @@
 
 ## 客户端配置
 
-你可以在官方文档里面找到所有平台的客户端下载地址 [https://github.com/breakwa11/shadowsocks-rss/wiki](https://github.com/breakwa11/shadowsocks-rss/wiki) 
+你可以在官方文档里面找到所有平台的客户端下载地址 [https://github.com/breakwa11/shadowsocks-rss/wiki](https://github.com/breakwa11/shadowsocks-rss/wiki)
 
 配置客户端你可以手动填写配置，也可以在 `HyperApp` 中轻点服务器名选择 `QR` 然后用客户端扫码配置。
 
@@ -60,7 +60,7 @@
 
 ## 注
   - 日志中显示以下内容代表服务端已成功启动(个别地方根据配置的不同可能不同，只要不报错就行)
-  
+
     ```
     IPv6 not support
     2017-07-29 12:06:54 INFO     util.py:85 loading libsodium from libsodium.so.18

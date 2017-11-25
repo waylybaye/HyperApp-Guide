@@ -34,7 +34,7 @@
 ### 注册 GCP 免费试用
 
 <img src='./images/gce/1-free-tier.png' width="414" /> <img src='./images/gce/1-intro.png' width="414" />
-   
+
 
 1. 登录Google账号后使用这个链接来注册 https://cloud.google.com/free/ ，在打开的页面中点击“Try it Free"。
 2. 接受条款，并点击”同意并继续“
@@ -198,7 +198,7 @@ Mac 和 Windows 上都有免费的 SS 客户端可以使用，配置方法也是
 
 ### HyperApp 支持
 
-[官方文档和教程](https://github.com/waylybaye/HyperApp-Guide)  
+[官方文档和教程](https://github.com/waylybaye/HyperApp-Guide)
 [Telegram 群](https://t.me/hyperapp)
 [Twitter @HyperApp](https://twitter.com/HyperAppCloud)
 
@@ -208,7 +208,7 @@ Mac 和 Windows 上都有免费的 SS 客户端可以使用，配置方法也是
 
 ### 设置 GCE 防火墙
 
-1. 在GCP后台点击 [网络 → 防火墙规则](https://console.cloud.google.com/networking/firewalls/list) 
+1. 在GCP后台点击 [网络 → 防火墙规则](https://console.cloud.google.com/networking/firewalls/list)
 2. 点击 `创建防火墙规则`
     * 名称：随便输入一个名称
     * 目标：选择 `网络中的所有示例`
@@ -220,5 +220,3 @@ Mac 和 Windows 上都有免费的 SS 客户端可以使用，配置方法也是
 
 1. 最主要的优势是隐私和安全，如果你看下上面SS的日志，你就知道服务商可以知道你的所有浏览历史的，如果你访问了不支持HTTPS的网站，那么请求内容也可能被监控（比如密码信息）。
 2. 另外是质量和成本，很多商家是使用和上面同样的机器但是卖给几百个人，你应该能明白了。成本方面没有免费试用的话1个人用可能会有点贵，但如果和朋友家人一起用就超值了，比如使用$2.5/月的 Vultr，每月500G 流量够很多人用的。
-
-

@@ -8,7 +8,7 @@
     * WebSocket 模式
     * mKCP 模式
 * V2Ray 服务端配置
-    * 方案1: 使用 TCP 传输，并开启 TLS 
+    * 方案1: 使用 TCP 传输，并开启 TLS
     * 方案2: WebSocket 传输，使用 Nginx & SSL Support 反代 V2Ray
 * 客户端配置
     * macOS V2RayX
@@ -43,7 +43,7 @@ WebSocket 是一种在 HTTP 之上的协议，本质也是TCP传输，但是是�
 
 ### 应用配置及安装
 
-<img src="./images/v2ray.jpg" width="450" />
+<img src="../images/v2ray.jpg" width="450" />
 
 ```
 * Port:             填一个端口
@@ -62,7 +62,7 @@ WebSocket 是一种在 HTTP 之上的协议，本质也是TCP传输，但是是�
     * alterID:      默认32，注意客户端的 UUID 和 alterID 必须保持一致
 * TLS
     * Enable TLS    开启 TLS 1.2 加密（混淆）
-    * TLS Domain    SSL 证书的域名，将会自动在下面 `SSL certs` 
+    * TLS Domain    SSL 证书的域名，将会自动在下面 `SSL certs`
                     目录下面寻找证书文件。
 * Volumes
     * config.json   生成的 V2Ray 配置文件会存在这里
@@ -72,7 +72,7 @@ WebSocket 是一种在 HTTP 之上的协议，本质也是TCP传输，但是是�
 ----
 
 
-## 方案1: 使用 TCP 传输，并开启 TLS 
+## 方案1: 使用 TCP 传输，并开启 TLS
 
 ### TLS 证书设置
 如果你想使用 WebSocket 请跳过本段，直接看下一段，本段只适用于 TCP 方式。
@@ -86,7 +86,7 @@ WebSocket 是一种在 HTTP 之上的协议，本质也是TCP传输，但是是�
 
 当然你也可以用 `Nginx Proxy` 和 `Nginx SSL Support` 自动生成可信的 SSL 证书。不过你要先关闭上面的 `Enable TLS` 选项，否则没有证书 V2ray 启动不起来，等几分钟证书生成了后，再打开此选项，然后`更新配置`即可。
 
-关于如何自动生成可信证书的更多介绍，请参考 [如何自动生成 SSL 证书](./SSL.md) 
+关于如何自动生成可信证书的更多介绍，请参考 [如何自动生成 SSL 证书](./SSL.md)
 
 
 ## 方案2: WebSocket 传输，使用 Nginx & SSL Support 反代 V2Ray
@@ -95,9 +95,12 @@ WebSocket 是一种在 HTTP 之上的协议，本质也是TCP传输，但是是�
 
 首先参考 [如何自动生成 SSL 证书](./SSL.md) 依次安装 `Nginx Proxy` 和 `Nginx SSL Support` 然后在上面的配置页面中，Nginx 和 SSL 选项按下面填写：
 
+
+**注意，使用此模式时，443 端口是分配给 Nginx 的，你要为 V2Ray 随便设置另外一个端口，但客户端连接时使用443**
+
 ### 自定义域名
 * 域名：填写您的域名
-* 应用端口：**填写最上面的端口号**
+* 应用端口：**填写上一段中设置的端口**
 * HTTPS: 默认会将 HTTP 重定向到 HTTPS，建议选择不重定向，这样客户端就可以随便选需不需要TLS了。
 
 ### SSL 选项
@@ -106,7 +109,7 @@ WebSocket 是一种在 HTTP 之上的协议，本质也是TCP传输，但是是�
 
 然后安装即可，安装完毕稍等几分钟 Nginx SSL Support 将会自动生成可信的 LetsEncrypt 证书。接下来就配置客户端连接即可。
 
-关于如何自动生成可信证书的更多介绍，请参考 [如何自动生成 SSL 证书](./SSL.md) 
+关于如何自动生成可信证书的更多介绍，请参考 [如何自动生成 SSL 证书](./SSL.md)
 
 ## 方案3: 使用mKCP 传输
 
@@ -125,14 +128,14 @@ mKCP是V2ray对KCP的简单实现，是基于UDP的一种传输方式，它可�
 ## 客户端配置
 
 
-你可以在这里找到所有平台的客户端 [V2Ray 各平台的图形客户端介绍](https://www.v2ray.com/chapter_01/3rd_party.html) 
+你可以在这里找到所有平台的客户端 [V2Ray 各平台的图形客户端介绍](https://www.v2ray.com/chapter_01/3rd_party.html)
 
 但是主流平台依然有以下推荐的方案：
 
 * **MAC** [V2RayX](https://github.com/Cenmrev/V2RayX/releases)
 * **PC** [V2rayN](https://github.com/v2ray/v2rayN/releases)
 * **IOS** [Shadowrocket](https://itunes.apple.com/us/app/shadowrocket/id932747118?mt=8)
-* **IOS** [Kitsunebi](https://itunes.apple.com/us/app/kitsunebi/id1275446921?mt=8) 
+* **IOS** [Kitsunebi](https://itunes.apple.com/us/app/kitsunebi/id1275446921?mt=8)
 * **Android** [V2rayNg](https://play.google.com/store/apps/details?id=com.v2ray.ang&hl=en)
 
 ## MAC 客户端
@@ -141,10 +144,10 @@ mKCP是V2ray对KCP的简单实现，是基于UDP的一种传输方式，它可�
 
 在 `V2RayX → Servers` 中添加一个服务器，如图：
 
-![](./images/v2rayx-server.png)
+![](../images/v2rayx-server.png)
 
 * Address: 填入你服务器的地址 和 HyperApp 中设置的端口
-* UUID: HyperApp 中的 UUID 
+* UUID: HyperApp 中的 UUID
 * alterId: HyperApp 中的 alterID
 * Security: 随便选，推荐默认选项
 * Network: 选择 HyperApp 中配置的选项，默认为 TCP
@@ -153,7 +156,7 @@ mKCP是V2ray对KCP的简单实现，是基于UDP的一种传输方式，它可�
 
 点击左下角的 `tranport settings` 选择 `TCP` 如图 `header type` 选择 `http` 即可开启 http 混淆
 
-![](./images/v2rayx-tcp.png)
+![](../images/v2rayx-tcp.png)
 #### WebSocket 配置
 
 如果你使用 WebSocket 则打开 WebSocket 选项卡，填写选项即可。其实不用改，默认选项就行。
@@ -163,7 +166,7 @@ mKCP是V2ray对KCP的简单实现，是基于UDP的一种传输方式，它可�
 
 点击 `TLS` 标签页，选中 `Use TLS` 如果你是自签名证书也同时选中 `Allow Insecure`
 
-![](./images/v2rayx-tls.png)
+![](../images/v2rayx-tls.png)
 
 ## PC 客户端
 
@@ -173,7 +176,7 @@ mKCP是V2ray对KCP的简单实现，是基于UDP的一种传输方式，它可�
 
 在`V2rayN→服务器`中添加一个服务器，如图
 
-![](./images/v2ray-client-1.png)
+![](../images/v2ray-client-1.png)
 
 * 地址(Address): 填入你服务器的地址
 * 端口(Port)：HyperApp 中的 端口，本例程为443
@@ -186,12 +189,12 @@ mKCP是V2ray对KCP的简单实现，是基于UDP的一种传输方式，它可�
 
 点击下方的`伪装类型` 选择 `http` 如图 `伪装域名/其他项` 填写所要伪装的域名，用逗号隔开即可开启 http 混淆
 
-![](./images/v2ray-client-2.png)
+![](../images/v2ray-client-2.png)
 #### WebSocket 配置
 
 如果你使用 WebSocket 则上方的`传输类型` 选择 `ws`，`伪装类型`选择`none`,`伪装域名/其他项`填写WS的路径，除非特别指定，一般留空。
 
-![](./images/v2ray-client-3.png)
+![](../images/v2ray-client-3.png)
 
 #### TLS 配置
 
@@ -212,12 +215,12 @@ mKCP是V2ray对KCP的简单实现，是基于UDP的一种传输方式，它可�
 
 点击下方的`Obfuscation` ,进入二级页面，`Name`选择 `http` .`Path` 保持默认，`下面的大方框` 填写所要伪装的域名，用逗号隔开即可开启 http 混淆
 
-![](./images/v2ray-client-4.png)
+![](../images/v2ray-client-4.png)
 #### WebSocket 配置
 
 点击下方的`Obfuscation` ,进入二级页面，`Name`选择 `Websocket` .`Path` 保持默认，`下面的大方框` 填写`你的域名`，用逗号隔开即可开启 http 混淆
 
-![](./images/v2ray-client-5.png)
+![](../images/v2ray-client-5.png)
 
 #### TLS 配置
 
@@ -236,11 +239,9 @@ mKCP是V2ray对KCP的简单实现，是基于UDP的一种传输方式，它可�
 * TLS: 右滑勾选
 * Allow Insecure: 建议勾选
 
-![](./images/v2ray-client-6.png)
+![](../images/v2ray-client-6.png)
 
 
 ---
 
 大功告成！
-
-
