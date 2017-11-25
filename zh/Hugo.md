@@ -3,8 +3,12 @@
 
 
 **大家好,我是VINGA :)今天为大家介绍Hugo这个静态页面生成引擎并且带来一篇简洁可行的搭建博客的教程.本博客就是使用Hugo来进行搭建的,并且托管在自己的私人VPS上.**
-* **本文原文链接https://vinga.fun/hugo**
+* **本文原文链接https://vinga.tech/hugo**
 
+
+## 文章更新记录:
+
+* 2017.7.27:增加了rsync作为文件上传的方法.
 
 ## 前言介绍
 
@@ -47,9 +51,9 @@
 
 ![hugo-1](./images/hugo-1.png)
 
-4. **先去网上寻找一个你满意的主题.为什么要这么做呢.因为hugo默认并没有主题.没有主题的话hugo是不能生生成页面的.https://themes.gohugo.io/ 这是hugo官方的主题仓库的链接.找到喜欢的就进去选择download.会跳转到一个Github的界面.一般来说在readme里面都会有提示怎么安装的.本教程采用docdock主题来举例.链接为https://github.com/vjeantet/hugo-theme-docdock**
+4. **先去网上寻找一个你满意的主题.为什么要这么做呢.因为hugo默认并没有主题.没有主题的话hugo是不能生生成页面的. https://themes.gohugo.io/ 这是hugo官方的主题仓库的链接.找到喜欢的就进去选择download.会跳转到一个Github的界面.一般来说在readme里面都会有提示怎么安装的.本教程采用docdock主题来举例.链接为 https://github.com/vjeantet/hugo-theme-docdock**
 5. **执行命令`cd themes`进入主题文件夹**
-6. **执行命令`git clone https://github.com/vjeantet/hugo-theme-docdock.git docdock`来下载docdock主题.**
+6. **执行命令`git clone  https://github.com/vjeantet/hugo-theme-docdock.git docdock`来下载docdock主题.**
 7. **我们进去docdock目录看一看都有什么东西.图中就是主题的构成.我们要做的是进入exampleSite文件夹.把里面的所有文件复制的最早的Mysite文件夹里面.注意要选替换选项**
 
 ![hugo-2](./images/hugo-2.png)
@@ -81,20 +85,21 @@
 
 ## 上传文件
 
-1. **建议使用压缩的方法.使用命令`scp -P 你的ssh端口 你的Mysite.zip的路径 你的登录用户名@你的服务器地址:/srv/docker`来把Mysite上传到服务器的`/srv/docker`目录下面.执行使用`unzip Mysite.zip && mv Mysite Hugo`命令**
-2. **回到hyperapp.对Hugo执行更新配置操作**
+1. **rsync方法:本地执行命令`rsync -av --delete -e 'ssh -p 你的ssh端口默认22' ~/desktop/放到桌面的Mysite文件夹名字/ VPS用户名@VPS地址:/srv/docker/Hugo/`**
+2. **压缩方法:使用命令`scp -P 你的ssh端口 你的Mysite.zip的路径 你的登录用户名@你的服务器地址:/srv/docker`来把Mysite上传到服务器的`/srv/docker`目录下面.执行使用`unzip Mysite.zip && mv Mysite Hugo`命令**
+3. **回到hyperapp.对Hugo执行更新配置操作**
 
 
 
 ## 大功告成
 
 * **现在访问你的域名吧!**
-
+* **我的博客所在VPS用的一个提供廉价CN2线路的IDC，有需要的话可以联系我索要推荐链接.双方都有收益.**
 
 
 ## 注意事项
 
-* **如果要添加文章.有两种方法.第一个是使用`hugo new example.md`.另外一个是直接把md文件放到content目录下面.然后参照已经存在的md文件修改顶部的显示设置.这部分请自行摸索.使用hugo new命令创建新文章的话.默认是content目录.要放到content目录下面的example目录的话执行`hugo new example/example.md` **
+* **如果要添加文章.有两种方法.第一个是使用`hugo new example.md`.另外一个是直接把md文件放到content目录下面.然后参照已经存在的md文件修改顶部的显示设置.这部分请自行摸索.使用hugo new命令创建新文章的话.默认是content目录.要放到content目录下面的example目录的话执行`hugo new example/example.md`**
 * **要修改主题的话.请自行阅读主题github的readme网站.**
 * **不只是官方主题仓库才有hugo仓库下载.请自行查找.安装方法基本类似**
 
@@ -103,7 +108,12 @@
 ## 写在最后
 
 * **写了这么久.如果能有所收获那就是我最大的荣幸了:)**
-* **如果可以的话.可以关注一下 https://vinga.fun 这是我的私人博客地址:)**
-* **如有问题可发邮件至我邮箱联系或telegram@fanvinga**
+* **如果可以的话.可以关注一下 https://vinga.tech 这是我的私人博客地址:)**
+* **如有问题可发邮件至我邮箱fanalcest@gmail.com联系或telegram@fanvinga**
+
+
+
+<a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
+
 
 

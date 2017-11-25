@@ -2,7 +2,7 @@
 
 > 有时你需要临时发送一些比较隐私的东西.又不想直接在聊天软件中直接发送.这时候维护一个轻量的即时通信平台就派上用场了.只要在url后面随便加上一个单词就能创建你的会话.非常方便.
 
-## 本文原文地址 https://vinga.fun/chat
+## 本文原文地址 https://vinga.tech/chat
 
 ## 更新记录
 
@@ -39,7 +39,7 @@
 ## 写在最后
 
 * 写了这么久.如果能有所收获那就是我最大的荣幸了:)
-* 如果可以的话.可以关注一下 https://vinga.fun 这是我的私人博客地址:)
+* 如果可以的话.可以关注一下 https://vinga.tech 这是我的私人博客地址:)
 * 如有问题可发邮件至我邮箱fanalcest@gmail.com联系或telegram@fanvinga
 
-<a href="https://vinga.fun"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
+<a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>

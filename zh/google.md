@@ -2,10 +2,11 @@
 
 > 很多人会遇到这样一个问题.有时候想用一下Google搜索.却苦于需要翻墙.打开各大代理工具稍显笨重.今天介绍一个不需要翻墙搭建Google反向代理的教程
 
-## 原文地址: https://vinga.fun/google
+## 原文地址: https://vinga.tech/google
 
 ## 更新记录
 
+* 2017.09.05:Turn on gzip so speed up nginx.Please pull newer image.
 * 2017.08.29:增加了默认语言的设置.更新了docker.详细设置见下文.
 
 ## 准备
@@ -19,15 +20,29 @@
 
 1. **转到商店页面.找到Docker Image然后选择服务器并且保存进入配置界面**
 2. **请完全按照下图配置进行填写！**
-   ![](./images/google-1.jpg)
+
+|    应用设置名称     |              内容               |
+| :-----------: | :---------------------------: |
+|     Image     | fanvinga/docker-google-mirror |
+|    Options    |                               |
+|    Command    |                               |
+|     Args      |                               |
+| **Nginx设置名称** |            **内容**             |
+|      域名       |      你要给google-mirror的域名      |
+|     应用端口      |                               |
+|     Https     |        将http重定向到https         |
+|      域名       |   你要给google-mirror的域名（自动填写）   |
+|      邮箱       |           域名所对应的邮箱            |
+
+
 3. **保存并且进行安装.请确保这时候Nginx Proxy以及Nginx SSL Support正常默认安装并且启动了**
 
 
-## 默认语言设置(默认中文)
+## 默认语言设置
 
-1. **VPS执行`docker ps`找到`Google-Proxy`应用的`CONTAINER ID`.一般是一个十二位的字符串.**
-2. **执行`docker exec -it '上面的CONTAINER ID' sh`进入`docker`内部**
-3. **执行`vi /opt/nginx/conf/nginx.conf`把`zh-CN`修改为下列对应语言.修改完成保存并且重启应用**
+1. **如果你看到这里的时候已经安装过`Google-Proxy`那么请注意要先`pull image`**
+
+2. **在`docker image`配置界面`optios`那个框填入`-e LANG=你要修改的语言简写`.然后选择更新配置.**
 
    ```
    ar    -> Arabic
@@ -79,7 +94,7 @@
 ## 写在最后
 
 * 写了这么久.如果能有所收获那就是我最大的荣幸了:)
-* 如果可以的话.可以关注一下 https://vinga.fun 这是我的私人博客地址:)
+* 如果可以的话.可以关注一下 https://vinga.tech 这是我的私人博客地址:)
 * 如有问题可发邮件至我邮箱fanalcest@gmail.com联系或telegram@fanvinga
 
-<a href="https://vinga.fun"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
+<a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
