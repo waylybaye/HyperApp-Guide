@@ -2,7 +2,7 @@
 
 > Huginn是一个神器，见到它有一种相见恨晚的感觉，我们都知道IFTTT是一个信息的触发器，可以用来建立自动的工作流。而Huginn是IFTTT的加强版，几乎可以将所有的信息进行重组、变形、输出，真正做信息的主人。
 
-## 本文原文地址 https://vinga.fun/huginn
+## 本文原文地址 https://vinga.tech/huginn
 
 ## 准备工作
 
@@ -43,7 +43,7 @@
 ## 写在最后
 
   * 写了这么久.如果能有所收获那就是我最大的荣幸了:)
-  * 如果可以的话.可以关注一下 https://vinga.fun 这是我的私人博客地址:)
+  * 如果可以的话.可以关注一下 https://vinga.tech 这是我的私人博客地址:)
   * 如有问题可发邮件至我邮箱fanalcest@gmail.com联系或telegram@fanvinga
  
-   <a href="https://vinga.fun"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
+   <a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>

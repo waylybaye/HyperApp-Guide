@@ -1,6 +1,6 @@
 > 在今时今日.拥有一个个人域名已经成为了一种互联网的必需品(笑).言归正传.很多人觉得申请一个域名会是一件复杂而困难的事情.并且可能要花很多钱.那么今天为大家带来一篇免费的个人域名的申请教程。
 
-* **本文原文链接https://vinga.fun/domain**
+* **本文原文链接https://vinga.tech/domain**
 
 
 # 准备
@@ -16,7 +16,7 @@
 
 
 
-**首先访问[www.freenom.com](http://www.freenom.com),freenom是一个免费的域名服务商，旗下提供.ML、.CF、.GA、.TK、.GQ四个免费域名的注册。（值得一提的是[www.dot.tk](http://www.dot.tk)也是一家免费域名服务商，提供.tk域名的免费注册，注册的步骤与在freenom中大致相同）然后在屏幕中间输入框输入你想要的域名比如`fanvinga.fun`,然后点击检查可用性**
+**首先访问[www.freenom.com](http://www.freenom.com),freenom是一个免费的域名服务商，旗下提供.ML、.CF、.GA、.TK、.GQ四个免费域名的注册。（值得一提的是[www.dot.tk](http://www.dot.tk)也是一家免费域名服务商，提供.tk域名的免费注册，注册的步骤与在freenom中大致相同）然后在屏幕中间输入框输入你想要的域名比如`fanvinga.tech`,然后点击检查可用性**
 
 ## ![](./images/Domain-1.jpg)
 
