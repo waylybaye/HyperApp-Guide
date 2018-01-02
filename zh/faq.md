@@ -67,6 +67,7 @@
 
 1. 请不要打开VPN连接hyperapp.（或者在对应的App中加一条规则，设置你的服务器IP直连）
 2. 检查服务器IP是否变了（GCP 如果没有用静态IP，服务器关机后再重启IP可能会变）
+3. 检查SSH端口有没有填对（默认22）
 
 #### 提示 transport read 或者 timeout
 
