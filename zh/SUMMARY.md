@@ -34,6 +34,8 @@
     * [Pipesocks 教程](proxy/Pipesocks.md)
     * [联通客户端检测](proxy/unicom.md)
     * [SSPANEL轻松搭建教程](proxy/panel.md)
+    * [魔改V3后端一键搭建教程](proxy/ssrmu.md)
+    * [简易搭建brook代理](proxy/brook.md)
     * [V2Ray完美混淆教程（内含全平台客户端配置教程）](proxy/V2ray+Websocket.md)
 * [商店应用配置](Apps.md)
     - [Huginn: 打造自己的IFTTT服务](Apps.md#huginn)
@@ -55,6 +57,7 @@
    * [搭建HACK·CHAT即时通信平台](chat.md)
    * [内网穿透服务otunnel架设](otunnel.md)
    * [搭建个人专享2048在线小游戏](2048.md)
+   * [超简单搭建常见404站点镜像](mirror.md)
 * 系统教程
    * [CentOS 如何手动升级 Docker 版本](centos-upgrade-docker.md)
    * [阿里云 Docker 加速](Aliyun-docker.md)
