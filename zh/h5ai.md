@@ -5,6 +5,8 @@
 
 ## 更新记录
 
+- 2018.1.10: 更新镜像.增加了全局搜索文件的功能.改进了打包压缩的功能.修复了一个bug.增加了自定义介绍的方法.增加了对于php文档的高亮显示
+- 2017.12.29:重构镜像.修复了没有输出日志的bug.并且通过增加启动参数`--restart=always`来提升稳定性.请自行在options中增加.
 - 2017.11.19:再次更新镜像.本次更新极大的压缩了镜像的体积.请记得pull image.
 - 2017.11.19:两个分支的镜像都更新了.修复BUG和增强性能.请记得pull image.
 - 2017.11.14:增加了密码保护部分，并且更新了原来的镜像.请原来的用户也pull一下image.
@@ -41,7 +43,7 @@ ln -s /share .
 |    应用设置名称     |          内容          |
 | :-----------: | :------------------: |
 |     Image     | fanvinga/docker-h5ai |
-|    Options    |   -v /share:/share   |
+|    Options    |   `-v /share:/share --restart=always`  |
 |    Command    |                      |
 |     Args      |                      |
 | **Nginx设置名称** |        **内容**        |
@@ -66,6 +68,11 @@ ln -s /share .
 ## 联合Cloud-Torrent
 
 * **如果想做到利用Cloud-Torrent下载完BT之后直接可以在H5AI里面找到的话.只需要在上面的options里面加入`-v /srv/docker/Cloud-Torrent:/share/download`.然后更新配置.这样在h5ai目录下会出现download文件夹.里面就有CT下载完成的文件啦**
+
+## 自定义介绍
+
+* **如果想在h5ai的顶部或者底部增加一些说明.只需要在分享目录里面新增一个 `_h5ai.header.md` 然后输入你想输出的内容即可.会自动渲染. html 同理.**
+* **要在底部增加改成footer即可**
 
 ## 大功告成
 
