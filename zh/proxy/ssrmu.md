@@ -7,6 +7,8 @@
 
 ## 更新记录
 
+- 2017.12.29:重构镜像.对镜像进行了优化提升了性能.通过增加启动参数`--restart=always`来提升稳定性.请自行在options中增加.
+- 2017.12.18:压缩了镜像.
 - 2017.11.21:增加glzjinmod的链接方式
 
 ## 准备
@@ -21,12 +23,12 @@
 1. **转到商店页面.找到Docker Image然后选择服务器并且保存进入配置界面**
 2. **请完全按照下图配置进行填写！**
 
-| 应用设置名称  |                    内容                    |
-| :-----: | :--------------------------------------: |
-|  Image  |          fanvinga/docker-ssrmu           |
-| Options | -e DOMAIN=example.com -e MUKEY=your_mukey -e NODEID=your_nodeid --network=host |
-| Command |                                          |
-|  Args   |                                          |
+|    应用设置名称     |          内容          |
+| :-----------: | :------------------: |
+|     Image     | fanvinga/docker-ssrmu |
+|    Options    |   `-e DOMAIN=example.com -e MUKEY=your_mukey -e NODEID=your_nodeid --network=host  --restart=always` |
+|    Command    |                      |
+|     Args      |                      |
 
 3. **保存并且进行安装.**
 * **注意默认是https所以example.com前面不需要填写https**
@@ -36,12 +38,12 @@
 1. **转到商店页面.找到Docker Image然后选择服务器并且保存进入配置界面**
 2. **请完全按照下图配置进行填写！**
 
-| 应用设置名称  |                    内容                    |
-| :-----: | :--------------------------------------: |
-|  Image  |         fanvinga/docker-ssrmu:db         |
-| Options | -e DOMAIN=example.com -e DB=database_name -e NODEID=your_nodeid -e USER=database_user -e PASSWD=database_password --network=host |
-| Command |                                          |
-|  Args   |                                          |
+|    应用设置名称     |          内容          |
+| :-----------: | :------------------: |
+|     Image     | fanvinga/docker-ssrmu:db |
+|    Options    |   `-e DOMAIN=example.com -e DB=database_name -e NODEID=your_nodeid -e USER=database_user -e PASSWD=database_password --network=host  --restart=always` |
+|    Command    |                      |
+|     Args      |                      |
 
 3. **保存并且进行安装.**
 * DB USER PASSWD 默认是sspanel；
