@@ -24,7 +24,7 @@
 
 ### 3.2 配置 SSH
 
-docker 一般安装在 `/usr/local/bin` 下面（你可以运行 `which docker` 来验证），但 SSH 登录时的默认环境变量 `$PATH` 并不包含此路径，所以需要改下 `sshd` 的配置。
+docker 和 homebrew 安装的应用一般都在 `/usr/local/bin` 下面（你可以运行 `which docker` 来验证），但 SSH 登录时的默认环境变量 `PATH` 并不包含此路径，所以需要改下 `sshd` 的配置。让 HyperApp 能够正确找到 docker 可执行文件。
 
 1. 运行 `sudo vi /etc/ssh/sshd_config`
 2. 找到 `PermitUserEnvironment` 这一行，取消注释并且改成 `PermitUserEnvironment yes`
