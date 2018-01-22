@@ -7,6 +7,7 @@
     * [Linode](vendors.md#linode)
     * [Bandwagon](vendors.md#bandwagon搬瓦工)
     * [~~如何添加 GCE 和 AWS 的服务器 (已过期)~~](Add-Sever-Cloud.md)
+    * [如何添加 Mac](add_mac.md)
 * 应用教程
     * [如何自动生成 SSL 证书](SSL.md)
     * [使用certbot 更加简单的生成 SSL证书](developer/certbot.md)
