@@ -19,7 +19,7 @@
 
 ### 3.1 安装 Docker
 
-在 [Docker 官网下载并按照 Docker](https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac)
+在 [Docker 官网下载并安装 Docker](https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac)
 
 
 ### 3.2 配置 SSH
