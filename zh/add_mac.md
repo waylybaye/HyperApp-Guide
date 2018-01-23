@@ -1,7 +1,7 @@
 # 如何添加 macOS
 
 
-## 1. 开始远程登录
+## 1. 开启远程登录
 
 1. 点击最顶部的左上角的【 → 系统偏好设置】
 2. 选中【共享 → 远程登录】
@@ -28,9 +28,14 @@ docker 和 homebrew 安装的应用一般都在 `/usr/local/bin` 下面（你可
 
 1. 运行 `sudo vi /etc/ssh/sshd_config`
 2. 找到 `PermitUserEnvironment` 这一行，取消注释并且改成 `PermitUserEnvironment yes`
-3. 运行 `vi ~/.ssh/environment` 添加一行 `PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin` 设置 PATH 变量
+3. 运行 `vi ~/.ssh/environment` 添加一行 `PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin` 设置 `PATH` 变量
 4. 运行 `sudo launchctl unload /System/Library/LaunchDaemons/ssh.plist` 关闭 sshd
 5. 运行 `sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist` 重新开启 sshd
+
+
+#### 验证是否修改成功
+
+在你 macOS 上执行 `ssh $USER@localhost env`，查看 `PATH` 是否被成功修改了
 
 
 ## 大功告成
