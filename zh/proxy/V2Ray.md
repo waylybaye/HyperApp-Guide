@@ -83,14 +83,14 @@ WebSocket 是一种在 HTTP 之上的协议，本质也是TCP传输，但是是�
 1. 选中`Enable TLS` 并在 `TLS Domain` 中填写您的域名
 2. 在上面 `SSL certs` 对应的目录下面放两个域名同名的文件:
 
-* `domain.com.crt` 如`bing.com.crt`
-* `domain.com.key` 如 `bing.com.key`
+    * `domain.com.crt` 如`bing.com.crt`
+    * `domain.com.key` 如 `bing.com.key`
 
 
 #### 2. 使用 Nginx 自动生成新的 SSL 证书
 
 1. 先安装 `Nginx Proxy` 和 `Nginx SSL Support`
-2. 先关闭上面的 `Enable TLS` 选项（否则没有证书 V2ray 启动不起来），点击 `安装`
+2. 关闭上面的 `Enable TLS` 选项（否则没有证书 V2ray 启动不起来），点击 `安装`
 3. 等几分钟证书生成了后，重新打开配置页面，开启 `Enable TLS` 选项，然后点击 `更新配置`。
 
 
