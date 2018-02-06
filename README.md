@@ -14,10 +14,14 @@ HyperApp 还集成了 Let's Encrypt SSL 证书功能，几乎可以为全部应�
 
 ---
 
+<img src='https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/f4/7e/65/f47e6532-25fe-e994-3d4e-b18b30af1785/source/384x0w.jpg' /> <img src='https://is2-ssl.mzstatic.com/image/thumb/Purple111/v4/06/c1/b2/06c1b29d-b745-ba35-2a74-c8b2ebfad21b/source/384x0w.jpg' /> <img src='https://is1-ssl.mzstatic.com/image/thumb/Purple118/v4/88/45/f4/8845f425-f385-5ec6-a6d0-dafc48756713/source/128x0w.jpg' />
+
+---
+
+
 ## 在线浏览
 
 [www.hyperapp.fun](https://www.hyperapp.fun)
-
 
 
 ---
@@ -58,8 +62,6 @@ HyperApp 还集成了 Let's Encrypt SSL 证书功能，几乎可以为全部应�
 ---
 
 ### 管理服务器
-
-![管理服务器截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/manage-server.png "添加服务器")
 
 1. 打开服务器页面，在这里可以显示基本的服务器运行状态，您可以随时下拉刷新更新重新检查服务器状态
 2. 添加服务器时您可以使用 root 账号登录也可以使用具有 sudo 权限的非 root 账号登录。如果您使用密码登录请填写密码，如果使用私钥登录密码可以留空。
