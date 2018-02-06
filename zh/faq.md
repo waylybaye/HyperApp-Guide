@@ -177,7 +177,13 @@ echo -e "proxy_intercept_errors on;\nerror_page 400 = https://要跳转到的域
 ```sh
 echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
 ```
-* **除了 Nginx 外，PHP 还可以有自己的上传限制，请参考 https://github.com/waylybaye/HyperApp-Guide/issues/152**
+如果原方案不行，尝试以下两种方案： 
+1. ```echo "client_max_body_size 100m;" | sudo tee -a /srv/docker/nginx/vhost.d/default```
+2. ```sudo su echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default```
+
+以上任选一种执行后，手动重启nginx
+
+***除了 Nginx 外，PHP 还可以有自己的上传限制，请参考 https://github.com/waylybaye/HyperApp-Guide/issues/152**
 
 
 ## 爱国问题
