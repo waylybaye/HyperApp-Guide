@@ -14,10 +14,14 @@ HyperApp 还集成了 Let's Encrypt SSL 证书功能，几乎可以为全部应�
 
 ---
 
+<img src='https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/f4/7e/65/f47e6532-25fe-e994-3d4e-b18b30af1785/source/256x0w.jpg' /> <img src='https://is2-ssl.mzstatic.com/image/thumb/Purple111/v4/06/c1/b2/06c1b29d-b745-ba35-2a74-c8b2ebfad21b/source/256x0w.jpg' /> <img src='https://is1-ssl.mzstatic.com/image/thumb/Purple118/v4/88/45/f4/8845f425-f385-5ec6-a6d0-dafc48756713/source/256x0w.jpg' />
+
+---
+
+
 ## 在线浏览
 
 [www.hyperapp.fun](https://www.hyperapp.fun)
-
 
 
 ---
@@ -42,15 +46,15 @@ HyperApp 还集成了 Let's Encrypt SSL 证书功能，几乎可以为全部应�
 注意，这里所说的支持是指自动安装docker支持的系统，如果你使用其它系统（如 FreeBSD, Gentoo等），你可以自己安装 docker，HyperApp 会自动检测 docker 是否安装，如果已经安装则使用已有的 docker。
 
 * Docker 只支持64位系统，且内核版本 >= 3.10
-* Ubuntu 14，16 ✅
+* Ubuntu 14 ✅ 
+* Ubuntu 16 ✅ 👍 （推荐）
 * CentOS 7 ✅
 * Debian 8 ✅
-* CentOS 6 ⚠️ （不支持，但你可以手动安装最新版的Docker）
+* CentOS 6 ⚠️ （需要自己安装 Docker）
+* Debian 7 ⚠️ （需要自己安装 Docker）
 * 不支持 OpenVZ ❌
 
 注：CentOS 6 也是支持的，但是有些厂商自带的内核版本较低导致不支持 Docker
-
-推荐 Ubuntu 16.04 LTS
 
 **为什么不支持 OpenVZ ？**
 因为 OpenVZ 支持的内核版本太低，不支持 Docker ,所以HyperApp 不支持 OpenVZ 的主机。
@@ -59,8 +63,6 @@ HyperApp 还集成了 Let's Encrypt SSL 证书功能，几乎可以为全部应�
 
 ### 管理服务器
 
-![管理服务器截图](https://github.com/waylybaye/HyperApp-Guide/raw/master/images/manage-server.png "添加服务器")
-
 1. 打开服务器页面，在这里可以显示基本的服务器运行状态，您可以随时下拉刷新更新重新检查服务器状态
 2. 添加服务器时您可以使用 root 账号登录也可以使用具有 sudo 权限的非 root 账号登录。如果您使用密码登录请填写密码，如果使用私钥登录密码可以留空。
     * Name: 为您的服务器起个名字
@@ -68,9 +70,11 @@ HyperApp 还集成了 Let's Encrypt SSL 证书功能，几乎可以为全部应�
     * Port: SSH的端口，一般是22
     * User: 您登陆用的用户名
     * Password: 您的密码，如果使用私钥登录此处可以留空，请参考下面
-3. 如果您使用私钥登录，那么请将您的私钥复制到剪切板中（iCloud剪贴板同步或者使用其它同步App）然后点击 "Paste Privatekey from Clipboard" 从剪贴板中复制私钥，如果您的私钥是加密的那么请在 Passphrase 中输入，否则留空。关于密钥的更多信息请参考 [常见问题](#常见问题)
 
+
+#### 常见厂商
 * Linode/Vultr/DigitalOcean 等厂商一般可以使用 root 账号和密码直接登录;
+* 搬瓦工的 root 密码和端口会在购买服务器后，通过邮箱发给你。
 * 如果您使用 Google Cloud Engine 或者 AWS EC2 等默认禁止 root 登录的账号，请查看下面的教程怎样配置私钥登录，然后重复上面的第3步骤在 HyperApp 中链接。
 
 [查看添加服务器的新手教程](./zh/Add-Server.md)
@@ -138,5 +142,5 @@ HyperApp 还集成了 Let's Encrypt SSL 证书功能，几乎可以为全部应�
 有些服务商可能会屏蔽另外服务商的某些链接，当你使用 VPN 绕道连接时可能会出现此问题。
 
 
-**HyperApp 会在我的服务器/路由器上运行哪些命令？**
-[HyperApp 运行的命令](./commands.md)
+**如何在服务器上卸载 HyperApp？**
+HyperApp 不会在您的服务器上安装任何软件，所以不需要卸载

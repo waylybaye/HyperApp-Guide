@@ -72,31 +72,47 @@ WebSocket 是一种在 HTTP 之上的协议，本质也是TCP传输，但是是�
 ----
 
 
+
 ## 方案1: 使用 TCP 传输，并开启 TLS
 
 ### TLS 证书设置
-如果你想使用 WebSocket 请跳过本段，直接看下一段，本段只适用于 TCP 方式。
 
-如果你开启了 TLS 就需要填一个 `TLS Domain` 并且在上面 `SSL certs` 目录下面放两个文件。
 
-* `domain.com.crt` 如`bing.com.crt`
-* `domain.com.key` 如 `bing.com.key`
+#### 1. 已经有证书
 
-#### 自动生成 SSL 证书
+1. 选中`Enable TLS` 并在 `TLS Domain` 中填写您的域名
+2. 在上面 `SSL certs` 对应的目录下面放两个域名同名的文件:
 
-当然你也可以用 `Nginx Proxy` 和 `Nginx SSL Support` 自动生成可信的 SSL 证书。不过你要先关闭上面的 `Enable TLS` 选项，否则没有证书 V2ray 启动不起来，等几分钟证书生成了后，再打开此选项，然后`更新配置`即可。
+    * `domain.com.crt` 如`bing.com.crt`
+    * `domain.com.key` 如 `bing.com.key`
 
-关于如何自动生成可信证书的更多介绍，请参考 [如何自动生成 SSL 证书](./SSL.md)
+
+#### 2. 使用 Nginx 自动生成新的 SSL 证书
+
+1. 先安装 `Nginx Proxy` 和 `Nginx SSL Support`
+2. 关闭上面的 `Enable TLS` 选项（否则没有证书 V2ray 启动不起来），点击 `安装`
+3. 等几分钟证书生成了后，重新打开配置页面，开启 `Enable TLS` 选项，然后点击 `更新配置`。
+
+
+#### 3. 使用 certbot 自动生成新的 SSL 证书
+
+1. 参考 [certbot 的教程](../developer/certbot.md) 来生成 SSL
+2. 选中 `Enable TLS` 选项，并且填入 `TLS Domain`
+3. 保存并安装
+
+
+关于如何自动生成可信证书的更多介绍，请参考 [如何自动生成 SSL 证书](../SSL.md)
 
 
 ## 方案2: WebSocket 传输，使用 Nginx & SSL Support 反代 V2Ray
 
 这个方案会自动配置 Nginx 来反代 V2Ray，达到完美伪装。结合 Nginx SSL Support 还能自动生成可信的 LetsEncrypt 证书。这个方案 TLS 是在 Nginx 层面实现的。
 
-首先参考 [如何自动生成 SSL 证书](./SSL.md) 依次安装 `Nginx Proxy` 和 `Nginx SSL Support` 然后在上面的配置页面中，Nginx 和 SSL 选项按下面填写：
+首先参考 [如何自动生成 SSL 证书](../SSL.md) 依次安装 `Nginx Proxy` 和 `Nginx SSL Support` 然后在上面的配置页面中，Nginx 和 SSL 选项按下面填写：
 
 
 **注意，使用此模式时，443 端口是分配给 Nginx 的，你要为 V2Ray 随便设置另外一个端口，但客户端连接时使用443**
+
 
 ### 自定义域名
 * 域名：填写您的域名
@@ -110,6 +126,7 @@ WebSocket 是一种在 HTTP 之上的协议，本质也是TCP传输，但是是�
 然后安装即可，安装完毕稍等几分钟 Nginx SSL Support 将会自动生成可信的 LetsEncrypt 证书。接下来就配置客户端连接即可。
 
 关于如何自动生成可信证书的更多介绍，请参考 [如何自动生成 SSL 证书](./SSL.md)
+
 
 ## 方案3: 使用mKCP 传输
 
