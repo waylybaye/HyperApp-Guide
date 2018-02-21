@@ -8,7 +8,13 @@
 
 ### 本文原文链接为 https://vinga.tech/v2ray 原文更新更为及时
 
+## 重要说明
+
+* **从现在开始.所有技术支持请联系付费.我能确保教程没有问题.按着来肯定可以成功.除此之外不做任何说明**
+
+
 ## 更新记录
+* 2017.12.01:修改了方法一的命令部分.更直观.
 * 2017.10.22:增加了完美融合页面的部分
 * 2017.10.12:修改了win客户端部分
 * 2017.10.1:增加了网络拓扑部分.
@@ -24,14 +30,14 @@
 
 ## 工具
 
-* **hyperapp**
+* **HyperApp**
 * **Mac/Win**
 * **耐心**
 
 ## 准备工作
 
 * **首先先按照之前的获取顶级域名教程.拿到属于你自己域名.并且将域名解析到VPS上面去.请确保解析正确后再进行以下步骤.如果已经有域名了直接进入下一步**
-* **使用hyperapp安装Nginx Proxy以及Nginx SSL Support.保持默认配置即可.如有发生端口冲突则自行排查.Nginx的端口请不要修改.否则可能导致无法连接的问题(仅限于本教程范畴)**
+* **使用HyperApp安装`Nginx Proxy`以及`Nginx SSL Support`.保持默认配置即可.如有发生端口冲突则自行排查.Nginx的端口请不要修改.否则可能导致无法连接的问题(仅限于本教程范畴)**
 
 ## 配置V2Ray服务端（方法一）
 
@@ -39,28 +45,28 @@
 
 > 一直以来.虽然v2ray有完整的tls实现等等好处.但是一直有个小缺陷就是访问证书域名会有一个`bad request`的提示.虽然也可以用错误跳转的方法跳转到正常页面.但毕竟不是原来的域名.今天给出一个真正完美的办法
 
-1. **按照我博客别的任何一个方法部署一个用`Nginx Proxy`反向代理的网站.我比较建议是[H5AI](https://vinga.tech/h5ai).确定可以正常访问之后走下面板的步骤.**
+1. **按照我博客别的任何一个方法部署一个用``Nginx Proxy``反向代理的网站.我比较建议是[H5AI](https://vinga.tech/h5ai).确定可以正常访问之后走下面板的步骤.**
 
 2. **按照下图去部署一个V2Ray.注意不要开启TLS.不要展开Nginx选项.除了端口56789和UUID别的都不要动.** ![v2ray-new](../images/v2ray-new.jpg)
 
-3. **执行下面给出的命令，并且按照提示修改替换对应的地方.**
-  * **替换VPS_IP为VPS公网IP**
-  * **替换V2Ray_Port为V2Ray端口**
-  * **替换 example.com 为目标域名**
-
-4. **执行没有问题之后.点击Nginx Proxy选择重启.稍等片刻.先访问网页确定没有问题.然后按照下面的客户端连接照常链接.记得开启TLS.端口连接443.**
+3. 按照中文提示修改好命令.然后**一整段所有字符**粘贴到SSH里面执行.只修改前面三行有中文的.后面不需要修改.
 
 ```
-echo -e "proxy_http_version 1.1; \n
-proxy_set_header Upgrade \$http_upgrade; \n
-proxy_set_header Connection \"upgrade\"; \n
-proxy_redirect off; \n
-proxy_set_header Host \$http_host; \n
-if (\$http_upgrade = \"websocket\" ) \n
-   { \n
-      proxy_pass http://VPS_IP:V2Ray_Port; \n
-    } \n " > /srv/docker/nginx/vhost.d/example.com_location
+VPS_IP=你的IP
+V2Ray_Port=V2Ray的端口
+DOMAIN=目标域名
+echo "proxy_http_version 1.1;
+proxy_set_header Upgrade \$http_upgrade;
+proxy_set_header Connection \"upgrade\";
+proxy_redirect off;
+proxy_set_header Host \$http_host;
+if (\$http_upgrade = \"websocket\" )
+   {
+      proxy_pass http://${VPS_IP}:${V2Ray_Port}; 
+    } " > /srv/docker/nginx/vhost.d/${DOMAIN}_location
 ```
+
+4. **执行没有问题之后.点击`Nginx Proxy`选择重启.稍等片刻.先访问网页确定没有问题.然后按照下面的客户端连接照常链接.记得开启TLS.端口连接443.**
 
 ## 配置V2Ray服务端（方法二）
 
@@ -74,9 +80,9 @@ if (\$http_upgrade = \"websocket\" ) \n
 
 ### 通用
 
-* **注意保证客户端的ID以及alterID和服务端保持一致(在之后版本的hyperapp会添加多用户支持)**
+* **注意保证客户端的ID以及alterID和服务端保持一致(在之后版本的HyperApp会添加多用户支持)**
 * **注意选择网络类型为Websocket**
-* **地址要填写你的域名.端口是443(也就是你的Nginx Proxy里面SSL Port请保持默认443不要更改.更改会导致出错)**
+* **地址要填写你的域名.端口是443(也就是你的`Nginx Proxy`里面SSL Port请保持默认443不要更改.更改会导致出错)**
 
 ### ios&Mac
 
@@ -111,7 +117,7 @@ if (\$http_upgrade = \"websocket\" ) \n
             "users": [
               {
                 "id": "",//这里填写的是你的UUID也就是一大长串的那个
-                "alterId": ,//这里填写的是hyperapp里面配置的alterID.默认32
+                "alterId": ,//这里填写的是HyperApp里面配置的alterID.默认32
                 "security": "aes-128-gcm"//这里选择一个加密方式.不了解这个请不要改.个人推荐这个
               }
             ]
@@ -147,22 +153,14 @@ if (\$http_upgrade = \"websocket\" ) \n
 | :----: | :--------------------------------------: |
 |   别名   |               自定义自己看的顺眼就行                |
 |   地址   |               你给v2ray分配的域名               |
-|   端口   | 443(也就是你的Nginx Proxy里面SSL Port请保持默认443不要更改.更改会导致出错) |
-|  用户ID  |        hyperapp里面的uuid(也就是最长的那一串)        |
-|  额外ID  |        填写hyperapp里面alterID(默认32)         |
+|   端口   | 443(也就是你的`Nginx Proxy`里面SSL Port请保持默认443不要更改.更改会导致出错) |
+|  用户ID  |        HyperApp里面的uuid(也就是最长的那一串)        |
+|  额外ID  |        填写HyperApp里面alterID(默认32)         |
 |  加密方式  |          默认就可以(个人推荐aes-128-gcm)          |
 |  传输协议  |                    ws                    |
 |  伪装类型  |          none(下面一行tcp伪装域名留空不写)           |
 | 底层传输安全 |                   tls                    |
 
-## 请尽情享受安全的网络:)
-* **疑问请加入hyperapp官方telegram群咨询@fanvinga**
+ 
 
-## 写在最后
-
-* **写了这么久.如果能有所收获那就是我最大的荣幸了:)**
-* **如果可以的话.可以关注一下 https://vinga.tech 这是我的私人博客地址:)**
-* **如有问题可发邮件至我邮箱fanalcest@gmail.com联系或telegram@fanvinga**
-
-
-  <a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
+ <a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
