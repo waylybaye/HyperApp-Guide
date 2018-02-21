@@ -21,8 +21,6 @@
     * [NodeBB论坛 搭建教程](nodebb.md)
     * [WordPress搭建教程](wordpress.md)
     * [搭建Huginn构建自动化信息流](huginn.md)
-    * [搭建精美H5AI文件服务器](h5ai.md)
-    * [搭建精美强大Grafana监控系统](monitor.md)
 * 爱国软件
     * [❤️ LoveBundle 爱国套件](proxy/love-bundle.md)
     * [如何选择主机商和爱国软件？(未完)](proxy/GFW.md)
@@ -58,7 +56,10 @@
    * [搭建HACK·CHAT即时通信平台](chat.md)
    * [内网穿透服务otunnel架设](otunnel.md)
    * [搭建个人专享2048在线小游戏](2048.md)
-   * [超简单搭建常见404站点镜像](mirror.md)
+   * [超简单搭建常见404站点镜像](mirror.md)    
+   * [搭建精美H5AI文件服务器](h5ai.md)
+   * [搭建精美强大Grafana监控系统](monitor.md)
+   * [搭建filemanager超轻量私人云盘](filemanager.md)
 * 系统教程
    * [CentOS 如何手动升级 Docker 版本](centos-upgrade-docker.md)
    * [阿里云 Docker 加速](Aliyun-docker.md)
