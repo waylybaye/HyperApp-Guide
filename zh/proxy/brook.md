@@ -10,12 +10,12 @@
 
 ## 准备
 
-* **Hyperapp**
+* **HyperApp**
 * **耐心.仔细.认真**
 
-#### 到Hyperapp进行设置
+#### 到HyperApp进行设置
 
-1. **转到商店页面.找到Docker Image然后选择服务器并且保存进入配置界面**
+1. **转到商店页面.找到``Docker Image``然后选择服务器并且保存进入配置界面**
 2. **请完全按照下图配置进行填写！**
 
 
@@ -35,10 +35,6 @@
 
 https://github.com/txthinking/brook/wiki
 
-## 写在最后
 
-* 写了这么久.如果能有所收获那就是我最大的荣幸了:)
-* 如果可以的话.可以关注一下 https://vinga.tech 这是我的私人博客地址:)
-* 如有问题可发邮件至我邮箱fanalcest@gmail.com联系或telegram@fanvinga
 
 <a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>

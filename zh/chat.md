@@ -31,15 +31,8 @@
   * **首先先`pull image`到最新镜像**
   * **清除浏览器的缓存（可能缓存了错误的client.js）**
   * **稍等一会等hyper的nginx把证书完全签发下来.因为链接过程会用到证书**
-  
-  
+
 ## 吐槽一下
 * **说实在的这个docker..可能是我做过的坑最多的..不说别的..官方源码clone下来不能用你敢信🤦‍♂️为了只开放一个端口.并且用上https.我在docker内部封了一个nginx作为websocket的转发代理.希望大家用的开心**
-
-## 写在最后
-
-* 写了这么久.如果能有所收获那就是我最大的荣幸了:)
-* 如果可以的话.可以关注一下 https://vinga.tech 这是我的私人博客地址:)
-* 如有问题可发邮件至我邮箱fanalcest@gmail.com联系或telegram@fanvinga
 
 <a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
