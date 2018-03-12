@@ -18,11 +18,11 @@
 	![](./images/huginn-1.jpg)
   
   3. 设置完成之后选择保存配置并安装即可.  
-	  
+	
 ## Huginn服务端部署
 
   1. 按照下图对`Huginn`服务端进行设置.注意除了有中文提示的选项.其他都应该保持跟图片一致以免出错.
-  
+
   ![](./images/huginn-2.jpg)
 
   2. 设置完成之后选择保存配置并安装即可.  
@@ -31,19 +31,13 @@
 
   * 注意.部署完启动访问域名可能会提示502.请稍等一会.`Huginn`的启动需要时间.五分钟之后尚且报错才考虑启动失败.
   * 初始登录用户名为`admin`密码为`password`
-  
+
 ## 大功告成！
 
 
   * 现在.去访问你的`Huginn`吧:)
   * 这里放一个已经部署成功的截图:)
-  ![](./images/huginn-3.jpg)
-  
-  
-## 写在最后
+    ![](./images/huginn-3.jpg)
 
-  * 写了这么久.如果能有所收获那就是我最大的荣幸了:)
-  * 如果可以的话.可以关注一下 https://vinga.tech 这是我的私人博客地址:)
-  * 如有问题可发邮件至我邮箱fanalcest@gmail.com联系或telegram@fanvinga
- 
-   <a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
+
+<a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>

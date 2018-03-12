@@ -288,7 +288,23 @@ sysctl -p
 * Centos请将第一个echo换成
   `echo "/swapfile swap swap defaults 0 0" | sudo tee -a /etc/fstab`
 
+* V2ray不能连接排查
+针对教程：V2Ray完美混淆教程（内含全平台客户端配置教程）
 
+  * 确定完全按教程操作 
+    * 填写 config.json新建docker默认值被遮挡，且与教程所给值不一致，需更改为srv/docker/etc/v2ray.json 
+    * 应用端口需手动填写，不要和别的教程一样默认自动抓取了
+    * 域名填写低调一点的
+    * Ubutu不用看这条，centos7注意开启防火墙，添加新端口（你填的port），并重启防火墙，下面写为yyy，在ssh中执行 
+    ```
+    firewall-cmd --add-port=yyy/tcp --permanent && firewall-cmd --reload 
+    ```
+    * 更新配置或安装后启动docker，注意要手动重启Nginx proxy和Nginx SSL Support 
+    
+  * 出错后检查思路 
+    * 先检查证书是否存在.tls域名是否正常.伪装应用是否正常 
+    * 再检查后端v2ray的服务端配置 
+    * 再检查客户端配置
 
 
 ## Hyperapp官方应用教程链接

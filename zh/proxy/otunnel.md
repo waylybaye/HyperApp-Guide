@@ -36,7 +36,7 @@
     1. 假设服务端的地址为 example.com
     2. 假设你设定的token为token.监听端口为10000
     3. 从客户端能连接服务端(无需在同一个网段内.
-  	
+
 ### 客户端准备工作
    0. https://dl.ooclab.com/otunnel/1.2.3/
    1. 到这里下载你对应平台的客户端.本文以macOS举例（下载darwin-amd64版本并放置在桌面）
@@ -62,11 +62,5 @@ https://github.com/ooclab/otunnel/wiki/USAGE.zh_CN
 
 ## 吐槽一下
 * **做docker的时候一直提示找不到可执行文件🤦‍♂️🤦‍♂️明明就在那里🤦‍♂️最后开挂给开发者提issue才修好.**
-
-## 写在最后
-
-* 写了这么久.如果能有所收获那就是我最大的荣幸了:)
-* 如果可以的话.可以关注一下 https://vinga.tech 这是我的私人博客地址:)
-* 如有问题可发邮件至我邮箱fanalcest@gmail.com联系或telegram@fanvinga
 
 <a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
