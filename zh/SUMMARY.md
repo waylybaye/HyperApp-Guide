@@ -1,5 +1,5 @@
 * [HyperApp 介绍](README.md)
-    * [常见错误指引](faq.md)
+    * [常见问题](faq.md)
     * [如何使用 URL Scheme](workflow.md)
     * [⭐️ 手把手爱国教程](proxy/get-started.md)
 * 如何添加服务器：
@@ -56,7 +56,7 @@
    * [搭建HACK·CHAT即时通信平台](chat.md)
    * [内网穿透服务otunnel架设](otunnel.md)
    * [搭建个人专享2048在线小游戏](2048.md)
-   * [超简单搭建常见404站点镜像](mirror.md)    
+   * [超简单搭建常见404站点镜像](mirror.md)
    * [搭建精美H5AI文件服务器](h5ai.md)
    * [搭建精美强大Grafana监控系统](monitor.md)
    * [搭建filemanager超轻量私人云盘](filemanager.md)
