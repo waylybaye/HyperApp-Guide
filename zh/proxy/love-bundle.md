@@ -14,8 +14,8 @@ LoveBundle 就是这样的一个应用，专为 HyperApp 用户提供，使用 h
 
 * `SS TLS 混淆`  —— 你懂得
 * `SSR tls1.2_ticket_auth`  —— 你也懂
-* `V2Ray VMess TCP TLS` —— 新秀 V2Ray
-* `V2Ray VMess WebSocket TLS` —— 新秀第二种食用方法
+* `V2Ray VMess TCP TLS` —— 女神 V2Ray
+* `V2Ray VMess WebSocket TLS` —— 女神第二种食用方法
 * `nghttpx HTTP2 TLS` —— 高效的 HTTP2 + TLS 代理，即使在 SS/SSR 被严重干扰的时候由于其小众性质也一直超稳定。
 * `ocserv: Cisco AnyConnect VPN` —— 广泛使用的企业级 VPN，出自 Cisco，全端客户端免费。
 
