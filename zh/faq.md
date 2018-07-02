@@ -94,6 +94,7 @@
 
 1. 请确保你的 Linux 版本符合要求
 2. 请确保一定要先安装 BBR 再安装应用，如果你不幸搞错了顺序，参考下一条
+3. 尝试在终端的快捷命令中点击 `Start Docker` 手动启动下 Docker 或者启动任意一个应用
 
 
 #### 如果先安装了docker再安装bbr导致无法启动docker怎么办?
@@ -260,7 +261,8 @@ echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
 * bbr脚本执行后重启后发现执行`lsmod | grep bbr`发现输出空白.bbr没有正确启动.同时执行sysctl -p输出空白
 * 根据使用者反馈的问题 ,初步解决方案是执行一下命令
 
-​```bash
+
+```bash
 sudo su && cp /etc/sysctl.conf /etc/sysctl.conf.bak && rm -rf /etc/sysctl.conf && touch /etc/sysctl.conf && chmod 644 /etc/sysctl.conf && sudo echo -e "\n\n\n\nnet.core.default_qdisc = fq\n\n\nnet.ipv4.tcp_congestion_control = bbr" >> /etc/sysctl.conf && sysctl -p
 ```
 
@@ -307,12 +309,3 @@ sysctl -p
     * 先检查证书是否存在.tls域名是否正常.伪装应用是否正常
     * 再检查后端v2ray的服务端配置
     * 再检查客户端配置
-
-
-## Hyperapp官方应用教程链接
-
-https://www.hyperapp.fun
-
-#### ~~部署v2ray等hyperapp应用可适当参考如下链接~~(打死这个不要脸的:)
-
-https://vinga.tech
