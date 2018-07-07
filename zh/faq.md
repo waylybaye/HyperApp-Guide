@@ -7,7 +7,6 @@
     * 如何申请 TF
     * 如何升级应用
     * 常见安装错误
-    * BBR 问题
     * 服务器错误
 * 应用问题
     * 文件上传大小限制
@@ -15,6 +14,8 @@
 * 爱国问题
     * 手机爱国电脑不爱国
     * 无法爱国的问题
+* [系统问题]
+    * 如何手动开启 BBR
 * [GCP 问题](#gcp)
     * [结算账号被停用](proxy/get-started.md)
     * [密钥认证失败](proxy/get-started.md)
@@ -239,6 +240,36 @@ echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
       * 协议和端口：`指定的协议和端口` 下面输入 `tcp;udp:端口号`
   * AWS: EC2 控制面板 → 安全组
   * 阿里云: 云服务器 ECS → 安全组
+
+## 系统问题
+
+### 如果手动开启 BBR
+
+注意以下命令需要 `root` 权限，非 root 用户先执行 `sudo su -` 切换到 root 账户
+
+1. 运行 `uname -r` 看看是不是内核 >= 4.9，不是的话请先升级内核
+2. 执行 `lsmod | grep bbr`，查看 BBR 模块是否启用，如果结果中没有 tcp_bbr 的话就先执行
+    ```sh
+    modprobe tcp_bbr
+    echo "tcp_bbr" >> /etc/modules-load.d/modules.conf
+    ```
+3. 执行下命令开启设置 TCP 使用 BBR 发包
+    ```sh
+    echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+    echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+    ```
+4. 保存生效 `sysctl -p`
+
+
+### 验证 BBR 是否已经启用
+
+```sh
+sysctl net.ipv4.tcp_available_congestion_control
+sysctl net.ipv4.tcp_congestion_control
+```
+
+如果结果都有bbr, 则证明你的内核已开启bbr
+
 
 ## GCP
 
