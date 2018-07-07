@@ -1,4 +1,3 @@
-
 # FAQ
 
 ## 索引
@@ -14,7 +13,7 @@
 * 爱国问题
     * 手机爱国电脑不爱国
     * 无法爱国的问题
-* [系统问题]
+* 系统问题
     * 如何手动开启 BBR
 * [GCP 问题](#gcp)
     * [结算账号被停用](proxy/get-started.md)
@@ -164,30 +163,6 @@ docker image rm 镜像ID或者REPOSITORY
 3. 如果你要寻求帮助，请发出此处的日志截图，且要贴全。
 
 
-### 关于V2Ray访问域名出现Bad Request的解决办法
-  如果你按照教程搭建了`Nginx(tls)+V2Ray(websocket)`.那么访问证书域名的时候往往会出现bad request的情况.这是成功的标志.但是总不那么好看.这里给出一个跳转到其他域名的办法.执行以下命令即可.注意修改命令中的域名
-
-```sh
-echo -e "proxy_intercept_errors on;\nerror_page 400 = https://要跳转到的域名;" > /srv/docker/nginx/vhost.d/default
-```
-### 关于 Nginx 的上传限制
-
-如果你使用了 `Nginx Proxy`，则默认有个2M的上传限制，你可以新建一个文件 `/srv/docker/nginx/vhost.d/default` 添加一行  `client_max_body_size 100m;` 来解决这个问题（一般情况下 Nginx 会自动重启，如果没有则需要手动重启下 Nginx Proxy）
-
-你也可以直接运行下面的命令，会自动创建上面的所说的文件:
-
-```sh
-echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
-```
-如果原方案不行，尝试以下两种方案：
-1. ```echo "client_max_body_size 100m;" | sudo tee -a /srv/docker/nginx/vhost.d/default```
-2. ```sudo su echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default```
-
-以上任选一种执行后，手动重启nginx
-
-***除了 Nginx 外，PHP 还可以有自己的上传限制，请参考 https://github.com/waylybaye/HyperApp-Guide/issues/152**
-
-
 ## 爱国问题
 
 ### 手机可以电脑不行：
@@ -241,9 +216,12 @@ echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
   * AWS: EC2 控制面板 → 安全组
   * 阿里云: 云服务器 ECS → 安全组
 
+----
+
+
 ## 系统问题
 
-### 如果手动开启 BBR
+### 如何手动开启 BBR
 
 注意以下命令需要 `root` 权限，非 root 用户先执行 `sudo su -` 切换到 root 账户
 
@@ -270,8 +248,9 @@ sysctl net.ipv4.tcp_congestion_control
 
 如果结果都有bbr, 则证明你的内核已开启bbr
 
+----
 
-## GCP
+## GCP 问题
 
 ### 二维码显示不全，如何手动添加 GCP ？
 
@@ -287,26 +266,14 @@ sysctl net.ipv4.tcp_congestion_control
 * 50Kvm 的机器第一次登录需要记下下次登录的 SSH 端口
 * DigitalOcean 的机器第一次登录需要改密码
 
-## HyperApp 常见问题:
 
-* bbr脚本执行后重启后发现执行`lsmod | grep bbr`发现输出空白.bbr没有正确启动.同时执行sysctl -p输出空白
-* 根据使用者反馈的问题 ,初步解决方案是执行一下命令
+----
 
+## 其它常见问题:
 
-```bash
-sudo su && cp /etc/sysctl.conf /etc/sysctl.conf.bak && rm -rf /etc/sysctl.conf && touch /etc/sysctl.conf && chmod 644 /etc/sysctl.conf && sudo echo -e "\n\n\n\nnet.core.default_qdisc = fq\n\n\nnet.ipv4.tcp_congestion_control = bbr" >> /etc/sysctl.conf && sysctl -p
-```
+###  关于squid内存不足无法正确启动的解决办法:
 
-​**如果这时候`lsmod | grep bbr`还没有出现tcp_bbr的话请自行根据网上linux文本编辑器教程编辑/etc/sysctl.conf.加上这两行**
-
-​```bash
-net.core.default_qdisc = fq
-net.ipv4.tcp_congestion_control = bbr
-```
-
-* 关于squid内存不足无法正确启动的解决办法:
-
-   * Ubuntu使用如下命令创建swap
+1. Ubuntu使用如下命令创建swap:
 
 ```bash
 sudo su
@@ -320,23 +287,49 @@ echo "vm.swappiness = 10" » /etc/sysctl.conf
 sysctl -p
 ```
 
-* Centos请将第一个echo换成
+2. Centos请将第一个echo换成
   `echo "/swapfile swap swap defaults 0 0" | sudo tee -a /etc/fstab`
 
-* V2ray不能连接排查
+### V2ray不能连接排查
+
 针对教程：V2Ray完美混淆教程（内含全平台客户端配置教程）
 
-  * 确定完全按教程操作
-    * 填写 config.json新建docker默认值被遮挡，且与教程所给值不一致，需更改为srv/docker/etc/v2ray.json
-    * 应用端口需手动填写，不要和别的教程一样默认自动抓取了
-    * 域名填写低调一点的
-    * Ubutu不用看这条，centos7注意开启防火墙，添加新端口（你填的port），并重启防火墙，下面写为yyy，在ssh中执行
-    ```
-    firewall-cmd --add-port=yyy/tcp --permanent && firewall-cmd --reload
-    ```
-    * 更新配置或安装后启动docker，注意要手动重启Nginx proxy和Nginx SSL Support
+* 确定完全按教程操作
+  * 填写 config.json新建docker默认值被遮挡，且与教程所给值不一致，需更改为srv/docker/etc/v2ray.json
+  * 应用端口需手动填写，不要和别的教程一样默认自动抓取了
+  * 域名填写低调一点的
+  * Ubutu不用看这条，centos7注意开启防火墙，添加新端口（你填的port），并重启防火墙，下面写为yyy，在ssh中执行
+  ```
+  firewall-cmd --add-port=yyy/tcp --permanent && firewall-cmd --reload
+  ```
+  * 更新配置或安装后启动docker，注意要手动重启Nginx proxy和Nginx SSL Support
 
-  * 出错后检查思路
-    * 先检查证书是否存在.tls域名是否正常.伪装应用是否正常
-    * 再检查后端v2ray的服务端配置
-    * 再检查客户端配置
+* 出错后检查思路
+  * 先检查证书是否存在.tls域名是否正常.伪装应用是否正常
+  * 再检查后端v2ray的服务端配置
+  * 再检查客户端配置
+
+
+### 关于V2Ray访问域名出现Bad Request的解决办法
+  如果你按照教程搭建了`Nginx(tls)+V2Ray(websocket)`.那么访问证书域名的时候往往会出现bad request的情况.这是成功的标志.但是总不那么好看.这里给出一个跳转到其他域名的办法.执行以下命令即可.注意修改命令中的域名
+
+```sh
+echo -e "proxy_intercept_errors on;\nerror_page 400 = https://要跳转到的域名;" > /srv/docker/nginx/vhost.d/default
+```
+### 关于 Nginx 的上传限制
+
+如果你使用了 `Nginx Proxy`，则默认有个2M的上传限制，你可以新建一个文件 `/srv/docker/nginx/vhost.d/default` 添加一行  `client_max_body_size 100m;` 来解决这个问题（一般情况下 Nginx 会自动重启，如果没有则需要手动重启下 Nginx Proxy）
+
+你也可以直接运行下面的命令，会自动创建上面的所说的文件:
+
+```sh
+echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
+```
+如果原方案不行，尝试以下两种方案：
+1. ```echo "client_max_body_size 100m;" | sudo tee -a /srv/docker/nginx/vhost.d/default```
+2. ```sudo su echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default```
+
+以上任选一种执行后，手动重启nginx
+
+**除了 Nginx 外，PHP 还可以有自己的上传限制，请参考 https://github.com/waylybaye/HyperApp-Guide/issues/152**
+
