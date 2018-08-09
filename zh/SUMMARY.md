@@ -59,6 +59,7 @@
    * [超简单搭建常见404站点镜像](mirror.md)
    * [搭建精美H5AI文件服务器](h5ai.md)
    * [搭建精美强大Grafana监控系统](monitor.md)
+   * [自建网页版speedtest测速教程](speedtest.md)
    * [搭建filemanager超轻量私人云盘](filemanager.md)
 * 系统教程
    * [CentOS 如何手动升级 Docker 版本](centos-upgrade-docker.md)
