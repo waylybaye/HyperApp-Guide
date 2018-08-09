@@ -6,19 +6,22 @@
 
 ## 更新记录
 
+* 2017.12.18:压缩了镜像.
 * 2017.10.11:修改了一下措辞
 
 ## 准备
 
-* **Hyperapp**
-* **一个已经解析正确的域名（ping验证）**
-* **耐心.仔细.认真**
+* HyperApp
+* 一个已经解析正确的域名（ping验证）
+* 耐心.仔细.认真
 
+## 提醒
+* 由于`Zmirror`作者太久没有更新.本镜像不支持反向代理YouTube.可以自行学习 `You2PHP` 的相关设置.
 
-## Hyperapp设置服务端
+## HyperApp设置服务端
 
-1. **转到商店页面.找到Docker Image然后选择服务器并且保存进入配置界面**
-2. **请完全按照下图配置进行填写！**
+1. 转到商店页面.找到`Docker Image`然后选择服务器并且保存进入配置界面
+2. 请完全按照下图配置进行填写！
 
 |    应用设置名称     |                   内容                   |
 | :-----------: | :------------------------------------: |
@@ -26,7 +29,7 @@
 |    Options    | -e DOMAIN=你要给镜像站点的域名 -e GOAL=instagram |
 |    Command    |                                        |
 |     Args      |                                        |
-| **Nginx设置名称** |                 **内容**                 |
+| Nginx设置名称 |                 内容                 |
 |      域名       |               你要给镜像站点的域名               |
 |     应用端口      |                                        |
 |     Https     |             将http重定向到https             |
@@ -34,12 +37,12 @@
 |      邮箱       |                域名所对应的邮箱                |
 
 
-3. **保存并且进行安装.请确保这时候Nginx Proxy以及Nginx SSL Support正常默认安装并且启动了**
+3. 保存并且进行安装.请确保这时候`Nginx Proxy`以及`Nginx SSL Support`正常默认安装并且启动了
 
 
 ## 代理站点设置
 
-* **这里介绍一下`GOAL`所有可能的取值.请注意.如果要镜像`Google`请不要修改`GOAL`.即`options`里面只留下`-e DOMAIN=xxx`**
+* 这里介绍一下`GOAL`所有可能的取值.请注意.如果要镜像`Google`请不要修改`GOAL`.即`options`里面只留下`-e DOMAIN=xxx`
 
    ```
      archive_org—————————Archive.org镜像
@@ -56,6 +59,6 @@
 
 ## 大功告成
 
-* **这时候去访问你的域名吧٩(˃̶͈̀௰˂̶͈́)و**
+* 这时候去访问你的域名吧٩(˃̶͈̀௰˂̶͈́)و
 
 <a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
