@@ -145,7 +145,7 @@ LoadPlugin swap
 
 #### 根据InfluxDB的container id部署grafana
 
-1. 在vps的ssh执行`docker ps -f ancestor=influxdb:alpine --format '{{.Names}}'`.这时候会返回一个形如`docker-04f39d`一样的容器名称.复制备用
+1. 在vps的ssh执行`docker ps -f ancestor=influxdb:alpine --format '{% raw %}{{.Names}}{% endraw %}'`.这时候会返回一个形如`docker-04f39d`一样的容器名称.复制备用
 2. 转到HyperApp的商店页面.找到`Docker Image`然后选择服务器并且保存进入配置界面
 3. 请完全按照下图配置进行填写！
 4. 保存并安装,这时候两个docker如果正常启动并且没有报错.访问域名就会正常出现grafana的登录界面.
