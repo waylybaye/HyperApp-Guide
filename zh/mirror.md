@@ -61,4 +61,4 @@
 
 * 这时候去访问你的域名吧٩(˃̶͈̀௰˂̶͈́)و
 
-<a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
+<a href="https://vinga.tech"><img src="https://vinga.tech/images/banner.png" alt="banner" target="_blank"></a>

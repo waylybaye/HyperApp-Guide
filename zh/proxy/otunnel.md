@@ -64,4 +64,4 @@ https://github.com/ooclab/otunnel/wiki/USAGE.zh_CN
 ## 吐槽一下
 * 做docker的时候一直提示找不到可执行文件🤦‍♂️🤦‍♂️明明就在那里🤦‍♂️最后开挂给开发者提issue才修好.
 
-<a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
+<a href="https://vinga.tech"><img src="https://vinga.tech/images/banner.png" alt="banner" target="_blank"></a>
