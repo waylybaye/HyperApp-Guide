@@ -9,6 +9,8 @@
     * 服务器错误
 * 应用问题
     * 文件上传大小限制
+    * nextcloud安装问题
+    * wordpress 需要提供ftp凭据
     * 网页无法访问 (502,503)
 * 爱国问题
     * 手机爱国电脑不爱国
@@ -162,6 +164,35 @@ docker image rm 镜像ID或者REPOSITORY
 2. 如果不在运行中的状态，说明安装后的初始化没有成功，查看应用日志可以看到出错原因。
 3. 如果你要寻求帮助，请发出此处的日志截图，且要贴全。
 
+### 关于 Nginx 的上传限制
+
+如果你使用了 `Nginx Proxy`，则默认有个2M的上传限制，你可以新建一个文件 `/srv/docker/nginx/vhost.d/default` 添加一行  `client_max_body_size 100m;` 来解决这个问题（一般情况下 Nginx 会自动重启，如果没有则需要手动重启下 Nginx Proxy）
+
+你也可以直接运行下面的命令，会自动创建上面的所说的文件:
+
+```sh
+echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
+```
+如果原方案不行，尝试以下两种方案：
+1. ```echo "client_max_body_size 100m;" | sudo tee -a /srv/docker/nginx/vhost.d/default```
+2. ```sudo su echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default```
+
+以上任选一种执行后，手动重启nginx
+
+**除了 Nginx 外，PHP 还可以有自己的上传限制，请参考 https://github.com/waylybaye/HyperApp-Guide/issues/152**
+
+
+### nextcloud 安装问题
+
+1. 设置数据库时,填入数据库的账号密码之后,提示authentication出现问题,无法认证
+   这是MySQL的新版本更新了验证方式,比较简单的方式是在安装mysql时,手动选择`5.x`版本的镜像,不要选择`latest`,另一个方案是使用Mariadb,两者在后续操作上没有区别
+
+2. 进行安全检查时,提示没有设置`referer`
+   解决方法参考更改nginx的默认上传大小,在``` srv/docker/nginx/vhost.d/```目录下,新建一个文件,文件名为你为nextcloud分配的域名(要完整),在里面加入两条记录```add_header Referrer-Policy no-referrer;client_max_body_size 500m;``` ,你可以使用 ```echo "add_header Referrer-Policy no-referrer;client_max_body_size 500m;" >> /srv/docker/nginx/vhost.d/你的域名```
+   
+### wordpress 提示设置ftp
+
+在自动更新wordpress新版本时,提示填入ftp凭据,这是由于在配置wordpress的过程中文件没有写权限造成的,所以需要重新更改权限.查询一下wordpress的container name,然后执行 ```docker exec CONTAINER_NAME chown -R www-data:www-data /var/www/html```,`CONTAINER_NAME`填写你查询到的结果,具体参考[这里](https://github.com/docker-library/wordpress/issues/24).
 
 ## 爱国问题
 
@@ -316,20 +347,3 @@ sysctl -p
 ```sh
 echo -e "proxy_intercept_errors on;\nerror_page 400 = https://要跳转到的域名;" > /srv/docker/nginx/vhost.d/default
 ```
-### 关于 Nginx 的上传限制
-
-如果你使用了 `Nginx Proxy`，则默认有个2M的上传限制，你可以新建一个文件 `/srv/docker/nginx/vhost.d/default` 添加一行  `client_max_body_size 100m;` 来解决这个问题（一般情况下 Nginx 会自动重启，如果没有则需要手动重启下 Nginx Proxy）
-
-你也可以直接运行下面的命令，会自动创建上面的所说的文件:
-
-```sh
-echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default
-```
-如果原方案不行，尝试以下两种方案：
-1. ```echo "client_max_body_size 100m;" | sudo tee -a /srv/docker/nginx/vhost.d/default```
-2. ```sudo su echo "client_max_body_size 100m;" > /srv/docker/nginx/vhost.d/default```
-
-以上任选一种执行后，手动重启nginx
-
-**除了 Nginx 外，PHP 还可以有自己的上传限制，请参考 https://github.com/waylybaye/HyperApp-Guide/issues/152**
-
