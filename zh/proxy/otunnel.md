@@ -5,26 +5,27 @@
 
 ## 更新记录
 
+* 2017.12.17: 更新了镜像和设置向导
 * 2017.09.10: 增加了设置向导
 
 ## 准备
 
-* **Hyperapp**
-* **一个已经解析正确的域名（ping验证）**
-* **耐心.仔细.认真**
+* HyperApp
+* 一个已经解析正确的域名（ping验证）
+* 耐心.仔细.认真
 
-## 到Hyperapp进行设置服务端
+## 到HyperApp进行设置服务端
 
-1. **转到商店页面.找到Docker Image然后选择服务器并且保存进入配置界面**
-2. **请完全按照下图配置进行填写！**
+1. 转到商店页面.找到`Docker Image`然后选择服务器并且保存进入配置界面
+2. 请完全按照下图配置进行填写！
 
 
-|    应用设置名称     |          内容          |
-| :-----------: | :------------------: |
-|     Image     | fanvinga/docker-otunnel |
-|    Options    |                      |
-|    Command    |                      |
-|     Args      |                      |
+| 应用设置名称  |           内容            |
+| :-----: | :---------------------: |
+|  Image  | fanvinga/docker-otunnel |
+| Options |    `--network=host`     |
+| Command |                         |
+|  Args   |                         |
 
 * 默认的监听端口是10000且TOKEN为token.如果要设置.请在`Options`这个空里面加入`-e TOKEN=你要设置的token -e BIND_PORT=你要设置的端口`注意每个`-e`只能设置一个变量.等号前面的变量名不可更换.
 * 没有填写的设置即为留空
@@ -38,9 +39,9 @@
     3. 从客户端能连接服务端(无需在同一个网段内.
 
 ### 客户端准备工作
-   0. https://dl.ooclab.com/otunnel/1.2.3/
-   1. 到这里下载你对应平台的客户端.本文以macOS举例（下载darwin-amd64版本并放置在桌面）
-  2. 运行`chmod +x /path/to/otunnel`赋予权限.记得修改路径
+      0. https://dl.ooclab.com/otunnel/1.2.3/
+      1. 到这里下载你对应平台的客户端.本文以macOS举例（下载darwin-amd64版本并放置在桌面）
+     2. 运行`chmod +x /path/to/otunnel`赋予权限.记得修改路径
 
 ### 反向代理
 举例：将客户端可以访问的 192.168.1.3:22 映射到服务端上的 23333 端口：
@@ -61,6 +62,6 @@
 https://github.com/ooclab/otunnel/wiki/USAGE.zh_CN
 
 ## 吐槽一下
-* **做docker的时候一直提示找不到可执行文件🤦‍♂️🤦‍♂️明明就在那里🤦‍♂️最后开挂给开发者提issue才修好.**
+* 做docker的时候一直提示找不到可执行文件🤦‍♂️🤦‍♂️明明就在那里🤦‍♂️最后开挂给开发者提issue才修好.
 
-<a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
+<a href="https://vinga.tech"><img src="https://vinga.tech/images/banner.png" alt="banner" target="_blank"></a>

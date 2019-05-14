@@ -63,4 +63,4 @@
 
 **去面板那里使用连接信息登陆吧！**
 
-<a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.png" alt="banner" target="_blank"></a>
+<a href="https://vinga.tech"><img src="https://vinga.tech/images/banner.png" alt="banner" target="_blank"></a>
