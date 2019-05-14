@@ -17,9 +17,9 @@ HyperApp 还集成了 LetsEncrypt SSL 证书功能，几乎可以为全部应用
 * [在 Twitter 上关注 HyperApp](https://twitter.com/LoveHyperApp)
 * [在 GitHub 上的此教程仓库](https://github.com/waylybaye/HyperApp-Guide)
 
+
 ## 文档使用办法
 
-* 新手入门推荐从此教程开始：[手把手爱国教程](proxy/get-started.md)
 * 如果你在使用中遇到问题，请参考 [HyperApp 排错索引](faq.md)
 
 
