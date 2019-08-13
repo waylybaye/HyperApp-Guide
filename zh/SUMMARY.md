@@ -2,7 +2,7 @@
     * [常见问题](faq.md)
     * [常见安装错误](FAQ-Error.md)
     * [常见应用问题](FAQ-App.md)
-    * [如何使用 URL Scheme](Config/workflow.md)
+    * [如何使用 URL Scheme](Config/Workflow.md)
 * 如何添加服务器：
     * [Vultr](Config/Vendors.md#vultr)
     * [Linode](Config/Vendors.md#linode)
