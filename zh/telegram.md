@@ -4,7 +4,6 @@
 
 
 
-## 本文原文链接 https://vinga.tech/telegram 
 
 ## 准备
 

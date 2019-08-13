@@ -3,7 +3,6 @@
 
 > 之前写过一篇Hugo个人博客部署的教程.那是一个轻量化的选择.今天就给大家带来以丰富插件著称的WordPress的搭建教程
 
-### 本文原文链接为 [wordpress](https://vinga.tech/wordpress)
 
 
 ## 准备工作

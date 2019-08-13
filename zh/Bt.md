@@ -40,7 +40,6 @@
 
 ## 联合H5AI
 
-- **参考这篇文章 https://vinga.tech/h5ai**
 
 ## 用法
 
