@@ -48,7 +48,7 @@
 
     
 ### 添加服务器
-    
+
 等几分钟实例创建完成并且启动后，在 [Servers](https://my.vultr.com/) 页面点击刚才的实例进去可以看到一些信息，最重要的是左侧的 `IP Address` `Username` `Password`
 
 1. 手动配置：只需要将上面三个参数填入 HyperApp 中即可，端口不用填默认用 `22`。
@@ -56,7 +56,6 @@
     1. 出现 `vultr login` 时输入上面看到的 `Username` 一般都是 `root`
     2. 出现 `Password` 提示时，输入上面看到的 `Password`
     3. 运行 HyperApp 提示的命令，然后扫码即可。
-
 
 ---
 
@@ -100,13 +99,7 @@
 	* 点击服务器信息框右侧的`KiWiVM Control Panel`按钮，默认会来到是`Main controls`,依次记下`IP address`和`SSH Port`,root密码在创建时一般会发到你的邮箱中，记下它。
 	* 依次填入记录下的 IP 地址， 用户名 root，端口填写上面`SSH Port`中的内容。密码为之前创建时发送到你邮箱中的密码。如果遗忘，可以在搬瓦工控制面板找到`Root password modification`中更改。
 
----
-
-## AWS
-
-### 创建服务器
-
-
+----
 
 ## 推荐链接
 
