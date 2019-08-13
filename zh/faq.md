@@ -167,13 +167,6 @@ sysctl net.ipv4.tcp_congestion_control
 
 ----
 
-## 厂商使用教程
-
-* 如果你想了解更多关于厂商的内容,请查看[厂商使用教程](Vendors.md)
-
-
-----
-
 ## 安装错误
 
 * 如果你遇到以下情况请查看[关于安装错误的FAQ](FAQ-Error.md)
