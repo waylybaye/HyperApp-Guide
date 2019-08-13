@@ -6,6 +6,7 @@
 
 ## 更新记录
 
+* 2018.08.23:镜像更新.修复了youtube不可以用的bug.并且优化了镜像设置
 * 2017.12.18:压缩了镜像.
 * 2017.10.11:修改了一下措辞
 
@@ -16,7 +17,8 @@
 * 耐心.仔细.认真
 
 ## 提醒
-* 由于`Zmirror`作者太久没有更新.本镜像不支持反向代理YouTube.可以自行学习 `You2PHP` 的相关设置.
+* ~~由于`Zmirror`作者太久没有更新.本镜像不支持反向代理YouTube.可以自行学习 `You2PHP` 的相关设置.~~
+* 在最新的更新中`YouTube`已经重新可用
 
 ## HyperApp设置服务端
 
@@ -26,7 +28,7 @@
 |    应用设置名称     |                   内容                   |
 | :-----------: | :------------------------------------: |
 |     Image     |        fanvinga/docker-zmirror         |
-|    Options    | -e DOMAIN=你要给镜像站点的域名 -e GOAL=instagram |
+|    Options    | -e DOMAIN=你要给镜像站点的域名 -e GOAL=youtube |
 |    Command    |                                        |
 |     Args      |                                        |
 | Nginx设置名称 |                 内容                 |
@@ -44,6 +46,8 @@
 
 * 这里介绍一下`GOAL`所有可能的取值.请注意.如果要镜像`Google`请不要修改`GOAL`.即`options`里面只留下`-e DOMAIN=xxx`
 
+* 另外当需要反向代理`Twitter`时请加入`-e FUNC=twitter`,别的网站并不需要.
+
    ```
      archive_org—————————Archive.org镜像
      duckduckgo——————————Duckduckgo镜像
@@ -60,5 +64,7 @@
 ## 大功告成
 
 * 这时候去访问你的域名吧٩(˃̶͈̀௰˂̶͈́)و
+
+
 
 <a href="https://vinga.tech"><img src="https://vinga.tech/images/banner.png" alt="banner" target="_blank"></a>

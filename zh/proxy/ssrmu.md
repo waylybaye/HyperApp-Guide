@@ -8,6 +8,9 @@
 
 ## 更新记录
 
+- 2019.03.12:使用envsubst作为配置工具以免出现未知的bug以及提升启动性能.
+- 2019.02.20:增加了关于DNS的相关设置.具体可见https://t.me/vingablog/88
+- 2019.02.05:升级相关依赖至最新以修复致命漏洞.可见https://t.me/vingablog/85
 - 2018.07.27:修复了一个由sed导致的严重bug.目前已经修复.新镜像已经上传.为大家带来不便非常抱歉.已知bug会引发如下问题:
   * NODE_ID>100时错乱
   * MYSQL_PORT=33066时错乱
@@ -31,23 +34,25 @@
 ## 环境变量
 
 ```
-NODE_ID=0                     
-SPEEDTEST=6                   
-CLOUDSAFE=0                   
-AUTOEXEC=0                    
-ANTISSATTACK=0                
-MU_SUFFIX=zhaoj.in            
-MU_REGEX=%5m%id.%suffix       
-API_INTERFACE=modwebapi       
-WEBAPI_URL=https://zhaoj.in   
-WEBAPI_TOKEN=glzjin           
-MYSQL_HOST=127.0.0.1          
-MYSQL_PORT=3306               
-MYSQL_USER=ss                 
-MYSQL_PASS=ss                 
-MYSQL_DB=shadowsocks          
-REDIRECT=github.com           
-FAST_OPEN=fals
+NODE_ID=0                   
+DNS_1=1.0.0.1               
+DNS_2=8.8.8.8               
+SPEEDTEST=6                 
+CLOUDSAFE=0                 
+AUTOEXEC=0                  
+ANTISSATTACK=0              
+MU_SUFFIX=zhaoj.in          
+MU_REGEX=%5m%id.%suffix     
+API_INTERFACE=modwebapi     
+WEBAPI_URL=https://zhaoj.in 
+WEBAPI_TOKEN=glzjin         
+MYSQL_HOST=127.0.0.1        
+MYSQL_PORT=3306             
+MYSQL_USER=ss               
+MYSQL_PASS=ss               
+MYSQL_DB=shadowsocks        
+REDIRECT=github.com         
+FAST_OPEN=false
 ```
 
 

@@ -12,6 +12,7 @@
 
 ## 更新记录
 
+- 2018.08.10:根据collectd-core的最新安装情况修改了一下配置文件的描述
 - 2018.08.06:更改了初始命令.使用了更加官方的配置文件生成方式.
 - 2018.04.05:改动了一下文档.改进了collect的的安装命令以及配置文件.安装更少的核心以及必备依赖即可.注意collectd的gpg提供有问题.暂时没有找到正确的.所以更新的时候要加上`--force-yes`进行更新.
 - 2017.12.20:修改了获取`InfluxDB`容器名称的命令.更直观简单
@@ -84,7 +85,7 @@ echo -e "deb http://pkg.ci.collectd.org/deb jessie collectd-5.7 \n" >> /etc/apt/
 apt-get update && apt-get install collectd-core liboping-dev -y --force-yes
 ```
 
-*  自行修改`/etc/collectd/collectd.conf`里面collectd的相应设置.`ping`这个模块里面的目标地址可以自行添加到`/etc/hosts`里面.修改完成之后执行`systemctl restart collectd`重启collectd.这里我提供一份优化过的配置.启动collectd报错请检查编辑器是否修改了配置导致错误
+*  自行修改下列内容然后创建并添加内容到`/etc/collectd/collectd.conf`里面.`ping`这个模块里面的目标地址可以自行添加到`/etc/hosts`里面.完成之后执行`systemctl restart collectd`重启collectd.启动collectd报错请检查编辑器是否修改了配置导致错误
 
 ```
 Hostname "被监控节点的名称,可以自定义"
@@ -145,7 +146,7 @@ LoadPlugin swap
 
 #### 根据InfluxDB的container id部署grafana
 
-1. 在vps的ssh执行`docker ps -f ancestor=influxdb:alpine --format '{% raw %}{{.Names}}{% endraw %}'`.这时候会返回一个形如`docker-04f39d`一样的容器名称.复制备用
+1. 在vps的ssh执行`docker ps -f ancestor=influxdb:alpine --format '{{.Names}}'`.这时候会返回一个形如`docker-04f39d`一样的容器名称.复制备用
 2. 转到HyperApp的商店页面.找到`Docker Image`然后选择服务器并且保存进入配置界面
 3. 请完全按照下图配置进行填写！
 4. 保存并安装,这时候两个docker如果正常启动并且没有报错.访问域名就会正常出现grafana的登录界面.
@@ -184,8 +185,6 @@ LoadPlugin swap
 3. 点击`Dashboards`然后选择`New`.选择一个图表样式.这里用`Graph`举例.再点击一下`Panel Title`.会出来一个小菜单.选择`Edit`.按照下图进行配置并且在`Legend`选项卡开启`Avg`即可得到一个节点到联通的链路信息图例.
    ![monitor-5](./images/monitor-5.jpg)
 
-4. 这只是其中一个小例子.还有监控CPU/内存/硬盘/流量/IO等等的图例.请到Grafana官网查找图例配置教程(官网真的文档非常非常非常齐全).或者Google搜索
-
-
+4. 这只是其中一个小例子.还有监控CPU/内存/硬盘/流量/IO等等的图例.请到Grafana官网查找图例配置教程(官网真的文档非常非常非常齐全).或者Google搜索别人提供的配置.
 
 <a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.jpg" alt="banner" target="_blank"></a>

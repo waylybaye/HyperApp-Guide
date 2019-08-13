@@ -6,6 +6,7 @@
 
 ## 更新记录
 
+* 2018.09.07:更新了镜像.修复了无法正常转发websocket的严重bug.更新镜像即可.
 * 2018.07.20: 根据最新的仓库地址彻底重构镜像.体积从147MB缩小为46.5MB.并且合并了上游文件的变更.增加了新的命令.使用了更彻底的前后端分离.提升了性能.新仓库地址为 https://github.com/hack-chat/main 如有需要请自行查看
 * 2017.09.08: 修复了一个地址拼凑错误.如果部署不能用的.请pull一下最新的image.抱歉抱歉😂😂
 
@@ -55,6 +56,5 @@
   * ADMIN_PASSWORD=password
   * PASSWORD_SALT=salt
   * PROTOCOL=wss
-
 
 <a href="https://vinga.tech"><img src="https://vinga.tech/images/banner.png" alt="banner" target="_blank"></a>
