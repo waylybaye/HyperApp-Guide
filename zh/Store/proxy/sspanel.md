@@ -12,7 +12,7 @@
 
 ### 安装 ss-panel
 
-<img src=".../../images/sspanel.jpeg" width="450" />
+<img src="../..//images/sspanel.jpeg" width="450" />
 
 
 * Migration: 第一次安装时需要选中该选项，告诉 `ss-panel` 运行后初始化表格和数据。

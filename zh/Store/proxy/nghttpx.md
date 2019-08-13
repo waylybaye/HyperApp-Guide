@@ -11,7 +11,7 @@ nghttpx 是一个 HTTP2 代理，HTTP2 是新一代的 HTTP 协议，但一些�
 ## 服务器安装和配置
 
 ### 配置 squid
-<img src=".../../images/squid.jpg" width="450" />
+<img src="../..//images/squid.jpg" width="450" />
 
 在商店中选择 `squid` 并创建，无需填写任何选项安装即可（端口也不用填，因为squid配置好后默认监听在本地的3128端口）。
 
@@ -38,7 +38,7 @@ Centos:`echo "/swapfile swap swap defaults 0 0" | sudo tee -a /etc/fstab`
 
 ### 配置 nghttpx
 
-<img src=".../../images/nghttpx.jpg" width="450" />
+<img src="../..//images/nghttpx.jpg" width="450" />
 
 SSL 证书的获取你可以参考 [如何自动生成可信的SSL证书](./SSL.md)，如果使用自签名证书你需要在客户端导入CA。
 

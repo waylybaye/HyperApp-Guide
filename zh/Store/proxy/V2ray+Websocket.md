@@ -22,7 +22,7 @@
 
 ## 网络拓扑
 
-![v2ray-0](.../../images/v2ray-0.jpg)
+![v2ray-0](../..//images/v2ray-0.jpg)
 
 
 

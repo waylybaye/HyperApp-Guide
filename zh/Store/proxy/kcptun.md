@@ -2,14 +2,14 @@
 
 Kcptun 是一个非常简单和快速的，基于 KCP 协议的 UDP 隧道，它可以将 TCP 流转换为 KCP+UDP 流。而 KCP 是一个快速可靠协议，能以比 TCP 浪费10%-20%的带宽的代价，换取平均延迟降低 30%-40%，且最大延迟降低三倍的传输效果。服务端和客户端都需要安装特定软件。其需要配合其它软件来实现代理功能。（本教程中很多涉及端口的地方都有一个 : 英文冒号，配置过程中千万不要省略）
 
-<img src=".../../images/kcptun-1.png" style="zoom:100%"/>
+<img src="../..//images/kcptun-1.png" style="zoom:100%"/>
 
 *image from https://github.com/xtaci/kcptun/*
 
 
 ## 服务端
 
-<img src=".../../images/kcptun.jpeg" width="450" />
+<img src="../..//images/kcptun.jpeg" width="450" />
 
 
 配置信息：
@@ -61,7 +61,7 @@ Kcptun 是一个非常简单和快速的，基于 KCP 协议的 UDP 隧道，它
 
 运行图形客户端只需要填写几个关键的参数，kcp服务器地址填写你服务器的IP，端口填写上面的端口，本地侦听端口填写shadowsocks客户端在本地所建立的端口，其他设置根据上文的设置修改，配置完成后如下：
 
-<img src=".../../images/kcptun-2.JPG"  align=center/>
+<img src="../..//images/kcptun-2.JPG"  align=center/>
 
 ### 配置 SS/SSR/V2ray 等客户端
 
