@@ -41,7 +41,7 @@ HyperApp 是一个iOS 上的自动化部署工具，提供可视化的配置界�
 
 ### 配置界面
 
-<img src="../..//images/love-bundle.jpeg" width="450" />
+<img src="../../images/love-bundle.jpeg" width="450" />
 
 
 ### 配置详解

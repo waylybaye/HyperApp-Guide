@@ -3,7 +3,7 @@
 
 ## HyperApp 配置
 
-<img src="../..//images/ocserv.jpg" width="450" />
+<img src="../../images/ocserv.jpg" width="450" />
 
 * Port: 端口，一般为443，也可以改成别的端口
 * Domain: 填写你服务器的IP地址或者域名

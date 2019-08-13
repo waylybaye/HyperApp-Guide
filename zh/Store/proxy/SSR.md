@@ -9,7 +9,7 @@
 
 ### 应用配置及安装
 
-<img src="../..//images/ssr.jpg" width="450" />
+<img src="../../images/ssr.jpg" width="450" />
 
 * Port: 端口 (端口的选择范围在65536以内都可以)
 * Password: 填一个密码

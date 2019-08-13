@@ -14,7 +14,7 @@
 如果要自动生成域名的 SSL 证书则需要配合 `Nginx Proxy` 和 `Nginx SSL Support` 来进行，因为 LetsEncrypt 需要回访你的域名确认你拥有这个域名的所有权。所以在进行下面的操作前，你需要先将需要生成证书的域名解析到你的服务器上。否则无法验证就不能生成证书。
 
 
-![配置Nginx截图](../..//images/get-start/nginx-bundle.png "配置 Nginx 和 SSL")
+![配置Nginx截图](../../images/get-start/nginx-bundle.png "配置 Nginx 和 SSL")
 
 
 ### 安装 Nginx Proxy
