@@ -15,7 +15,7 @@
 
 Nginx设置如下：
 
-<img src="./images/syncthing-1.png" width="450" />
+<img src="../../images/syncthing-1.png" width="450" />
 
 - 首先打开HyperApp在应用中找到Syncthing,填写相关配置：
 
@@ -40,7 +40,7 @@ Nginx设置如下：
 ```
 全部填写好的示意图如下：
 
-<img src="./images/syncthing-2.png" width="450" />
+<img src="../../images/syncthing-2.png" width="450" />
 
 ## 防火墙配置
 
@@ -68,7 +68,7 @@ chmod -R o+w /srv/docker/syncthing
 
 打开浏览器，键入你的域名，回车即可看到syncthing的页面,进行相关设置后即可使用。
 
-<img src="./images/syncthing-3.png" align=center />
+<img src="../../images/syncthing-3.png" align=center />
 
 大功告成！
 

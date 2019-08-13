@@ -18,7 +18,7 @@ B`,它们三个的参数不需要变动。（如果之前已经安装了则可�
 
 Nginx相关的配置不再赘述，下面贴出MongoDB的配置图
 
-<img src="./images/nodebb-1.png" width="450" />
+<img src="../../images/nodebb-1.png" width="450" />
 
 ### 配置NodeBB 
 
@@ -49,7 +49,7 @@ Nginx相关的配置不再赘述，下面贴出MongoDB的配置图
 
 全部填写好的示意图如下：
 
-<img src="./images/nodebb-2.png" alien=center />
+<img src="../../images/nodebb-2.png" alien=center />
 
 ## 防火墙配置
 
@@ -71,11 +71,11 @@ sudo ufw allow 443
 
 BodeBB主页面如下
 
-<img src="./images/nodebb-3.png" align=center />
+<img src="../../images/nodebb-3.png" align=center />
 
 我们右上角登陆后随便点击一个帖子
 
-<img src="./images/nodebb-4.png" align=center />
+<img src="../../images/nodebb-4.png" align=center />
 
 ## 注意
 

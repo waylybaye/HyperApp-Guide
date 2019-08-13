@@ -14,7 +14,7 @@
    1. wordpress的必选依赖为`PostgreSQL`和`MariaDB`. 可选依赖为`Nginx Proxy`以及`Nginx SSL Support`.如果不选用这两个.需要配置Port.然后通过 http://VPS的IP:端口 来访问.本教程默认已经正确安装并启动这两者.
 	
   2. 按照下图对`PostgreSQL`以及`MariaDB`进行设置.注意除了有中文提示的选项.其他都应该保持跟图片一致以免出错.
-	![](./images/huginn-1.jpg)
+	![](../../images/huginn-1.jpg)
   
   3. 设置完成之后选择保存配置并安装即可.  
 	
@@ -22,7 +22,7 @@
 
   1. 按照下图对`Huginn`服务端进行设置.注意除了有中文提示的选项.其他都应该保持跟图片一致以免出错.
 
-  ![](./images/huginn-2.jpg)
+  ![](../../images/huginn-2.jpg)
 
   2. 设置完成之后选择保存配置并安装即可.  
 
@@ -36,6 +36,6 @@
 
   * 现在.去访问你的`Huginn`吧:)
   * 这里放一个已经部署成功的截图:)
-    ![](./images/huginn-3.jpg)
+    ![](../../images/huginn-3.jpg)
 
 

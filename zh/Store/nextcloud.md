@@ -29,7 +29,7 @@
 
 - Mysql 配置完成后如下：
 
-<img src="./images/nextcloud-1.PNG" width="450" />
+<img src="../../images/nextcloud-1.PNG" width="450" />
 
 ### Nextcloud 设置：
 
@@ -61,7 +61,7 @@
 
 全部填写好的示意图如下：
 
-<img src="./images/nextcloud-2.PNG" width="450" />
+<img src="../../images/nextcloud-2.PNG" width="450" />
 
 ## 防火墙配置
 
@@ -97,11 +97,11 @@ sudo ufw allow 443
 
 ```
 
-<img src="./images/nextcloud-3.PNG" align=center />
+<img src="../../images/nextcloud-3.PNG" align=center />
 
 等待初始化完成后，用刚刚创建的账户登陆进去即可。
 
-<img src="./images/nextcloud-4.PNG" align=center />
+<img src="../../images/nextcloud-4.PNG" align=center />
 
 大功告成！
 
@@ -121,21 +121,21 @@ sudo ufw allow 443
 
 在server address中填写你的域名，然后点击下一步
 
-<img src="./images/nextcloud-5.PNG" align=center />
+<img src="../../images/nextcloud-5.PNG" align=center />
 
 然后输入刚才创建的用户名和密码
 
-<img src="./images/nextcloud-6.PNG" align=center />
+<img src="../../images/nextcloud-6.PNG" align=center />
 
 然后上面选择相关的设置参数，比如同步大小到多大时通知用户，默认500M，按照自己需求设置，下面选择本地文件夹，选好之后点击完成。
 
-<img src="./images/nextcloud-7.PNG" align=center />
+<img src="../../images/nextcloud-7.PNG" align=center />
 
 - 此时配置完成，客户端会最小化到任务栏同时可以看到客户端和云端已经可以看到开始了自动同步，你可以打开所设置的本地文件夹，在里面放一个文件，它便会自动同步到云端。
 
 大功告成。
 
-<img src="./images/nextcloud-8.PNG" align=center />
+<img src="../../images/nextcloud-8.PNG" align=center />
 
 ## 后续配置
 
@@ -147,7 +147,7 @@ sudo ufw allow 443
 在代理设置(Proxy Settings)中 选择"手动指定代理"(Specify proxy manually as)为 "socks5"
 "Host"填写"127.0.0.1"，右侧的方框是填写端口的，一般填写"1080"
 ```
-<img src="./images/nextcloud-9.PNG" align=center />
+<img src="../../images/nextcloud-9.PNG" align=center />
 
 然后代理即设置完毕，点击关闭即可。
 

@@ -20,21 +20,21 @@
 3. **转到商店页面.找到`Docker Image`然后选择服务器并且保存进入配置界面**
 4. **请确认你完全按照按照下图对两个应用进行了设置.有中文提示的相应修改.其他不要动.**
 5. **保存并且进行安装**
-   ![IMG_1927](./images/pydio-1.jpg)
+   ![IMG_1927](../../images/pydio-1.jpg)
 
 ## 对Pydio进行设置
 
 1. **稍等一段时间等应用都正常启动之后.访问`Pydio`的域名会看到这样一张图**
-   ![pydio-2](./images/pydio-2.jpg)
+   ![pydio-2](../../images/pydio-2.jpg)
 * **前面三个警告是可以忽略的的.因为跟宿主机部署不一样.有些工作放在docker来做了.总之这时候点击绿色的`CONTINUE`即可.**
 2. **这里选择简体中文.然后点击开始向导.然后一路配置.先是网站名称.然后是管理员账户创建.**
-   ![pydio-2](./images/pydio-3.jpg)  
+   ![pydio-2](../../images/pydio-3.jpg)  
 3. **接着来到配置数据库这里.重点来了.按照图片中的提示进行配置.**
    * **注意Host一定要写ip然后后面半角冒号并加上端口.例如`8.8.8.8:8888`**
    * **密码写Pydio数据库密码.不是数据库Root密码.**
-     ![pydio-2](./images/pydio-4.jpg) 
+     ![pydio-2](../../images/pydio-4.jpg) 
    4. **然后选择`TEST DB CONNECTION`通过之后一路下一步即可.稍等片刻跳转到登录页面登录即可**
-     ![pydio-5](./images/pydio-5.jpg)
+     ![pydio-5](../../images/pydio-5.jpg)
 
 ## 客户端的使用方法
 

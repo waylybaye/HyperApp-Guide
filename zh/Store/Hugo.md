@@ -48,21 +48,21 @@
 2. **使用命令`brew install hugo`安装Hugo**
 3. **使用命令`hugo new site Mysite`新建一个叫做Mysite的网站.这时候在当前目录已经能看见当前目录出现了一个叫做Mysite的目录.里面有一些Hugo的文件**
 
-![hugo-1](./images/hugo-1.png)
+![hugo-1](../../images/hugo-1.png)
 
 4. **先去网上寻找一个你满意的主题.为什么要这么做呢.因为hugo默认并没有主题.没有主题的话hugo是不能生生成页面的. https://themes.gohugo.io/ 这是hugo官方的主题仓库的链接.找到喜欢的就进去选择download.会跳转到一个Github的界面.一般来说在readme里面都会有提示怎么安装的.本教程采用docdock主题来举例.链接为 https://github.com/vjeantet/hugo-theme-docdock**
 5. **执行命令`cd themes`进入主题文件夹**
 6. **执行命令`git clone  https://github.com/vjeantet/hugo-theme-docdock.git docdock`来下载docdock主题.**
 7. **我们进去docdock目录看一看都有什么东西.图中就是主题的构成.我们要做的是进入exampleSite文件夹.把里面的所有文件复制的最早的Mysite文件夹里面.注意要选替换选项**
 
-![hugo-2](./images/hugo-2.png)
+![hugo-2](../../images/hugo-2.png)
 
 8. **有个事情要注意一下.我们要把themes目录里面的docdock改一下名字.改成`hugo-theme-docdock`并且把config.toml里面`themesdir = "../.."`删掉(此处神坑)**
 9. **接下来我们就可以启动hugo来一看究竟了.使用`cd ..`命令可以返回上级目录.一直返回到Mysite目录并且执行`hugo server `启动本地hugo服务器.**
 10. **看到提示.这时候hugo server已经启动并且地址是`localhost:1313`.我们去访问看看.一个漂亮的页面就这样展现在我们面前**
 
 
-![hugo-3](./images/hugo-3.png)
+![hugo-3](../../images/hugo-3.png)
 
 
 
@@ -76,7 +76,7 @@
 1. **请先确认你已经采用正确的设置安装了Nginx Proxy和Nginx SSL Support这两个应用**
 2. **打开hyperapp.切换到商店选项卡.找到Hugo这个应用并且选择创建应用.按照图片中的选项来填写**
 
-![hugo-4](./images/hugo-4.png)
+![hugo-4](../../images/hugo-4.png)
 
 3. **保存安装.这时候会显示安装成功.但是会显示restart xxxx.这是因为我们还没有把相关的文件上传到服务器.**
 

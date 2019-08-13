@@ -13,18 +13,18 @@
 ## 注册
 
 1. **首先我们前往这个网站** [TelegramAppCreate](https://my.telegram.org/auth?to=apps)**来获取我们所需要的一些参数.**
-   ![](./images/tg-1.jpg)
+   ![](../../images/tg-1.jpg)
 2. **注意需要填写完整格式的手机号码例如`+861234567890`**
 3. **验证码一般来说会发送到已登陆设备上面.但也有可能会发送短信验证码.注意查收.**
 4. **通过之后来到这个界面 .这时候我们选择**`API Development Tool`
-   ![](./images/tg-2.jpg)
+   ![](../../images/tg-2.jpg)
 5. **再下一步会来到一个填写信息的界面.按照个人喜好来填写.我这里因为注册过一个了.当时没有截图就不提供图片了.**
 6. **提交信息之后会到下一个界面.长这个样子.把App api_id以及App api_hash复制备用**
-   ![](./images/tg-3.jpg)
+   ![](../../images/tg-3.jpg)
 
 ## 服务端配置
 
-![](./images/tg-4.jpg)
+![](../../images/tg-4.jpg)
 
 * **按照图中所提示的进行配置.**
 * **请确认你已经按照默认配置正常安装并启动了Nginx Proxy以及Nginx SSL Support.**

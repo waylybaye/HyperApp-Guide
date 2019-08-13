@@ -9,7 +9,7 @@
 
 ## HyperApp 应用配置
 
-<img src='../images/certbot.png' width=375 />
+<img src='.../../images/certbot.png' width=375 />
 
 * Domain: 填入你想获取证书的域名，多个域名用英文逗号分隔开
 * Email: 您的邮箱

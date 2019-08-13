@@ -32,7 +32,7 @@
 
 ### 注册 GCP 免费试用
 
-<img src='./images/gce/1-free-tier.png' width="414" /> <img src='./images/gce/1-intro.png' width="414" />
+<img src='../../images/gce/1-free-tier.png' width="414" /> <img src='../../images/gce/1-intro.png' width="414" />
 
 
 1. 登录Google账号后使用这个链接来注册 https://cloud.google.com/free/ ，在打开的页面中点击“Try it Free"。
@@ -49,13 +49,13 @@
 
 ### 新建主机
 
-<img src='./images/gce/2-vms-nav.png' width="414" /> <img src='./images/gce/2-vms.png' width="414" />
+<img src='../../images/gce/2-vms-nav.png' width="414" /> <img src='../../images/gce/2-vms.png' width="414" />
 
 
 1. 按照上图所示，在左侧菜单中导航到 [计算引擎 → VM 实例](https://console.cloud.google.com/compute/instances)
 2. 点击加号按钮，创建一个 VM 实例。
 
-<img src='./images/gce/2-create-vm.png' width="414" /> <img src='./images/gce/2-create-vm-firewall.png' width="414" />
+<img src='../../images/gce/2-create-vm.png' width="414" /> <img src='../../images/gce/2-create-vm-firewall.png' width="414" />
 
 * 名称：随意填入一个易记得名字
 * 地区：建议选择 `asia-east1-*` 三个中的任意一个，这个机房是在台湾，国内的延迟只有 50~70ms，简直快到飞起。
@@ -79,13 +79,13 @@ HyperApp 是一个部署自动化以及服务器监控管理的App，致力于�
 
 ### 添加服务器到 HyperApp
 
-<img src='./images/gce/3-servers.png' width="414" /> <img src='./images/gce/3-auto-config-start.png' width="414" />
+<img src='../../images/gce/3-servers.png' width="414" /> <img src='../../images/gce/3-auto-config-start.png' width="414" />
 
 1. 在 “服务器” 页面点击右下角的加号，然后选择第二个”自动配置“
 2. 点击“开始”，应用会自动生成一对密钥，请耐心等到几秒~十几秒。
 3. 等到出现“一切就绪”时，点击“复制“将代码复制到剪贴板里，如果你用电脑操作的话可以点击”发送“将代码通过任意一种方式发送到电脑上。
 
-<img src='./images/gce/3-auto-config-done.png' width="414" /> <img src='./images/gce/3-vm-ssh.jpg' width="414" />
+<img src='../../images/gce/3-auto-config-done.png' width="414" /> <img src='../../images/gce/3-vm-ssh.jpg' width="414" />
 
 
 
@@ -111,7 +111,7 @@ HyperApp 是一个部署自动化以及服务器监控管理的App，致力于�
 ### 部署科学上网应用
 
 
-<img src='./images/gce/4-create-app.png' width="414" /> <img src='./images/gce/4-config-app.png' width="414" />
+<img src='../../images/gce/4-create-app.png' width="414" /> <img src='../../images/gce/4-config-app.png' width="414" />
 
 
 在 `HyperApp` → `商店` 页面 `网络` 分组下选择任意一个应用，这里我们选择占用资源最少的 `****-libev`，（下文用SS代替）点击该应用。在弹出的对话框中选择刚刚添加的服务器，点击`创建应用`

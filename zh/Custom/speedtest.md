@@ -35,7 +35,7 @@
 
 * 这时候去访问你的域名吧٩(˃̶͈̀௰˂̶͈́)و
 
-![speedtest](./images/speedtest-1.png)
+![speedtest](../../images/speedtest-1.png)
 
 ## 温馨提示
 

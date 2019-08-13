@@ -17,13 +17,13 @@
 
 **首先访问[www.freenom.com](http://www.freenom.com),freenom是一个免费的域名服务商，旗下提供.ML、.CF、.GA、.TK、.GQ四个免费域名的注册。（值得一提的是[www.dot.tk](http://www.dot.tk)也是一家免费域名服务商，提供.tk域名的免费注册，注册的步骤与在freenom中大致相同）然后在屏幕中间输入框输入你想要的域名比如`fanvinga.tech`,然后点击检查可用性**
 
-## ![](./images/Domain-1.jpg)
+## ![](../../images/Domain-1.jpg)
 
 
 
 **然后选中自己喜欢的.点击现在获取.然后右上角购物车完成**
 
-![](./images/Domain-2.jpg)
+![](../../images/Domain-2.jpg)
 
 
 
@@ -33,15 +33,15 @@
 
 
 
-![](./images/Domain-3.jpg)
+![](../../images/Domain-3.jpg)
 
 **下一步在这里填写你的邮箱.然后选择验证我的邮箱地址.然后从邮箱中打开发过来的链接即可进入下一步**
 
-![](./images/Domain-4.jpg)
+![](../../images/Domain-4.jpg)
 
 **在页面填上你的资料,按照相应信息填写即可(最好使用美国的代理然后找一个美国人信息生成器)。记得勾选我已阅读并同意条款和条件.当然填写自己的信息也没有问题.这里给出一个范例**
 
-![](./images/Domain-5.jpg)
+![](../../images/Domain-5.jpg)
 
 **接下来的步骤一路下一步.然后登陆的时候使用你的邮箱和刚刚的密码来登陆.稍等片刻即可解析完成.其他更多关于freenom的问题请进入hyperapp的Telegram交流群请教帅气的FanVinga:)**
 

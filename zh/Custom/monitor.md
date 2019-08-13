@@ -22,14 +22,14 @@
 
 ## 效果截图
 
-![monitor-1](./images/monitor-1.jpg)
-![monitor-2](./images/monitor-2.jpg)
+![monitor-1](../../images/monitor-1.jpg)
+![monitor-2](../../images/monitor-2.jpg)
 
 
 
 ## 网络拓扑
 
-![monitor-0](./images/monitor-0.jpg)
+![monitor-0](../../images/monitor-0.jpg)
 
 
 
@@ -176,13 +176,13 @@ LoadPlugin swap
   * 用户名 admin
   * 密码 admin
 
-  ![monitor-3](./images/monitor-3.jpg)
+  ![monitor-3](../../images/monitor-3.jpg)
 
 2. 点击`Add data source`来到增加数据库界面.按照下图填写配置.要完全一致!
-   ![monitor-4](./images/monitor-4.jpg)
+   ![monitor-4](../../images/monitor-4.jpg)
 
 3. 点击`Dashboards`然后选择`New`.选择一个图表样式.这里用`Graph`举例.再点击一下`Panel Title`.会出来一个小菜单.选择`Edit`.按照下图进行配置并且在`Legend`选项卡开启`Avg`即可得到一个节点到联通的链路信息图例.
-   ![monitor-5](./images/monitor-5.jpg)
+   ![monitor-5](../../images/monitor-5.jpg)
 
 4. 这只是其中一个小例子.还有监控CPU/内存/硬盘/流量/IO等等的图例.请到Grafana官网查找图例配置教程(官网真的文档非常非常非常齐全).或者Google搜索别人提供的配置.
 
