@@ -72,4 +72,3 @@ ln -s /share .
 
 - **这时候去访问你的域名吧٩(˃̶͈̀௰˂̶͈́)و**
 
-[![img](https://vinga.tech/images/banner.png)](https://vinga.tech)

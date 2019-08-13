@@ -75,4 +75,3 @@ FAST_OPEN=false
 6. 注意REDIRECT的可能形式为`*:80#127.0.0.1:2333`.直接填写 `-e REDIRECT=*:80#127.0.0.1:2333`即可
 
 
-<a href="https://vinga.tech"><img src="https://vinga.tech/images/banner.png" alt="banner" target="_blank"></a>

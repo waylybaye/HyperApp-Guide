@@ -187,4 +187,3 @@ LoadPlugin swap
 
 4. 这只是其中一个小例子.还有监控CPU/内存/硬盘/流量/IO等等的图例.请到Grafana官网查找图例配置教程(官网真的文档非常非常非常齐全).或者Google搜索别人提供的配置.
 
-<a href="https://vinga.tech"><img src="https://d.unlimit.fun/design/banner.jpg" alt="banner" target="_blank"></a>

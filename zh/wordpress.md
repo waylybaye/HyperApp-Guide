@@ -35,4 +35,3 @@
 
 
 
-<a href="https://vinga.tech"><img src="https://vinga.tech/images/banner.png" alt="banner" target="_blank"></a>
