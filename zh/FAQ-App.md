@@ -63,33 +63,3 @@ sysctl -p
   ```
   echo "/swapfile swap swap defaults 0 0" | sudo tee -a /etc/fstab
   ```
-  
-  
-
-### V2ray不能连接排查
-
-* 确定完全按教程操作
-  * 填写 config.json新建docker默认值被遮挡，且与教程所给值不一致，需更改为srv/docker/etc/v2ray.json
-  * 应用端口需手动填写，不要和别的教程一样默认自动抓取了
-  * 域名填写低调一点的
-  * centos7注意开启防火墙，添加新端口（你填的port），并重启防火墙，下面写为yyy，在ssh中执行
-  ```
-  firewall-cmd --add-port=yyy/tcp --permanent && firewall-cmd --reload
-  ```
-  * 更新配置或安装后启动docker，注意要手动重启Nginx proxy和Nginx SSL Support
-* 出错后检查思路
-  * 先检查证书是否存在.tls域名是否正常.伪装应用是否正常
-  * 再检查后端v2ray的服务端配置
-  * 再检查客户端配置
-  * 在商店安装的应用遇到问题
-  * 应用的使用过程中遇到限制或者其他问题
-
-
-
-### 关于V2Ray访问域名出现Bad Request的解决办法
-
-* 如果你按照教程搭建了`Nginx(tls)+V2Ray(websocket)`.那么访问证书域名的时候往往会出现bad request的情况.这是成功的标志.但是总不那么好看.这里给出一个跳转到其他域名的办法.执行以下命令即可.注意修改命令中的域名
-
-```sh
-echo -e "proxy_intercept_errors on;\nerror_page 400 = https://要跳转到的域名;" > /srv/docker/nginx/vhost.d/default
-```
