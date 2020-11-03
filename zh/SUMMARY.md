@@ -27,7 +27,6 @@
    * [搭建HACK·CHAT即时通信平台](Custom/chat.md)
    * [内网穿透服务otunnel架设](Custom/otunnel.md)
    * [搭建个人专享2048在线小游戏](Custom/2048.md)
-   * [超简单搭建常见404站点镜像](Custom/mirror.md)
    * [搭建精美H5AI文件服务器](Custom/h5ai.md)
    * [搭建精美强大Grafana监控系统](Custom/monitor.md)
    * [自建网页版speedtest测速教程](Custom/speedtest.md)
