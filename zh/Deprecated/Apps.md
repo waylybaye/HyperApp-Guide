@@ -2,8 +2,6 @@
 
 
 ## 目录
-* [网络](#网络)
-    * [SS: TCP Fast Open 和 OBFS](#shadowsocks-libev)
 * [网站](#网站)
     * [Hugo](#hugo)
     * [Flarum](#flarum)
@@ -15,13 +13,6 @@
 
 
 ## 网络
-
-### Shadowsocks-libev
-
-**TCP Fast Open**
-默认配置就是开启的，在Surge 中需要配置 `,tfo=true`
-
-
 
 #### 配置客户端
 
